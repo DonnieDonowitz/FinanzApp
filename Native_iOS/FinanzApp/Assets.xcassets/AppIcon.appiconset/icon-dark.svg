@@ -1,0 +1,36 @@
+<svg width="1024" height="1024" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12141F"/>
+      <stop offset="55%" stop-color="#0D0F1A"/>
+      <stop offset="100%" stop-color="#08090F"/>
+    </linearGradient>
+    <radialGradient id="glowPurple" cx="18%" cy="14%" r="65%">
+      <stop offset="0%" stop-color="#7B6FE8" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#7B6FE8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowTeal" cx="88%" cy="90%" r="60%">
+      <stop offset="0%" stop-color="#2FE8B0" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#2FE8B0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glyphShade" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5A82FF"/>
+      <stop offset="55%" stop-color="#7B6FE8"/>
+      <stop offset="100%" stop-color="#2FE8B0"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#bg)"/>
+  <rect width="200" height="200" fill="url(#glowPurple)"/>
+  <rect width="200" height="200" fill="url(#glowTeal)"/>
+
+  <g filter="url(#soft)">
+    <path d="M 52 132 L 90 96 L 116 118 L 150 70"
+          fill="none" stroke="url(#glyphShade)" stroke-width="15"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="150" cy="70" r="11" fill="url(#glyphShade)"/>
+  </g>
+</svg>

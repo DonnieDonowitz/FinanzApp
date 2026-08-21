@@ -1,0 +1,31 @@
+<svg width="1024" height="1024" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A5AE0"/>
+      <stop offset="50%" stop-color="#3F7BE0"/>
+      <stop offset="100%" stop-color="#1FA8C9"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="28%" cy="18%" r="75%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glyphShade" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EAF6FF"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0B1120" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#bg)"/>
+  <rect width="200" height="200" fill="url(#sheen)"/>
+
+  <g filter="url(#soft)">
+    <path d="M 52 132 L 90 96 L 116 118 L 150 70"
+          fill="none" stroke="url(#glyphShade)" stroke-width="15"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="150" cy="70" r="11" fill="url(#glyphShade)"/>
+  </g>
+</svg>
