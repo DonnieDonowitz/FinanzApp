@@ -90,9 +90,9 @@
     "semantic_hash": "07c5d960106d66121c01d1116a53e1ba"
   },
   "Native_iOS/FinanzApp/Views/Components/ChartView.swift": {
-    "mtime": 1787493923.8527827,
-    "seen": 1787497896.4249542,
-    "ast_hash": "a1cb6053d9de360e0bb20ebba2330925",
+    "mtime": 1787498729.9377348,
+    "seen": 1787499185.4110138,
+    "ast_hash": "1a117842408ddb258703fb6fbdb2ba78",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Views/Components/ConfirmDialog.swift": {
@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Models/Gamification.swift": {
-    "mtime": 1787493923.8508594,
-    "seen": 1787497896.4247968,
-    "ast_hash": "4ee7c1fdc30bfe411084248489d7cb12",
+    "mtime": 1787498611.9310055,
+    "seen": 1787499185.4108381,
+    "ast_hash": "9c7fae8b7c522122ba722e31044176d6",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Views/Components/BudgetEditSheet.swift": {

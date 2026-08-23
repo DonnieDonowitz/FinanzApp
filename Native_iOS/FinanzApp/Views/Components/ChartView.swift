@@ -27,14 +27,15 @@ struct GapDonutChart: View {
 
     /// A round `lineCap` bulges outward by `lineWidth / 2` past each trim endpoint, so a gap
     /// smaller than roughly one `lineWidth` of arc length lets adjacent slices' caps visually
-    /// overlap even though their trimmed ranges don't. `gapFraction` alone (a fixed fraction of
-    /// the whole ring) can't guarantee that once `lineWidth` is a sizeable chunk of the ring's
-    /// circumference — as with the small month-preview donuts — so the actual gap used is
-    /// whichever is larger.
+    /// touch or overlap even though their trimmed ranges don't. `gapFraction` alone (a fixed
+    /// fraction of the whole ring) can't guarantee that once `lineWidth` is a sizeable chunk of
+    /// the ring's circumference — as with the small month-preview donuts — so the actual gap
+    /// used is whichever is larger. The 2x factor goes past the bare minimum that just clears
+    /// the caps, leaving a clearly visible breathing-room gap rather than a hairline one.
     private var effectiveGapFraction: Double {
         let circumference = Double.pi * diameter
         guard circumference > 0 else { return gapFraction }
-        let minGapFraction = (Double(lineWidth) * 1.15) / circumference
+        let minGapFraction = (Double(lineWidth) * 2) / circumference
         return max(gapFraction, minGapFraction)
     }
 
@@ -80,7 +81,13 @@ struct GapDonutChart: View {
         let before = data.prefix(index).map(\.value).reduce(0, +)
         let rawStart = before / total
         let rawEnd = (before + data[index].value) / total
-        let gap = effectiveGapFraction / 2
+        // A gap sized to clear the round cap's bulge (see `effectiveGapFraction`) can be wider
+        // than a small slice itself, which would zero it out — invisible rather than merely
+        // touching its neighbor. Capping the gap to a fraction of the slice's own width keeps
+        // every non-zero slice visible, even if very thin slices stay a little closer together
+        // than the ideal gap.
+        let sliceWidth = rawEnd - rawStart
+        let gap = min(effectiveGapFraction / 2, sliceWidth * 0.4)
         let start = rawStart + gap
         let end = max(start, rawEnd - gap)
         return (start, end)

@@ -1,7 +1,7 @@
 # Graph Report - FinanzApp  (2026-08-23)
 
 ## Corpus Check
-- 38 files · ~39,226 words
+- 38 files · ~39,329 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5e85c42b`
+- Built from commit: `fdd3d664`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

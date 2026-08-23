@@ -90,9 +90,9 @@
     "semantic_hash": "07c5d960106d66121c01d1116a53e1ba"
   },
   "Native_iOS/FinanzApp/Views/Components/ChartView.swift": {
-    "mtime": 1787498729.9377348,
-    "seen": 1787499185.4110138,
-    "ast_hash": "1a117842408ddb258703fb6fbdb2ba78",
+    "mtime": 1787499399.924339,
+    "seen": 1787499506.6495821,
+    "ast_hash": "6c3ae063e047bd872097b66fc30e7f60",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Views/Components/ConfirmDialog.swift": {
