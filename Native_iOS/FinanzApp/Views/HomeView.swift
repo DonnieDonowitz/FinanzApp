@@ -8,7 +8,9 @@ struct HomeView: View {
     // reuse between "open for expense" and "open for income" presentations.
     @State private var showAddExpenseSheet = false
     @State private var showAddIncomeSheet = false
+    @State private var showBudgetEdit = false
     @State private var editingTransaction: Transaction?
+    @State private var selectedDay: Int?
 
     init(showTransactions: Binding<Bool> = .constant(false)) {
         self._showTransactions = showTransactions
@@ -21,11 +23,19 @@ struct HomeView: View {
                 BalanceCard(income: vm.monthIncome, expense: vm.monthExpense, balance: vm.monthBalance, monthName: currentMonthName())
                     .padding(.horizontal, 18)
 
+                budgetCard
+                    .padding(.horizontal, 18)
+
+                levelCard
+                    .padding(.horizontal, 18)
+
                 QuickAddBar(onIncome: { showAddIncomeSheet = true },
                             onExpense: { showAddExpenseSheet = true })
                     .padding(.horizontal, 18)
 
                 if !vm.monthTransactions.isEmpty {
+                    dailyChartCard
+                        .padding(.horizontal, 18)
                     insightCards
                 }
 
@@ -54,6 +64,9 @@ struct HomeView: View {
         .sheet(item: $editingTransaction) { tx in
             AddTransactionView(editTransaction: tx).environmentObject(vm)
         }
+        .sheet(isPresented: $showBudgetEdit) {
+            BudgetEditSheet().environmentObject(vm)
+        }
         .onChange(of: vm.pendingQuickAddType) { _, pending in
             guard let pending else { return }
             if pending == "income" { showAddIncomeSheet = true } else { showAddExpenseSheet = true }
@@ -79,6 +92,155 @@ struct HomeView: View {
         .padding(.top, 14)
         .padding(.bottom, 4)
     }
+
+    // MARK: - Budget card
+
+    private var budgetCard: some View {
+        Button { showBudgetEdit = true } label: {
+            GlassView(intensity: .strong, radius: 26) {
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        Text(L.monthlyBudget.uppercased())
+                            .font(.system(size: 11, weight: .bold))
+                            .foregroundStyle(AppColors.textTertiary)
+                            .tracking(0.4)
+                        Spacer()
+                        Image(systemName: "pencil.circle.fill")
+                            .font(.system(size: 15))
+                            .foregroundStyle(AppColors.textTertiary)
+                    }
+
+                    if vm.isBudgetConfigured {
+                        HStack(alignment: .firstTextBaseline, spacing: 6) {
+                            Text(formatCurrency(vm.monthExpense))
+                                .font(.system(size: 26, weight: .bold, design: .monospaced))
+                                .foregroundStyle(AppColors.text)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
+                            Text("/ \(formatCurrency(vm.monthlyBudget))")
+                                .font(.system(size: 14, weight: .semibold, design: .monospaced))
+                                .foregroundStyle(AppColors.textTertiary)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
+                        }
+
+                        GeometryReader { geo in
+                            ZStack(alignment: .leading) {
+                                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                    .fill(AppColors.text.opacity(0.10))
+                                    .frame(height: 10)
+                                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                    .fill(vm.isOverBudget ? AppColors.expense : AppColors.income)
+                                    .frame(width: geo.size.width * min(vm.monthExpense / max(vm.monthlyBudget, 1), 1), height: 10)
+                            }
+                        }
+                        .frame(height: 10)
+
+                        Text(vm.isOverBudget
+                             ? L.overBudgetBy(formatCurrency(-vm.monthBudgetRemaining))
+                             : L.remainingBudget(formatCurrency(vm.monthBudgetRemaining)))
+                            .font(.system(size: 12.5, weight: .bold))
+                            .foregroundStyle(vm.isOverBudget ? AppColors.expense : AppColors.income)
+                    } else {
+                        Text(L.setBudgetPrompt)
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundStyle(AppColors.textSecondary)
+                    }
+                }
+                .padding(18)
+            }
+        }
+        .buttonStyle(.plain)
+    }
+
+    // MARK: - Level card
+
+    private var levelCard: some View {
+        GlassView(radius: 26) {
+            HStack(spacing: 14) {
+                ZStack {
+                    Circle()
+                        .fill(AppColors.primary.opacity(0.18))
+                        .frame(width: 52, height: 52)
+                    Text("\(vm.currentLevel)")
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .foregroundStyle(AppColors.primary)
+                }
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack {
+                        Text(L.levelLabel(vm.currentLevel))
+                            .font(.system(size: 13, weight: .bold))
+                            .foregroundStyle(AppColors.text)
+                        Spacer()
+                        Text(L.xpTotal(Int(vm.totalXP)))
+                            .font(.system(size: 11, weight: .semibold, design: .monospaced))
+                            .foregroundStyle(AppColors.textTertiary)
+                    }
+                    GeometryReader { geo in
+                        ZStack(alignment: .leading) {
+                            RoundedRectangle(cornerRadius: 4, style: .continuous)
+                                .fill(AppColors.text.opacity(0.10))
+                                .frame(height: 7)
+                            RoundedRectangle(cornerRadius: 4, style: .continuous)
+                                .fill(AppColors.primary)
+                                .frame(width: geo.size.width * vm.levelProgress, height: 7)
+                        }
+                    }
+                    .frame(height: 7)
+                }
+            }
+            .padding(16)
+        }
+    }
+
+    // MARK: - Daily bar chart with drill-down
+
+    private var dailyChartCard: some View {
+        GlassView(radius: 26) {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(L.dailySpendingTrend.uppercased())
+                    .font(.system(size: 11, weight: .bold))
+                    .foregroundStyle(AppColors.textTertiary)
+                    .tracking(0.4)
+
+                DailyBarChart(entries: vm.dailyExpenses(for: Date.currentMonth), selectedDay: $selectedDay)
+                    .padding(.top, 4)
+
+                if let day = selectedDay {
+                    let dayTx = vm.transactionsForDay(dayDateString(day))
+                    Divider().background(AppColors.divider).padding(.vertical, 2)
+                    Text(L.dayTransactions(day))
+                        .font(.system(size: 12, weight: .bold))
+                        .foregroundStyle(AppColors.textSecondary)
+
+                    if dayTx.isEmpty {
+                        Text(L.noTransactionsThisDay)
+                            .font(.system(size: 12.5))
+                            .foregroundStyle(AppColors.textTertiary)
+                            .padding(.vertical, 6)
+                    } else {
+                        VStack(spacing: 0) {
+                            ForEach(dayTx) { tx in
+                                SwipeToDeleteRow(onDelete: { vm.deleteTransaction(tx.id) }, onTap: { editingTransaction = tx }) {
+                                    TransactionRow(transaction: tx)
+                                }
+                                if tx.id != dayTx.last?.id {
+                                    Divider().background(AppColors.divider)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .padding(18)
+        }
+    }
+
+    private func dayDateString(_ day: Int) -> String {
+        "\(Date.currentMonth)-\(String(format: "%02d", day))"
+    }
+
+    // MARK: - Existing sections (unchanged)
 
     private var insightCards: some View {
         HStack(spacing: 12) {

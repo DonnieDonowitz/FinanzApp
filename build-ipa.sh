@@ -5,14 +5,15 @@ set -euo pipefail
 # FinanzApp — Build IPA for sideloading
 # Usage: ./build-ipa.sh
 # Output: FinanzApp.ipa (in project root)
+# Requires: Xcode + XcodeGen (`brew install xcodegen`), run on macOS.
 # ============================================================
 
 PROJECT_DIR="$(cd "$(dirname "$0")" && pwd)"
-IOS_DIR="$PROJECT_DIR/ios"
-WORKSPACE="FinanzApp.xcworkspace"
+NATIVE_DIR="$PROJECT_DIR/Native_iOS"
+PROJECT="FinanzApp.xcodeproj"
 SCHEME="FinanzApp"
-BUNDLE_ID="com.marino.finanzapp"
-TEAM_ID="6C53L638P6"
+BUNDLE_ID="marino.finanzapp.app"
+TEAM_ID="VVGS6626NR"
 EXPORT_METHOD="development"
 
 ARCHIVE_PATH="/tmp/FinanzApp-build.xcarchive"
@@ -31,16 +32,21 @@ echo "  Team ID   : $TEAM_ID"
 echo "  Method    : $EXPORT_METHOD"
 echo ""
 
-# Step 1: Install CocoaPods dependencies
-echo "📦 [1/3] Installing CocoaPods..."
-cd "$IOS_DIR"
-pod install --repo-update 2>&1 | tail -3
+# Step 1: Regenerate the Xcode project from project.yml (XcodeGen)
+echo "🛠  [1/3] Generating Xcode project..."
+cd "$NATIVE_DIR"
+if ! command -v xcodegen >/dev/null 2>&1; then
+  echo "xcodegen not found. Install it with: brew install xcodegen" >&2
+  exit 1
+fi
+xcodegen generate
 echo ""
 
-# Step 2: Archive main app
+# Step 2: Archive main app (this also builds the FinanzAppWidget extension, which is a
+# dependency of the FinanzApp target — see project.yml)
 echo "🔨 [2/3] Archiving main app..."
 xcodebuild \
-  -workspace "$WORKSPACE" \
+  -project "$PROJECT" \
   -scheme "$SCHEME" \
   -configuration Release \
   -destination "generic/platform=iOS" \

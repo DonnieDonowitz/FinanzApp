@@ -281,4 +281,53 @@ enum L {
         case .es: return ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"]
         }
     }
+
+    // MARK: - Budget & Gamification
+    static var monthlyBudget: String { t(it: "Budget mensile", en: "Monthly budget", de: "Monatsbudget", fr: "Budget mensuel", es: "Presupuesto mensual") }
+    static var setBudgetPrompt: String { t(it: "Imposta un budget massimo di spesa mensile per iniziare a guadagnare livelli ed esperienza.", en: "Set a maximum monthly spending budget to start earning levels and XP.", de: "Lege ein monatliches Ausgabenlimit fest, um Level und XP zu sammeln.", fr: "Définis un budget de dépenses mensuel maximum pour commencer à gagner des niveaux et de l'XP.", es: "Establece un presupuesto máximo de gasto mensual para empezar a ganar niveles y XP.") }
+    static var budgetExplanation: String { t(it: "Ogni euro risparmiato sotto il budget vale 10 punti esperienza. Ogni euro speso in più ne toglie 1.", en: "Every euro you save under budget is worth 10 XP. Every euro you overspend costs 1 XP.", de: "Jeder gesparte Euro unter dem Budget bringt 10 XP. Jeder Euro Mehrausgabe kostet 1 XP.", fr: "Chaque euro économisé sous le budget vaut 10 XP. Chaque euro dépensé en trop en coûte 1.", es: "Cada euro ahorrado por debajo del presupuesto vale 10 XP. Cada euro de más gastado cuesta 1 XP.") }
+    static func remainingBudget(_ amount: String) -> String {
+        t(it: "\(amount) ancora disponibili questo mese", en: "\(amount) left this month", de: "\(amount) diesen Monat noch verfügbar", fr: "\(amount) encore disponibles ce mois-ci", es: "\(amount) disponibles este mes")
+    }
+    static func overBudgetBy(_ amount: String) -> String {
+        t(it: "\(amount) oltre il budget", en: "\(amount) over budget", de: "\(amount) über dem Budget", fr: "\(amount) au-dessus du budget", es: "\(amount) por encima del presupuesto")
+    }
+    static func levelLabel(_ level: Int) -> String {
+        t(it: "Livello \(level)", en: "Level \(level)", de: "Level \(level)", fr: "Niveau \(level)", es: "Nivel \(level)")
+    }
+    static func xpTotal(_ xp: Int) -> String {
+        t(it: "\(xp) XP totali", en: "\(xp) total XP", de: "\(xp) XP insgesamt", fr: "\(xp) XP au total", es: "\(xp) XP totales")
+    }
+    static func xpEarnedThisMonth(_ xp: Int) -> String {
+        t(it: "+\(xp) XP questo mese", en: "+\(xp) XP this month", de: "+\(xp) XP diesen Monat", fr: "+\(xp) XP ce mois-ci", es: "+\(xp) XP este mes")
+    }
+    static func xpLostThisMonth(_ xp: Int) -> String {
+        t(it: "-\(xp) XP questo mese", en: "-\(xp) XP this month", de: "-\(xp) XP diesen Monat", fr: "-\(xp) XP ce mois-ci", es: "-\(xp) XP este mes")
+    }
+    static var levelUpTitle: String { t(it: "Livello raggiunto!", en: "Level up!", de: "Level aufgestiegen!", fr: "Niveau supérieur !", es: "¡Subiste de nivel!") }
+    static func levelUpBody(level: Int) -> String {
+        t(it: "Complimenti, hai raggiunto il livello \(level)!", en: "Congratulations, you reached level \(level)!", de: "Glückwunsch, du hast Level \(level) erreicht!", fr: "Félicitations, tu as atteint le niveau \(level) !", es: "¡Felicidades, alcanzaste el nivel \(level)!")
+    }
+    static var dailySpendingTrend: String { t(it: "Andamento giornaliero", en: "Daily trend", de: "Täglicher Verlauf", fr: "Tendance quotidienne", es: "Tendencia diaria") }
+    static func dayTransactions(_ day: Int) -> String {
+        t(it: "Spese del giorno \(day)", en: "Day \(day) transactions", de: "Transaktionen vom \(day).", fr: "Transactions du \(day)", es: "Transacciones del día \(day)")
+    }
+    static var noTransactionsThisDay: String { t(it: "Nessuna spesa in questo giorno.", en: "No transactions on this day.", de: "Keine Transaktionen an diesem Tag.", fr: "Aucune transaction ce jour-là.", es: "Sin transacciones este día.") }
+    static var noExpensesThisMonth: String { t(it: "Nessuna spesa questo mese", en: "No expenses this month", de: "Keine Ausgaben diesen Monat", fr: "Aucune dépense ce mois-ci", es: "Sin gastos este mes") }
+    static var advancedStatistics: String { t(it: "Statistiche avanzate", en: "Advanced statistics", de: "Erweiterte Statistiken", fr: "Statistiques avancées", es: "Estadísticas avanzadas") }
+    static var semester: String { t(it: "Semestre", en: "Semester", de: "Halbjahr", fr: "Semestre", es: "Semestre") }
+    static var firstHalf: String { t(it: "1° semestre", en: "1st half", de: "1. Halbjahr", fr: "1er semestre", es: "1er semestre") }
+    static var secondHalf: String { t(it: "2° semestre", en: "2nd half", de: "2. Halbjahr", fr: "2e semestre", es: "2º semestre") }
+    static var budgetLevelSection: String { t(it: "Budget & Livello", en: "Budget & Level", de: "Budget & Level", fr: "Budget et niveau", es: "Presupuesto y nivel") }
+    static var backTapSection: String { t(it: "Aggiunta rapida (Tocco successivo)", en: "Quick add (Back Tap)", de: "Schnell hinzufügen (Rücktipp)", fr: "Ajout rapide (Toucher arrière)", es: "Añadir rápido (Toque trasero)") }
+    static var backTapInstructions: String {
+        t(it: "Per aggiungere una transazione con un doppio tocco sul retro dell'iPhone, vai in Impostazioni → Accessibilità → Tocco → Tocco successivo → Doppio tocco, e scegli l'azione \"Aggiungi rapido\" di FinanzApp.",
+          en: "To add a transaction with a double tap on the back of your iPhone, go to Settings → Accessibility → Touch → Back Tap → Double Tap, and choose FinanzApp's \"Quick add\" action.",
+          de: "Um eine Transaktion durch doppeltes Tippen auf die Rückseite deines iPhones hinzuzufügen, gehe zu Einstellungen → Bedienungshilfen → Tippen → Rücktipp → Doppeltippen und wähle die Aktion „Schnell hinzufügen“ von FinanzApp.",
+          fr: "Pour ajouter une transaction en touchant deux fois l'arrière de ton iPhone, va dans Réglages → Accessibilité → Toucher → Toucher arrière → Double toucher, et choisis l'action « Ajout rapide » de FinanzApp.",
+          es: "Para añadir una transacción con un doble toque en la parte trasera de tu iPhone, ve a Ajustes → Accesibilidad → Tocar → Toque trasero → Doble toque, y elige la acción \"Añadir rápido\" de FinanzApp.")
+    }
+    static func quickAddConfirmation(amount: String, category: String) -> String {
+        t(it: "\(amount) · \(category) salvato in FinanzApp", en: "\(amount) · \(category) saved in FinanzApp", de: "\(amount) · \(category) in FinanzApp gespeichert", fr: "\(amount) · \(category) enregistré dans FinanzApp", es: "\(amount) · \(category) guardado en FinanzApp")
+    }
 }

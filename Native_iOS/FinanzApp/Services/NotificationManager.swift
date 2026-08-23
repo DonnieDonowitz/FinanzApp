@@ -50,4 +50,13 @@ enum NotificationManager {
         let request = UNNotificationRequest(identifier: "expense-alert-\(Date().timeIntervalSince1970)", content: content, trigger: nil)
         UNUserNotificationCenter.current().add(request)
     }
+
+    static func sendLevelUpAlert(level: Int) {
+        let content = UNMutableNotificationContent()
+        content.title = L.levelUpTitle
+        content.body = L.levelUpBody(level: level)
+        content.sound = .default
+        let request = UNNotificationRequest(identifier: "level-up-\(Date().timeIntervalSince1970)", content: content, trigger: nil)
+        UNUserNotificationCenter.current().add(request)
+    }
 }

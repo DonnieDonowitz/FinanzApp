@@ -25,7 +25,7 @@ targets:
       path: FinanzApp/Info.plist
       properties:
         CFBundleDisplayName: FinanzApp
-        CFBundleShortVersionString: 5.1.1
+        CFBundleShortVersionString: 6.0.0
         LSRequiresIPhoneOS: true
         UIFileSharingEnabled: true
         LSSupportsOpeningDocumentsInPlace: true
@@ -75,7 +75,7 @@ targets:
     info:
       path: FinanzAppWidget/Info.plist
       properties:
-        CFBundleShortVersionString: 5.1.1
+        CFBundleShortVersionString: 6.0.0
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
     settings:

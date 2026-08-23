@@ -35,6 +35,21 @@ struct WidgetData {
         return (income, expense, income - expense)
     }
 
+    static func monthlyBudget() -> Double {
+        guard let path = sharedDBPath else { return 0 }
+        var db: OpaquePointer?
+        guard sqlite3_open(path, &db) == SQLITE_OK else { return 0 }
+        defer { sqlite3_close(db) }
+
+        let sql = "SELECT value FROM app_settings WHERE key = 'monthly_budget'"
+        var stmt: OpaquePointer?
+        guard sqlite3_prepare_v2(db, sql, -1, &stmt, nil) == SQLITE_OK else { return 0 }
+        defer { sqlite3_finalize(stmt) }
+
+        guard sqlite3_step(stmt) == SQLITE_ROW, let cStr = sqlite3_column_text(stmt, 0) else { return 0 }
+        return Double(String(cString: cStr)) ?? 0
+    }
+
     static func transactionCount() -> Int {
         guard let path = sharedDBPath else { return 0 }
         var db: OpaquePointer?

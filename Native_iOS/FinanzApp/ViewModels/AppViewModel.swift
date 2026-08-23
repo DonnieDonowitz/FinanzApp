@@ -24,10 +24,16 @@ enum BackupFrequency: String, CaseIterable {
 
 final class AppViewModel: ObservableObject {
     @Published var categories: [Category] = [] { didSet { recomputeMonthlyCache() } }
-    @Published var transactions: [Transaction] = [] { didSet { recomputeMonthlyCache() } }
+    @Published var transactions: [Transaction] = [] { didSet { recomputeMonthlyCache(); recomputeGamificationCache() } }
     @Published var recurringTransactions: [RecurringTransaction] = []
     @Published var isLoading = true
     @Published var pendingQuickAddType: String?
+    @Published var monthlyBudget: Double = Double(DatabaseManager.shared.getSetting("monthly_budget") ?? "") ?? 0 {
+        didSet { recomputeGamificationCache() }
+    }
+    /// Set right after a level-up is detected so a view can show a celebration; the view
+    /// should clear it back to `nil` once shown.
+    @Published var justLeveledUpTo: Int?
     @Published var isDarkMode: Bool = UserDefaults.standard.string(forKey: "themeMode") != "light"
     @Published var languageCode: String = AppSettingsStore.languageCode
     @Published var currencyCode: String = AppSettingsStore.currencyCode
@@ -188,6 +194,73 @@ final class AppViewModel: ObservableObject {
         expenseRatio = income > 0 ? expense / income : 0
     }
 
+    // MARK: - Budget & Gamification
+
+    private(set) var totalXP: Double = 0
+    private(set) var levelInfo: Gamification.LevelInfo = Gamification.levelInfo(forXP: 0)
+
+    var currentLevel: Int { levelInfo.level }
+    var levelProgress: Double { levelInfo.progress }
+    var isBudgetConfigured: Bool { monthlyBudget > 0 }
+    var monthBudgetRemaining: Double { monthlyBudget - monthExpense }
+    var isOverBudget: Bool { isBudgetConfigured && monthExpense > monthlyBudget }
+
+    private func recomputeGamificationCache() {
+        totalXP = Gamification.totalXP(transactions: transactions, budget: monthlyBudget)
+        levelInfo = Gamification.levelInfo(forXP: totalXP)
+        checkLevelUp()
+    }
+
+    /// Compares against the last level recorded in `UserDefaults`. The very first time this
+    /// runs (no baseline yet) it just records the current level silently — otherwise a fresh
+    /// install with existing transaction history would immediately fire a "level up!"
+    /// celebration for progress the user already had before opening the app.
+    private func checkLevelUp() {
+        let key = "lastKnownLevel"
+        let newLevel = levelInfo.level
+        guard UserDefaults.standard.object(forKey: key) != nil else {
+            UserDefaults.standard.set(newLevel, forKey: key)
+            return
+        }
+        let lastKnown = UserDefaults.standard.integer(forKey: key)
+        guard newLevel != lastKnown else { return }
+        UserDefaults.standard.set(newLevel, forKey: key)
+        if newLevel > lastKnown {
+            justLeveledUpTo = newLevel
+            NotificationManager.sendLevelUpAlert(level: newLevel)
+        }
+    }
+
+    func setMonthlyBudget(_ value: Double) {
+        monthlyBudget = value
+        db.setSetting("monthly_budget", String(value))
+        WidgetCenter.shared.reloadAllTimelines()
+    }
+
+    /// One bar entry per day of `month`, including days with 0 spent, for the dashboard's
+    /// daily bar chart.
+    func dailyExpenses(for month: String) -> [(day: Int, amount: Double)] {
+        var totals: [Int: Double] = [:]
+        for tx in transactionsForMonth(month) where tx.type == "expense" {
+            guard tx.date.count == 10, let day = Int(tx.date.suffix(2)) else { continue }
+            totals[day, default: 0] += tx.amount
+        }
+        let count = daysInMonth(month)
+        return (1...count).map { day in (day: day, amount: totals[day] ?? 0) }
+    }
+
+    func transactionsForDay(_ date: String) -> [Transaction] {
+        transactions.filter { $0.date == date }
+    }
+
+    private func daysInMonth(_ month: String) -> Int {
+        let f = DateFormatter()
+        f.dateFormat = "yyyy-MM"
+        f.locale = Locale(identifier: "en_US_POSIX")
+        guard let date = f.date(from: month) else { return 30 }
+        return Calendar.current.range(of: .day, in: .month, for: date)?.count ?? 30
+    }
+
     func categoryById(_ id: Int64?) -> Category? {
         guard let id else { return nil }
         return categories.first { $0.id == id }
@@ -320,6 +393,7 @@ final class AppViewModel: ObservableObject {
     func restoreBackup(_ content: String) -> Bool {
         guard db.restoreFromBackup(content) else { return false }
         setDarkMode(db.getSetting("theme") != "light")
+        monthlyBudget = Double(db.getSetting("monthly_budget") ?? "") ?? 0
         refresh()
         return true
     }

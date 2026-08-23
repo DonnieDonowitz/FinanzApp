@@ -362,7 +362,8 @@ final class DatabaseManager {
         let txs = getAllTransactions()
         let recs = getAllRecurring()
         let theme = getSetting("theme") ?? "light"
-        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "5.1.1"
+        let monthlyBudget = getSetting("monthly_budget")
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "6.0.0"
 
         func esc(_ s: String) -> String { "'" + s.replacingOccurrences(of: "'", with: "''") + "'" }
         func escOpt(_ s: String?) -> String { s.map(esc) ?? "NULL" }
@@ -400,6 +401,9 @@ final class DatabaseManager {
 
         lines.append("--- Settings ---")
         lines.append("INSERT INTO app_settings (key, value) VALUES ('theme', \(esc(theme)));")
+        if let monthlyBudget {
+            lines.append("INSERT INTO app_settings (key, value) VALUES ('monthly_budget', \(esc(monthlyBudget)));")
+        }
         lines.append("")
 
         let deleteStmts = "DELETE FROM transactions;\nDELETE FROM recurring_transactions;\nDELETE FROM categories;\nDELETE FROM app_settings;\n\n"
@@ -471,6 +475,11 @@ final class DatabaseManager {
         }
 
         setSetting("theme", theme)
+        if let monthlyBudget = dict["monthly_budget"] as? String {
+            setSetting("monthly_budget", monthlyBudget)
+        } else if let monthlyBudget = dict["monthly_budget"] as? Double {
+            setSetting("monthly_budget", String(monthlyBudget))
+        }
         return true
     }
 

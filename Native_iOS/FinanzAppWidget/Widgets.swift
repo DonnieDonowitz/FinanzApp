@@ -47,15 +47,15 @@ struct StatsWidget: Widget {
                     WidgetBackground()
                 }
         }
-        .configurationDisplayName("Statistiche")
-        .description("Saldo, entrate, uscite e categoria principale del mese")
-        .supportedFamilies([.systemMedium])
+        .configurationDisplayName("Budget mensile")
+        .description("Quanto hai speso questo mese e quanto ti resta rispetto al budget")
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 
 struct StatsProvider: TimelineProvider {
     func placeholder(in context: Context) -> StatsEntry {
-        StatsEntry(date: Date(), income: 2500, expense: 1800, balance: 700, txCount: 24, topCat: ("Alimentari", "#E53935", "🛒", 450))
+        StatsEntry(date: Date(), income: 2500, expense: 1200, budget: 1800, txCount: 24, topCat: ("Alimentari", "#E53935", "🛒", 450))
     }
 
     func getSnapshot(in context: Context, completion: @escaping (StatsEntry) -> Void) {
@@ -64,10 +64,11 @@ struct StatsProvider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<StatsEntry>) -> Void) {
         let totals = WidgetData.currentMonthTotals()
+        let budget = WidgetData.monthlyBudget()
         let txCount = WidgetData.transactionCount()
         let topCat = WidgetData.topExpenseCategories().first
 
-        let entry = StatsEntry(date: Date(), income: totals.income, expense: totals.expense, balance: totals.balance, txCount: txCount, topCat: topCat)
+        let entry = StatsEntry(date: Date(), income: totals.income, expense: totals.expense, budget: budget, txCount: txCount, topCat: topCat)
 
         let nextUpdate = Calendar.current.date(byAdding: .minute, value: 15, to: Date())!
         let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
@@ -79,29 +80,74 @@ struct StatsEntry: TimelineEntry {
     let date: Date
     let income: Double
     let expense: Double
-    let balance: Double
+    let budget: Double
     let txCount: Int
     let topCat: (name: String, color: String, icon: String, amount: Double)?
+
+    var remaining: Double { budget - expense }
+    var isOverBudget: Bool { budget > 0 && expense > budget }
+    var progress: Double { budget > 0 ? min(expense / budget, 1) : 0 }
 }
 
 struct StatsWidgetView: View {
     let entry: StatsEntry
+    @Environment(\.widgetFamily) private var family
     private var t: WidgetTint { .current(sharedIsDarkMode ? .dark : .light) }
+
+    private var statusColor: Color { entry.isOverBudget ? t.expense : t.income }
 
     private var monthName: String {
         widgetMonths[Calendar.current.component(.month, from: entry.date) - 1]
     }
 
-    private var incomeShare: CGFloat {
-        let total = entry.income + entry.expense
-        guard total > 0 else { return 0.5 }
-        return CGFloat(entry.income / total)
+    private var progressBar: some View {
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                RoundedRectangle(cornerRadius: 3, style: .continuous)
+                    .fill(t.track)
+                    .frame(height: 6)
+                RoundedRectangle(cornerRadius: 3, style: .continuous)
+                    .fill(statusColor)
+                    .frame(width: geo.size.width * entry.progress, height: 6)
+            }
+        }
+        .frame(height: 6)
     }
 
     var body: some View {
+        switch family {
+        case .systemSmall: smallBody
+        default: mediumBody
+        }
+    }
+
+    /// Small family: "solo l'andamento del mese" — just the headline number and progress bar.
+    private var smallBody: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Budget mensile")
+                .font(.system(size: 10, weight: .semibold))
+                .foregroundStyle(t.textSecondary)
+                .lineLimit(1)
+
+            Text(widgetCurrency(abs(entry.remaining)))
+                .font(.system(size: 20, weight: .bold, design: .monospaced))
+                .foregroundStyle(entry.budget > 0 ? statusColor : t.textTertiary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+
+            Text(entry.budget == 0 ? "nessun budget" : (entry.isOverBudget ? "sforati" : "rimanenti"))
+                .font(.system(size: 10, weight: .semibold))
+                .foregroundStyle(t.textTertiary)
+
+            progressBar
+        }
+        .padding(14)
+    }
+
+    private var mediumBody: some View {
         VStack(alignment: .leading, spacing: 7) {
             HStack {
-                Text("Saldo · \(monthName)")
+                Text("Budget · \(monthName)")
                     .font(.system(size: 11, weight: .semibold))
                     .foregroundStyle(t.textSecondary)
                 Spacer()
@@ -110,38 +156,31 @@ struct StatsWidgetView: View {
                     .foregroundStyle(t.textTertiary)
             }
 
-            Text(widgetCurrency(entry.balance))
-                .font(.system(size: 26, weight: .bold, design: .monospaced))
-                .foregroundStyle(entry.balance >= 0 ? t.income : t.expense)
+            Text(widgetCurrency(abs(entry.remaining)))
+                .font(.system(size: 24, weight: .bold, design: .monospaced))
+                .foregroundStyle(entry.budget > 0 ? statusColor : t.textTertiary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
+            Text(entry.budget == 0 ? "nessun budget impostato" : (entry.isOverBudget ? "sforati questo mese" : "ancora disponibili questo mese"))
+                .font(.system(size: 10.5, weight: .semibold))
+                .foregroundStyle(t.textTertiary)
 
-            GeometryReader { geo in
-                HStack(spacing: 3) {
-                    RoundedRectangle(cornerRadius: 3, style: .continuous)
-                        .fill(t.income)
-                        .frame(width: max(6, geo.size.width * incomeShare))
-                    RoundedRectangle(cornerRadius: 3, style: .continuous)
-                        .fill(t.expense)
-                }
-                .frame(height: 6)
-            }
-            .frame(height: 6)
+            progressBar
 
             HStack(alignment: .top) {
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("Entrate").font(.system(size: 9, weight: .semibold)).foregroundStyle(t.textTertiary)
-                    Text(widgetCurrency(entry.income))
+                    Text("Speso").font(.system(size: 9, weight: .semibold)).foregroundStyle(t.textTertiary)
+                    Text(widgetCurrency(entry.expense))
                         .font(.system(size: 12.5, weight: .bold, design: .monospaced))
-                        .foregroundStyle(t.income)
+                        .foregroundStyle(t.text)
                         .lineLimit(1).minimumScaleFactor(0.7)
                 }
                 Spacer(minLength: 8)
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("Uscite").font(.system(size: 9, weight: .semibold)).foregroundStyle(t.textTertiary)
-                    Text(widgetCurrency(entry.expense))
+                    Text("Budget").font(.system(size: 9, weight: .semibold)).foregroundStyle(t.textTertiary)
+                    Text(entry.budget > 0 ? widgetCurrency(entry.budget) : "—")
                         .font(.system(size: 12.5, weight: .bold, design: .monospaced))
-                        .foregroundStyle(t.expense)
+                        .foregroundStyle(t.text)
                         .lineLimit(1).minimumScaleFactor(0.7)
                 }
                 Spacer(minLength: 8)

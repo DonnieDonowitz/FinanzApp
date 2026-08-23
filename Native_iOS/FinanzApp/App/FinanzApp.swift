@@ -45,6 +45,10 @@ struct ContentView: View {
             } else {
                 MainTabView(selectedTab: $selectedTab).environmentObject(vm)
             }
+
+            if let level = vm.justLeveledUpTo {
+                LevelUpOverlay(level: level) { vm.justLeveledUpTo = nil }
+            }
         }
         .onReceive(NotificationCenter.default.publisher(for: .openQuickAddExpense)) { _ in
             selectedTab = 0

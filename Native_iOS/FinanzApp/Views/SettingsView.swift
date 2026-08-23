@@ -10,6 +10,7 @@ struct SettingsView: View {
 
     @State private var showCategoryManager = false
     @State private var showStatistics = false
+    @State private var showBudgetEdit = false
 
     @State private var showBackupImporter = false
     @State private var showBackupExport = false
@@ -28,6 +29,7 @@ struct SettingsView: View {
         ScrollView {
             VStack(spacing: 12) {
                 header
+                budgetSection
                 appearanceSection
                 regionSection
                 reminderSection
@@ -45,6 +47,9 @@ struct SettingsView: View {
         }
         .sheet(isPresented: $showStatistics) {
             StatisticsView().environmentObject(vm)
+        }
+        .sheet(isPresented: $showBudgetEdit) {
+            BudgetEditSheet().environmentObject(vm)
         }
         .fileExporter(isPresented: $showBackupExport, document: backupDocument, contentType: .finanzBackup, defaultFilename: "FinanzApp-backup") { result in
             if case .failure = result {
@@ -132,6 +137,63 @@ struct SettingsView: View {
         .padding(.horizontal, 24)
         .padding(.top, 14)
         .padding(.bottom, 4)
+    }
+
+    private var budgetSection: some View {
+        VStack(spacing: 8) {
+            SectionLabel(L.budgetLevelSection)
+            GlassView(radius: 28) {
+                VStack(spacing: 0) {
+                    HStack(spacing: 14) {
+                        ZStack {
+                            Circle().fill(AppColors.primary.opacity(0.18)).frame(width: 40, height: 40)
+                            Text("\(vm.currentLevel)")
+                                .font(.system(size: 15, weight: .bold, design: .rounded))
+                                .foregroundStyle(AppColors.primary)
+                        }
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text(L.levelLabel(vm.currentLevel))
+                                .font(.system(size: 14, weight: .bold))
+                                .foregroundStyle(AppColors.text)
+                            Text(L.xpTotal(Int(vm.totalXP)))
+                                .font(.system(size: 11.5, weight: .semibold, design: .monospaced))
+                                .foregroundStyle(AppColors.textTertiary)
+                        }
+                        Spacer()
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 14)
+
+                    Divider().background(AppColors.divider).padding(.leading, 52)
+
+                    SettingsRow(icon: "target", label: L.monthlyBudget) {
+                        showBudgetEdit = true
+                    }
+                }
+                .padding(.vertical, 4)
+            }
+            .padding(.horizontal, 18)
+
+            SectionLabel(L.backTapSection)
+            GlassView(radius: 28) {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(L.backTapInstructions)
+                        .font(.system(size: 12.5, weight: .medium))
+                        .foregroundStyle(AppColors.textSecondary)
+                    Button {
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            UIApplication.shared.open(url)
+                        }
+                    } label: {
+                        Text(L.openSettings)
+                            .font(.system(size: 13, weight: .bold))
+                            .foregroundStyle(AppColors.primary)
+                    }
+                }
+                .padding(16)
+            }
+            .padding(.horizontal, 18)
+        }
     }
 
     private var appearanceSection: some View {
@@ -543,7 +605,7 @@ struct SettingsView: View {
             SectionLabel(L.info)
             GlassView(radius: 28) {
                 VStack(spacing: 12) {
-                    InfoRow(label: L.version, value: "5.1.1")
+                    InfoRow(label: L.version, value: "6.0.0")
                     Divider().background(AppColors.divider)
                     AppLogo()
                         .padding(.vertical, 8)

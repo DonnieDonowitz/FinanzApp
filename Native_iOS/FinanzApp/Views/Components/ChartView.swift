@@ -1,104 +1,147 @@
 import SwiftUI
 
-struct ChartView: View {
-    var body: some View {
-        Text("ChartView placeholder - use PieChart or BarChart directly")
-            .font(.caption).foregroundStyle(AppColors.textTertiary)
-    }
+// MARK: - Gap Donut Chart
+
+/// One slice of a `GapDonutChart`. `id` should be stable per category (or a sentinel like -1
+/// for "uncategorized") so selection survives re-renders.
+struct GapDonutSlice: Identifiable {
+    let id: Int64
+    let label: String
+    let value: Double
+    let color: Color
 }
 
-// MARK: - Donut Pie Chart
+/// An empty-centered ring chart with a small angular gap and rounded caps between slices.
+/// Tap or drag a finger across a slice to select it (drag lets the user "sweep" across
+/// segments instead of only tapping one at a time); the selection drives a highlight (a
+/// brighter, thicker stroke) and is meant to be read by the caller to show a drill-down list.
+struct GapDonutChart: View {
+    let data: [GapDonutSlice]
+    var diameter: CGFloat = 190
+    var lineWidth: CGFloat = 26
+    var gapFraction: Double = 0.014
+    @Binding var selectedId: Int64?
+    var interactive: Bool = true
 
-struct DonutChart: View {
-    let data: [(label: String, value: Double, color: Color)]
-    let centerText: String
-    let centerSubtext: String
-
-    @State private var animated = false
-    @State private var selectedIndex: Int? = nil
-
-    private var total: Double { data.map(\.value).reduce(0, +) }
+    private var total: Double { max(data.map(\.value).reduce(0, +), 0) }
 
     var body: some View {
+        Group {
+            // The drag gesture is only attached when `interactive`, so a non-interactive
+            // preview donut (e.g. inside a month list row's own `Button`) never competes with
+            // an ancestor view's own tap handling.
+            if interactive {
+                ring.gesture(DragGesture(minimumDistance: 0).onChanged { value in handleTouch(value.location) })
+            } else {
+                ring
+            }
+        }
+        .frame(width: diameter, height: diameter)
+        .contentShape(Circle())
+    }
+
+    private var ring: some View {
         ZStack {
             if total > 0 {
-                ForEach(Array(data.enumerated()), id: \.offset) { idx, item in
-                    PieSlice(
-                        startAngle: angle(for: idx),
-                        endAngle: angle(for: idx + 1),
-                        isSelected: selectedIndex == idx
-                    )
-                    .fill(item.color)
-                    .scaleEffect(selectedIndex == idx ? 1.03 : 1.0)
-                    .onTapGesture {
-                        withAnimation(.spring(response: 0.35, dampingFraction: 0.7)) {
-                            selectedIndex = selectedIndex == idx ? nil : idx
-                        }
-                    }
+                ForEach(Array(data.enumerated()), id: \.element.id) { idx, item in
+                    let (start, end) = range(for: idx)
+                    let isSelected = selectedId == item.id
+                    Circle()
+                        .trim(from: start, to: end)
+                        .stroke(
+                            item.color.opacity(selectedId == nil || isSelected ? 1 : 0.32),
+                            style: StrokeStyle(lineWidth: isSelected ? lineWidth + 5 : lineWidth, lineCap: .round)
+                        )
+                        .rotationEffect(.degrees(-90))
                 }
-                .opacity(animated ? 1 : 0)
-                .scaleEffect(animated ? 1 : 0.8)
-
-                Circle()
-                    .fill(.ultraThinMaterial)
-                    .frame(width: 90, height: 90)
-                    .overlay(
-                        VStack(spacing: 2) {
-                            Text(centerText)
-                                .font(.system(size: 14, weight: .bold, design: .monospaced))
-                                .foregroundStyle(AppColors.text)
-                            Text(centerSubtext)
-                                .font(.system(size: 9, weight: .semibold))
-                                .foregroundStyle(AppColors.textTertiary)
-                        }
-                    )
+                .animation(.spring(response: 0.35, dampingFraction: 0.75), value: selectedId)
             } else {
-                Text("Nessun dato")
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(AppColors.textTertiary)
-            }
-        }
-        .frame(height: 190)
-        .onAppear {
-            withAnimation(.easeOut(duration: 0.6).delay(0.1)) {
-                animated = true
+                Circle()
+                    .stroke(AppColors.textTertiary.opacity(0.15), style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
             }
         }
     }
 
-    private func angle(for index: Int) -> Angle {
-        if total == 0 { return .zero }
-        let sum = data.prefix(index).map(\.value).reduce(0, +)
-        return .degrees(sum / total * 360 - 90)
+    private func range(for index: Int) -> (Double, Double) {
+        guard total > 0 else { return (0, 0) }
+        let before = data.prefix(index).map(\.value).reduce(0, +)
+        let rawStart = before / total
+        let rawEnd = (before + data[index].value) / total
+        let gap = gapFraction / 2
+        let start = rawStart + gap
+        let end = max(start, rawEnd - gap)
+        return (start, end)
+    }
+
+    private func hitSlice(at unitPoint: Double) -> GapDonutSlice? {
+        for (idx, item) in data.enumerated() {
+            let (start, end) = range(for: idx)
+            if unitPoint >= start - gapFraction && unitPoint <= end + gapFraction { return item }
+        }
+        return nil
+    }
+
+    private func handleTouch(_ point: CGPoint) {
+        guard interactive, total > 0 else { return }
+        let center = CGPoint(x: diameter / 2, y: diameter / 2)
+        let dx = point.x - center.x
+        let dy = point.y - center.y
+        let radius = sqrt(dx * dx + dy * dy)
+        guard radius > diameter / 2 - lineWidth * 1.6, radius < diameter / 2 + lineWidth * 0.6 else { return }
+        var degrees = atan2(dy, dx) * 180 / .pi + 90
+        if degrees < 0 { degrees += 360 }
+        if let hit = hitSlice(at: degrees / 360), hit.id != selectedId {
+            selectedId = hit.id
+        }
     }
 }
 
-struct PieSlice: Shape {
-    let startAngle: Angle
-    let endAngle: Angle
-    let isSelected: Bool
+// MARK: - Daily Bar Chart
 
-    func path(in rect: CGRect) -> Path {
-        let center = CGPoint(x: rect.midX, y: rect.midY)
-        let radius = min(rect.width, rect.height) / 2
-        let inset = isSelected ? -4.0 : 0.0
+/// One bar per day of a month on the dashboard. Tapping a bar highlights it (brighter fill)
+/// and toggles `selectedDay`, which the caller uses to reveal that day's transactions below.
+struct DailyBarChart: View {
+    let entries: [(day: Int, amount: Double)]
+    @Binding var selectedDay: Int?
+    var height: CGFloat = 120
 
-        var path = Path()
-        path.move(to: center)
-        path.addArc(center: center, radius: radius + CGFloat(inset), startAngle: startAngle, endAngle: endAngle, clockwise: false)
-        path.closeSubpath()
-        return path
+    private var maxValue: Double { max(entries.map(\.amount).max() ?? 1, 1) }
+    private var barSpacing: CGFloat { entries.count > 20 ? 2 : 4 }
+
+    var body: some View {
+        HStack(alignment: .bottom, spacing: barSpacing) {
+            ForEach(entries, id: \.day) { entry in
+                let isSelected = selectedDay == entry.day
+                RoundedRectangle(cornerRadius: 3, style: .continuous)
+                    .fill(barFill(isSelected: isSelected))
+                    .frame(height: max(3, CGFloat(entry.amount / maxValue) * height))
+                    .frame(maxWidth: .infinity)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+                            selectedDay = isSelected ? nil : entry.day
+                        }
+                    }
+            }
+        }
+        .frame(height: height, alignment: .bottom)
+    }
+
+    private func barFill(isSelected: Bool) -> LinearGradient {
+        isSelected
+            ? LinearGradient(colors: [Color(hex: "#FF9B9B"), Color(hex: "#FF3B3B")], startPoint: .top, endPoint: .bottom)
+            : LinearGradient(colors: [Color(hex: "#FF9B9B").opacity(0.55), Color(hex: "#FF5C5C").opacity(0.55)], startPoint: .top, endPoint: .bottom)
     }
 }
 
 // MARK: - Legend
 
 struct ChartLegend: View {
-    let data: [(label: String, value: Double, color: Color)]
+    let data: [GapDonutSlice]
 
     var body: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 8) {
-            ForEach(Array(data.enumerated()), id: \.offset) { _, item in
+            ForEach(data) { item in
                 HStack(spacing: 6) {
                     Circle()
                         .fill(item.color)
@@ -111,83 +154,5 @@ struct ChartLegend: View {
                 }
             }
         }
-    }
-}
-
-// MARK: - Stacked Bar Chart
-
-struct BarChartView: View {
-    let bars: [BarData]
-    let incomeLabel: String
-    let expenseLabel: String
-
-    @State private var hoveredBar: Int? = nil
-
-    struct BarData: Identifiable {
-        let id = UUID()
-        let label: String
-        let income: Double
-        let expense: Double
-        let month: String
-    }
-
-    var body: some View {
-        VStack(spacing: 8) {
-            HStack(alignment: .bottom, spacing: 6) {
-                ForEach(Array(bars.enumerated()), id: \.element.id) { idx, bar in
-                    VStack(spacing: 4) {
-                        ZStack(alignment: .bottom) {
-                            RoundedRectangle(cornerRadius: 4, style: .continuous)
-                                .fill(AppColors.textTertiary.opacity(0.15))
-                                .frame(height: 96)
-
-                            VStack(spacing: 2) {
-                                if bar.income > 0 {
-                                    RoundedRectangle(cornerRadius: 3, style: .continuous)
-                                        .fill(LinearGradient(colors: [Color(hex: "#5CFFCB"), Color(hex: "#17C899")], startPoint: .top, endPoint: .bottom))
-                                        .frame(height: max(8, barHeight(bar.income)))
-                                }
-                                if bar.expense > 0 {
-                                    RoundedRectangle(cornerRadius: 3, style: .continuous)
-                                        .fill(LinearGradient(colors: [Color(hex: "#FF9B9B"), Color(hex: "#FF5C5C")], startPoint: .top, endPoint: .bottom))
-                                        .frame(height: max(8, barHeight(bar.expense)))
-                                }
-                            }
-                            .frame(height: 96, alignment: .bottom)
-                        }
-                        .onTapGesture {
-                            withAnimation { hoveredBar = hoveredBar == idx ? nil : idx }
-                        }
-
-                        Text(bar.label)
-                            .font(.system(size: 9, weight: .bold))
-                            .foregroundStyle(hoveredBar == idx ? AppColors.text : AppColors.textTertiary)
-                            .lineLimit(1)
-                    }
-                    .frame(maxWidth: .infinity)
-                }
-            }
-
-            HStack(spacing: 16) {
-                HStack(spacing: 6) {
-                    RoundedRectangle(cornerRadius: 3, style: .continuous)
-                        .fill(Color(hex: "#1FD8A4")).frame(width: 9, height: 9)
-                    Text(incomeLabel).font(.system(size: 11, weight: .semibold)).foregroundStyle(AppColors.textSecondary)
-                }
-                HStack(spacing: 6) {
-                    RoundedRectangle(cornerRadius: 3, style: .continuous)
-                        .fill(Color(hex: "#FF6B6B")).frame(width: 9, height: 9)
-                    Text(expenseLabel).font(.system(size: 11, weight: .semibold)).foregroundStyle(AppColors.textSecondary)
-                }
-            }
-        }
-    }
-
-    private var maxValue: Double {
-        max(bars.map { max($0.income, $0.expense) }.max() ?? 1, 1)
-    }
-
-    private func barHeight(_ value: Double) -> CGFloat {
-        CGFloat(value / maxValue) * 84
     }
 }
