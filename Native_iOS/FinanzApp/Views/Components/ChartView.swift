@@ -25,6 +25,19 @@ struct GapDonutChart: View {
 
     private var total: Double { max(data.map(\.value).reduce(0, +), 0) }
 
+    /// A round `lineCap` bulges outward by `lineWidth / 2` past each trim endpoint, so a gap
+    /// smaller than roughly one `lineWidth` of arc length lets adjacent slices' caps visually
+    /// overlap even though their trimmed ranges don't. `gapFraction` alone (a fixed fraction of
+    /// the whole ring) can't guarantee that once `lineWidth` is a sizeable chunk of the ring's
+    /// circumference — as with the small month-preview donuts — so the actual gap used is
+    /// whichever is larger.
+    private var effectiveGapFraction: Double {
+        let circumference = Double.pi * diameter
+        guard circumference > 0 else { return gapFraction }
+        let minGapFraction = (Double(lineWidth) * 1.15) / circumference
+        return max(gapFraction, minGapFraction)
+    }
+
     var body: some View {
         Group {
             // The drag gesture is only attached when `interactive`, so a non-interactive
@@ -67,7 +80,7 @@ struct GapDonutChart: View {
         let before = data.prefix(index).map(\.value).reduce(0, +)
         let rawStart = before / total
         let rawEnd = (before + data[index].value) / total
-        let gap = gapFraction / 2
+        let gap = effectiveGapFraction / 2
         let start = rawStart + gap
         let end = max(start, rawEnd - gap)
         return (start, end)
@@ -76,7 +89,7 @@ struct GapDonutChart: View {
     private func hitSlice(at unitPoint: Double) -> GapDonutSlice? {
         for (idx, item) in data.enumerated() {
             let (start, end) = range(for: idx)
-            if unitPoint >= start - gapFraction && unitPoint <= end + gapFraction { return item }
+            if unitPoint >= start - effectiveGapFraction && unitPoint <= end + effectiveGapFraction { return item }
         }
         return nil
     }
