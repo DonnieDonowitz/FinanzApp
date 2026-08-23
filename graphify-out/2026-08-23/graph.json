@@ -1187,7 +1187,7 @@
       "file_type": "code",
       "norm_label": "chartlegend",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L152"
+      "source_location": "L159"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_dailybarchart",
@@ -1200,7 +1200,7 @@
       "file_type": "code",
       "norm_label": "dailybarchart",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L116"
+      "source_location": "L123"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
@@ -3194,7 +3194,7 @@
       "file_type": "code",
       "norm_label": ".barfill()",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L143"
+      "source_location": "L150"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_handletouch",
@@ -3206,7 +3206,7 @@
       "file_type": "code",
       "norm_label": ".handletouch()",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L97"
+      "source_location": "L104"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_hitslice",
@@ -3218,7 +3218,7 @@
       "file_type": "code",
       "norm_label": ".hitslice()",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L89"
+      "source_location": "L96"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_range",
@@ -3230,7 +3230,7 @@
       "file_type": "code",
       "norm_label": ".range()",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L78"
+      "source_location": "L79"
     },
     {
       "id": "native_ios_finanzapp_theme_localization_l_daytransactions",
@@ -9324,7 +9324,7 @@
       "file_type": "code",
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L155"
+      "source_location": "L162"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_dailybarchart_barspacing",
@@ -9335,7 +9335,7 @@
       "file_type": "code",
       "norm_label": ".barspacing",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L122"
+      "source_location": "L129"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_dailybarchart_body",
@@ -9346,7 +9346,7 @@
       "file_type": "code",
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L124"
+      "source_location": "L131"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_dailybarchart_maxvalue",
@@ -9357,7 +9357,7 @@
       "file_type": "code",
       "norm_label": ".maxvalue",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L121"
+      "source_location": "L128"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_body",
@@ -9368,7 +9368,7 @@
       "file_type": "code",
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L41"
+      "source_location": "L42"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_effectivegapfraction",
@@ -9379,7 +9379,7 @@
       "file_type": "code",
       "norm_label": ".effectivegapfraction",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L34"
+      "source_location": "L35"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_ring",
@@ -9390,7 +9390,7 @@
       "file_type": "code",
       "norm_label": ".ring",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L56"
+      "source_location": "L57"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_total",
@@ -13105,7 +13105,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L145",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -13117,7 +13117,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L129",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -13129,7 +13129,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L130",
+      "source_location": "L137",
       "weight": 1.0
     },
     {
@@ -13141,19 +13141,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L47",
-      "weight": 1.0
-    },
-    {
-      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart_handletouch",
-      "target": "native_ios_finanzapp_views_components_chartview_gapdonutchart_hitslice",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L106",
+      "source_location": "L48",
       "weight": 1.0
     },
     {
@@ -13165,7 +13153,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L99",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart_handletouch",
+      "target": "native_ios_finanzapp_views_components_chartview_gapdonutchart_hitslice",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -14509,7 +14509,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L73",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -15733,7 +15733,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L153",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -15745,7 +15745,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L118",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -15757,7 +15757,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L121",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -15769,7 +15769,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L122",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -15829,7 +15829,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -18985,7 +18985,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L143",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
@@ -18997,7 +18997,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L89",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -19009,7 +19009,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L78",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -20929,7 +20929,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L89",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -20941,7 +20941,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L78",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -21856,7 +21856,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L116",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -21867,7 +21867,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L152",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -22824,7 +22824,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L152",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -22835,7 +22835,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L116",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -27279,7 +27279,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L155",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -27290,7 +27290,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L121",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -27301,7 +27301,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L122",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -27312,7 +27312,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L124",
+      "source_location": "L131",
       "weight": 1.0
     },
     {
@@ -27323,7 +27323,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L143",
+      "source_location": "L150",
+      "weight": 1.0
+    },
+    {
+      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
+      "target": "native_ios_finanzapp_views_components_chartview_gapdonutchart_handletouch",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -27345,7 +27356,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -27356,7 +27367,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -27367,7 +27378,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L56",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -27378,7 +27389,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L78",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -27389,18 +27400,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L89",
-      "weight": 1.0
-    },
-    {
-      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
-      "target": "native_ios_finanzapp_views_components_chartview_gapdonutchart_handletouch",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L97",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -29677,7 +29677,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L80",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -29689,7 +29689,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L59",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -31108,5 +31108,5 @@
       "source_file": "Native_iOS/project.yml"
     }
   ],
-  "built_at_commit": "5e85c42b6e6e6a3fbb8cabeee16731edd1e6692f"
+  "built_at_commit": "fdd3d6647b3173a2cad525f9becc2e13f76935f2"
 }

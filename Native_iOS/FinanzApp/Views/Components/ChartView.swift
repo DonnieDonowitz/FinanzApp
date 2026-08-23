@@ -27,16 +27,73 @@ struct GapDonutChart: View {
 
     /// A round `lineCap` bulges outward by `lineWidth / 2` past each trim endpoint, so a gap
     /// smaller than roughly one `lineWidth` of arc length lets adjacent slices' caps visually
-    /// touch or overlap even though their trimmed ranges don't. `gapFraction` alone (a fixed
-    /// fraction of the whole ring) can't guarantee that once `lineWidth` is a sizeable chunk of
-    /// the ring's circumference — as with the small month-preview donuts — so the actual gap
-    /// used is whichever is larger. The 2x factor goes past the bare minimum that just clears
-    /// the caps, leaving a clearly visible breathing-room gap rather than a hairline one.
-    private var effectiveGapFraction: Double {
+    /// touch or overlap even though their trimmed ranges don't.
+    private var capClearance: Double {
         let circumference = Double.pi * diameter
         guard circumference > 0 else { return gapFraction }
-        let minGapFraction = (Double(lineWidth) * 2) / circumference
-        return max(gapFraction, minGapFraction)
+        return (Double(lineWidth) * 2) / circumference
+    }
+
+    /// (start, end) unit-circle ranges for every slice, laid out so gaps read as a deliberate,
+    /// uniform rhythm instead of shrinking or vanishing depending on how the data happens to
+    /// split:
+    /// - `gapPerSlice` is the same fixed width between every adjacent pair (wide enough to
+    ///   clear the round cap's bulge, see `capClearance`), never squeezed down for a small slice
+    ///   the way a per-slice-proportional gap would be;
+    /// - every non-zero slice keeps at least `minSliceWidth` of visible arc — tiny categories
+    ///   read as a short, clearly visible pill rather than disappearing — with the remaining
+    ///   ring space then distributed to the other slices in proportion to their value.
+    private var layout: [(start: Double, end: Double)] {
+        guard total > 0, !data.isEmpty else { return [] }
+        let n = data.count
+        var gapPerSlice = max(gapFraction, capClearance)
+        var minSliceWidth = gapPerSlice * 1.5
+
+        // A generous fixed gap/minimum can outgrow the ring once there are many categories;
+        // shrink both together so slices always keep at least a quarter of the ring for widths
+        // that actually vary with value.
+        let reserved = Double(n) * (gapPerSlice + minSliceWidth)
+        if reserved > 0.75 {
+            let scale = 0.75 / reserved
+            gapPerSlice *= scale
+            minSliceWidth *= scale
+        }
+
+        let available = max(0, 1 - Double(n) * gapPerSlice)
+        var widths = [Double](repeating: 0, count: n)
+        var pinned = Set<Int>()
+        var remainingValue = data.reduce(0) { $0 + $1.value }
+        var remainingAvailable = available
+
+        var changed = true
+        while changed {
+            changed = false
+            for i in 0..<n where !pinned.contains(i) {
+                let share = remainingValue > 0 ? (data[i].value / remainingValue) * remainingAvailable : 0
+                if share < minSliceWidth {
+                    widths[i] = min(minSliceWidth, remainingAvailable)
+                    remainingAvailable -= widths[i]
+                    remainingValue -= data[i].value
+                    pinned.insert(i)
+                    changed = true
+                    break
+                }
+            }
+        }
+        for i in 0..<n where !pinned.contains(i) {
+            widths[i] = remainingValue > 0 ? (data[i].value / remainingValue) * remainingAvailable : 0
+        }
+
+        var ranges: [(start: Double, end: Double)] = []
+        ranges.reserveCapacity(n)
+        var position = 0.0
+        for i in 0..<n {
+            let start = position + gapPerSlice / 2
+            let end = start + widths[i]
+            ranges.append((start, end))
+            position = end + gapPerSlice / 2
+        }
+        return ranges
     }
 
     var body: some View {
@@ -77,26 +134,16 @@ struct GapDonutChart: View {
     }
 
     private func range(for index: Int) -> (Double, Double) {
-        guard total > 0 else { return (0, 0) }
-        let before = data.prefix(index).map(\.value).reduce(0, +)
-        let rawStart = before / total
-        let rawEnd = (before + data[index].value) / total
-        // A gap sized to clear the round cap's bulge (see `effectiveGapFraction`) can be wider
-        // than a small slice itself, which would zero it out — invisible rather than merely
-        // touching its neighbor. Capping the gap to a fraction of the slice's own width keeps
-        // every non-zero slice visible, even if very thin slices stay a little closer together
-        // than the ideal gap.
-        let sliceWidth = rawEnd - rawStart
-        let gap = min(effectiveGapFraction / 2, sliceWidth * 0.4)
-        let start = rawStart + gap
-        let end = max(start, rawEnd - gap)
-        return (start, end)
+        guard index >= 0, index < layout.count else { return (0, 0) }
+        return layout[index]
     }
 
     private func hitSlice(at unitPoint: Double) -> GapDonutSlice? {
+        let ranges = layout
         for (idx, item) in data.enumerated() {
-            let (start, end) = range(for: idx)
-            if unitPoint >= start - effectiveGapFraction && unitPoint <= end + effectiveGapFraction { return item }
+            guard idx < ranges.count else { continue }
+            let (start, end) = ranges[idx]
+            if unitPoint >= start - capClearance && unitPoint <= end + capClearance { return item }
         }
         return nil
     }
