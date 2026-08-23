@@ -1,8 +1,8 @@
 {
   "Native_iOS/FinanzApp/App/FinanzApp.swift": {
-    "mtime": 1787493923.8497207,
-    "seen": 1787497896.424793,
-    "ast_hash": "54dc12410b5db855742f04f51ba49507",
+    "mtime": 1787500479.4354973,
+    "seen": 1787500623.6563032,
+    "ast_hash": "43cef0695bd267d898acf5c93ea009e5",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/Contents.json": {
@@ -126,10 +126,10 @@
     "semantic_hash": "8f11663ccc545f9aca7f7c6b78b02b18"
   },
   "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift": {
-    "mtime": 1787350889.4764748,
-    "seen": 1787493634.513706,
-    "ast_hash": "4b261cf0cd3d23990251a1c48185fbcc",
-    "semantic_hash": "4b261cf0cd3d23990251a1c48185fbcc"
+    "mtime": 1787500422.0373387,
+    "seen": 1787500623.656669,
+    "ast_hash": "9d699e1c42b167bcd2f5df03e8d496e6",
+    "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Views/Components/TransactionRow.swift": {
     "mtime": 1787350889.476537,

@@ -46,17 +46,17 @@
       "source_location": "L7"
     },
     {
-      "id": "native_ios_finanzapp_app_finanzapp_tabitem",
-      "label": "TabItem",
+      "id": "native_ios_finanzapp_app_finanzapp_appdelegate",
+      "label": "AppDelegate",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "TabItem",
+      "community_name": "AppDelegate",
       "file_type": "code",
-      "norm_label": "tabitem",
+      "norm_label": "appdelegate",
       "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
-      "source_location": "L165"
+      "source_location": "L4"
     },
     {
       "id": "native_ios_finanzapp_views_components_glassview_view",
@@ -109,6 +109,19 @@
       "norm_label": "categoryrow",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
       "source_location": "L914"
+    },
+    {
+      "id": "native_ios_finanzapp_views_settingsview_formfield",
+      "label": "FormField",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "View",
+      "file_type": "code",
+      "norm_label": "formfield",
+      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
+      "source_location": "L953"
     },
     {
       "id": "native_ios_finanzapp_views_settingsview_inforow",
@@ -189,6 +202,19 @@
       "source_location": "L3"
     },
     {
+      "id": "native_ios_finanzapp_services_notificationmanager_notification_name",
+      "label": "Notification.Name",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Gamification",
+      "file_type": "code",
+      "norm_label": "notification.name",
+      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
+      "source_location": "L4"
+    },
+    {
       "id": "native_ios_finanzapp_theme_theme_backgroundgradient",
       "label": "BackgroundGradient",
       "_callable": true,
@@ -213,32 +239,6 @@
       "norm_label": "categoryiconview",
       "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
       "source_location": "L313"
-    },
-    {
-      "id": "native_ios_finanzapp_views_addrecurringview_addrecurringview",
-      "label": "AddRecurringView",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "CategoryIconView",
-      "file_type": "code",
-      "norm_label": "addrecurringview",
-      "source_file": "Native_iOS/FinanzApp/Views/AddRecurringView.swift",
-      "source_location": "L3"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_categorypicker_categorypicker",
-      "label": "CategoryPicker",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "CategoryIconView",
-      "file_type": "code",
-      "norm_label": "categorypicker",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/CategoryPicker.swift",
-      "source_location": "L3"
     },
     {
       "id": "native_ios_finanzapp_theme_theme_apptinting",
@@ -304,6 +304,19 @@
       "norm_label": "lighttints",
       "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
       "source_location": "L79"
+    },
+    {
+      "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager",
+      "label": "NotificationManager",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "SettingsView",
+      "file_type": "code",
+      "norm_label": "notificationmanager",
+      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
+      "source_location": "L8"
     },
     {
       "id": "native_ios_finanzapp_views_settingsview_importerkind",
@@ -449,43 +462,56 @@
       "source_location": "L7"
     },
     {
-      "id": "native_ios_finanzapp_views_addtransactionview_addtransactionview",
-      "label": "AddTransactionView",
+      "id": "native_ios_finanzapp_views_recurringview_brandtoggle",
+      "label": "BrandToggle",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "AddTransactionView",
+      "community_name": "RecurringRow",
       "file_type": "code",
-      "norm_label": "addtransactionview",
-      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
-      "source_location": "L3"
+      "norm_label": "brandtoggle",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L188"
     },
     {
-      "id": "native_ios_finanzapp_views_addtransactionview_typechip",
-      "label": "TypeChip",
+      "id": "native_ios_finanzapp_views_recurringview_recurringrow",
+      "label": "RecurringRow",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 21,
-      "community_name": "AddTransactionView",
+      "community_name": "RecurringRow",
       "file_type": "code",
-      "norm_label": "typechip",
-      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
-      "source_location": "L191"
+      "norm_label": "recurringrow",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L131"
     },
     {
-      "id": "native_ios_finanzapp_views_settingsview_formfield",
-      "label": "FormField",
+      "id": "native_ios_finanzapp_views_recurringview_summarydivider",
+      "label": "SummaryDivider",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 22,
-      "community_name": "String",
+      "community": 21,
+      "community_name": "RecurringRow",
       "file_type": "code",
-      "norm_label": "formfield",
-      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
-      "source_location": "L953"
+      "norm_label": "summarydivider",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L123"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_summarystat",
+      "label": "SummaryStat",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "RecurringRow",
+      "file_type": "code",
+      "norm_label": "summarystat",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L101"
     },
     {
       "id": "native_ios_finanzapp_views_settingsview_textfiledocument",
@@ -494,7 +520,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": "textfiledocument",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
@@ -507,7 +533,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": "uttype",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
@@ -592,82 +618,30 @@
       "source_location": "L50"
     },
     {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow",
-      "label": "SwipeToDeleteRow",
+      "id": "native_ios_finanzapp_views_addtransactionview_addtransactionview",
+      "label": "AddTransactionView",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
-      "norm_label": "swipetodeleterow",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
-      "source_location": "L8"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_brandtoggle",
-      "label": "BrandToggle",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "brandtoggle",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L188"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringrow",
-      "label": "RecurringRow",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "recurringrow",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L131"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringview",
-      "label": "RecurringView",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "recurringview",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "norm_label": "addtransactionview",
+      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
       "source_location": "L3"
     },
     {
-      "id": "native_ios_finanzapp_views_recurringview_summarydivider",
-      "label": "SummaryDivider",
+      "id": "native_ios_finanzapp_views_addtransactionview_typechip",
+      "label": "TypeChip",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
-      "norm_label": "summarydivider",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L123"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_summarystat",
-      "label": "SummaryStat",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "summarystat",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L101"
+      "norm_label": "typechip",
+      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
+      "source_location": "L191"
     },
     {
       "id": "native_ios_finanzapp_views_transactionsview_fab",
@@ -676,7 +650,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "fab",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
@@ -689,7 +663,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "filterchip",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
@@ -702,7 +676,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "transactionsview",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
@@ -720,45 +694,6 @@
       "norm_label": "statsentry",
       "source_file": "Native_iOS/FinanzAppWidget/Widgets.swift",
       "source_location": "L79"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_balancecard",
-      "label": "BalanceCard",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": "balancecard",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
-      "source_location": "L3"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_flowchip",
-      "label": "FlowChip",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": "flowchip",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
-      "source_location": "L61"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_quickaddbar_quickaddbar",
-      "label": "QuickAddBar",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": "quickaddbar",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/QuickAddBar.swift",
-      "source_location": "L3"
     },
     {
       "id": "native_ios_finanzapp_views_homeview_homeview",
@@ -826,6 +761,19 @@
       "source_location": "L6"
     },
     {
+      "id": "native_ios_finanzapp_views_components_categorypicker_categorypicker",
+      "label": "CategoryPicker",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "SwiftUI",
+      "file_type": "code",
+      "norm_label": "categorypicker",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/CategoryPicker.swift",
+      "source_location": "L3"
+    },
+    {
       "id": "native_ios_finanzapp_views_components_transactionrow_transactionrow",
       "label": "TransactionRow",
       "_callable": true,
@@ -878,17 +826,43 @@
       "source_location": "L28"
     },
     {
-      "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager",
-      "label": "NotificationManager",
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow",
+      "label": "SwipeToDeleteRow",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "NotificationManager",
+      "community_name": "SwipeToDeleteRow",
       "file_type": "code",
-      "norm_label": "notificationmanager",
-      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
+      "norm_label": "swipetodeleterow",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
       "source_location": "L8"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard_balancecard",
+      "label": "BalanceCard",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": "balancecard",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
+      "source_location": "L3"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard_flowchip",
+      "label": "FlowChip",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": "flowchip",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
+      "source_location": "L61"
     },
     {
       "id": "native_ios_shared_shareddata_color",
@@ -910,7 +884,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 39,
-      "community_name": ".dismiss",
+      "community_name": "LevelUpOverlay",
       "file_type": "code",
       "norm_label": "levelupoverlay",
       "source_file": "Native_iOS/FinanzApp/Views/Components/LevelUpOverlay.swift",
@@ -928,6 +902,45 @@
       "norm_label": "appcolors",
       "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
       "source_location": "L114"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_recurringview",
+      "label": "RecurringView",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "RecurringView",
+      "file_type": "code",
+      "norm_label": "recurringview",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L3"
+    },
+    {
+      "id": "native_ios_finanzapp_views_addrecurringview_addrecurringview",
+      "label": "AddRecurringView",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "AddRecurringView",
+      "file_type": "code",
+      "norm_label": "addrecurringview",
+      "source_file": "Native_iOS/FinanzApp/Views/AddRecurringView.swift",
+      "source_location": "L3"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_quickaddbar_quickaddbar",
+      "label": "QuickAddBar",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "QuickAddBar",
+      "file_type": "code",
+      "norm_label": "quickaddbar",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/QuickAddBar.swift",
+      "source_location": "L3"
     },
     {
       "id": "native_ios_finanzapp_app_finanzapp_contentview",
@@ -956,17 +969,17 @@
       "source_location": "L22"
     },
     {
-      "id": "native_ios_finanzapp_services_notificationmanager_notification_name",
-      "label": "Notification.Name",
+      "id": "native_ios_finanzapp_app_finanzapp_tabitem",
+      "label": "TabItem",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 45,
       "community_name": "FinanzApp.swift",
       "file_type": "code",
-      "norm_label": "notification.name",
-      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
-      "source_location": "L4"
+      "norm_label": "tabitem",
+      "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
+      "source_location": "L165"
     },
     {
       "id": "native_ios_finanzapp_intents_quickaddtransactionintent_categoryentity",
@@ -1112,19 +1125,6 @@
       "source_location": "L3"
     },
     {
-      "id": "native_ios_finanzapp_app_finanzapp_appdelegate",
-      "label": "AppDelegate",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "AppDelegate",
-      "file_type": "code",
-      "norm_label": "appdelegate",
-      "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
-      "source_location": "L4"
-    },
-    {
       "id": "native_ios_finanzappwidget_widgets_quickactionsentry",
       "label": "QuickActionsEntry",
       "_callable": true,
@@ -1187,7 +1187,7 @@
       "file_type": "code",
       "norm_label": "chartlegend",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L206"
+      "source_location": "L224"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_dailybarchart",
@@ -1200,7 +1200,7 @@
       "file_type": "code",
       "norm_label": "dailybarchart",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L170"
+      "source_location": "L188"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
@@ -1330,11 +1330,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "TabItem",
+      "community_name": "AppDelegate",
       "file_type": "code",
       "norm_label": ".application()",
       "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
       "source_location": "L5"
+    },
+    {
+      "id": "native_ios_finanzapp_views_settingsview_formfield_init",
+      "label": ".init()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "View",
+      "file_type": "code",
+      "norm_label": ".init()",
+      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
+      "source_location": "L956"
+    },
+    {
+      "id": "native_ios_finanzapp_views_settingsview_sectionlabel_init",
+      "label": ".init()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "View",
+      "file_type": "code",
+      "norm_label": ".init()",
+      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
+      "source_location": "L946"
     },
     {
       "id": "native_ios_finanzapp_models_gamification_gamification_cumulativexp",
@@ -1469,18 +1493,6 @@
       "source_location": "L237"
     },
     {
-      "id": "native_ios_finanzapp_theme_theme_categoryicon",
-      "label": "categoryIcon()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "CategoryIconView",
-      "file_type": "code",
-      "norm_label": "categoryicon()",
-      "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
-      "source_location": "L269"
-    },
-    {
       "id": "native_ios_finanzapp_theme_theme_resolvedicon",
       "label": "resolvedIcon()",
       "_callable": true,
@@ -1503,6 +1515,18 @@
       "norm_label": ".updatetransaction()",
       "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
       "source_location": "L316"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_levelupoverlay_levelupoverlay_dismiss",
+      "label": ".dismiss()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "CategoryIconView",
+      "file_type": "code",
+      "norm_label": ".dismiss()",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/LevelUpOverlay.swift",
+      "source_location": "L53"
     },
     {
       "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager_sendexpensealert",
@@ -1601,6 +1625,18 @@
       "source_location": "L218"
     },
     {
+      "id": "native_ios_finanzapp_theme_theme_categoryicon",
+      "label": "categoryIcon()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Theme.swift",
+      "file_type": "code",
+      "norm_label": "categoryicon()",
+      "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
+      "source_location": "L269"
+    },
+    {
       "id": "native_ios_finanzapp_theme_theme_color_init",
       "label": ".init()",
       "_callable": true,
@@ -1623,6 +1659,18 @@
       "norm_label": "formatdate()",
       "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
       "source_location": "L218"
+    },
+    {
+      "id": "native_ios_finanzapp_theme_theme_formatdateshort",
+      "label": "formatDateShort()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "Theme.swift",
+      "file_type": "code",
+      "norm_label": "formatdateshort()",
+      "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
+      "source_location": "L212"
     },
     {
       "id": "native_ios_finanzapp_theme_theme_frequencylabel",
@@ -1649,18 +1697,6 @@
       "source_location": "L208"
     },
     {
-      "id": "native_ios_finanzapp_theme_theme_getcurrentmonth",
-      "label": "getCurrentMonth()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "Theme.swift",
-      "file_type": "code",
-      "norm_label": "getcurrentmonth()",
-      "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
-      "source_location": "L204"
-    },
-    {
       "id": "native_ios_finanzapp_theme_theme_issfsymbolname",
       "label": "isSFSymbolName()",
       "_callable": true,
@@ -1671,6 +1707,42 @@
       "norm_label": "issfsymbolname()",
       "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
       "source_location": "L308"
+    },
+    {
+      "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager_cancelreminder",
+      "label": ".cancelReminder()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "SettingsView",
+      "file_type": "code",
+      "norm_label": ".cancelreminder()",
+      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
+      "source_location": "L41"
+    },
+    {
+      "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager_currentauthorizationstatus",
+      "label": ".currentAuthorizationStatus()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "SettingsView",
+      "file_type": "code",
+      "norm_label": ".currentauthorizationstatus()",
+      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
+      "source_location": "L17"
+    },
+    {
+      "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager_requestauthorization",
+      "label": ".requestAuthorization()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "SettingsView",
+      "file_type": "code",
+      "norm_label": ".requestauthorization()",
+      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
+      "source_location": "L11"
     },
     {
       "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager_scheduledailyreminder",
@@ -1745,18 +1817,6 @@
       "source_location": "L340"
     },
     {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_addcategory",
-      "label": ".addCategory()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "AppViewModel",
-      "file_type": "code",
-      "norm_label": ".addcategory()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L329"
-    },
-    {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_categorybyid",
       "label": ".categoryById()",
       "_callable": true,
@@ -1769,16 +1829,28 @@
       "source_location": "L264"
     },
     {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_deletecategory",
-      "label": ".deleteCategory()",
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_cleanupoldautobackups",
+      "label": ".cleanupOldAutoBackups()",
       "_callable": true,
       "_origin": "ast",
       "community": 17,
       "community_name": "AppViewModel",
       "file_type": "code",
-      "norm_label": ".deletecategory()",
+      "norm_label": ".cleanupoldautobackups()",
       "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L335"
+      "source_location": "L501"
+    },
+    {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_createbackup",
+      "label": ".createBackup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "AppViewModel",
+      "file_type": "code",
+      "norm_label": ".createbackup()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L389"
     },
     {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_isthresholdenabled",
@@ -1793,6 +1865,18 @@
       "source_location": "L84"
     },
     {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_performautobackupifneeded",
+      "label": ".performAutoBackupIfNeeded()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "AppViewModel",
+      "file_type": "code",
+      "norm_label": ".performautobackupifneeded()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L468"
+    },
+    {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_recomputemonthlycache",
       "label": ".recomputeMonthlyCache()",
       "_callable": true,
@@ -1805,16 +1889,16 @@
       "source_location": "L164"
     },
     {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_refresh",
-      "label": ".refresh()",
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_resolvedautobackupfolder",
+      "label": ".resolvedAutoBackupFolder()",
       "_callable": true,
       "_origin": "ast",
       "community": 17,
       "community_name": "AppViewModel",
       "file_type": "code",
-      "norm_label": ".refresh()",
+      "norm_label": ".resolvedautobackupfolder()",
       "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L137"
+      "source_location": "L444"
     },
     {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_restorebackup",
@@ -1841,6 +1925,18 @@
       "source_location": "L408"
     },
     {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_setautobackupfolder",
+      "label": ".setAutoBackupFolder()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "AppViewModel",
+      "file_type": "code",
+      "norm_label": ".setautobackupfolder()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L428"
+    },
+    {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_setdarkmode",
       "label": ".setDarkMode()",
       "_callable": true,
@@ -1865,28 +1961,16 @@
       "source_location": "L69"
     },
     {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_updatecategory",
-      "label": ".updateCategory()",
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_writeautobackup",
+      "label": ".writeAutoBackup()",
       "_callable": true,
       "_origin": "ast",
       "community": 17,
       "community_name": "AppViewModel",
       "file_type": "code",
-      "norm_label": ".updatecategory()",
+      "norm_label": ".writeautobackup()",
       "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L340"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_updaterecurring",
-      "label": ".updateRecurring()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "AppViewModel",
-      "file_type": "code",
-      "norm_label": ".updaterecurring()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L355"
+      "source_location": "L495"
     },
     {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_addcustomthreshold",
@@ -2417,6 +2501,30 @@
       "source_location": "L288"
     },
     {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_init",
+      "label": ".init()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "DatabaseManager",
+      "file_type": "code",
+      "norm_label": ".init()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L126"
+    },
+    {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_load",
+      "label": ".load()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "DatabaseManager",
+      "file_type": "code",
+      "norm_label": ".load()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L128"
+    },
+    {
       "id": "native_ios_finanzapp_views_settingsview_categoryformsheet_init",
       "label": ".init()",
       "_callable": true,
@@ -2441,60 +2549,12 @@
       "source_location": "L26"
     },
     {
-      "id": "native_ios_finanzapp_views_addtransactionview_addtransactionview_init",
-      "label": ".init()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "AddTransactionView",
-      "file_type": "code",
-      "norm_label": ".init()",
-      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
-      "source_location": "L18"
-    },
-    {
-      "id": "native_ios_finanzapp_views_addtransactionview_typechip_init",
-      "label": ".init()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "AddTransactionView",
-      "file_type": "code",
-      "norm_label": ".init()",
-      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
-      "source_location": "L193"
-    },
-    {
-      "id": "native_ios_finanzapp_views_settingsview_formfield_init",
-      "label": ".init()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "String",
-      "file_type": "code",
-      "norm_label": ".init()",
-      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
-      "source_location": "L956"
-    },
-    {
-      "id": "native_ios_finanzapp_views_settingsview_sectionlabel_init",
-      "label": ".init()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "String",
-      "file_type": "code",
-      "norm_label": ".init()",
-      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
-      "source_location": "L946"
-    },
-    {
       "id": "native_ios_finanzapp_views_settingsview_textfiledocument_filewrapper",
       "label": ".fileWrapper()",
       "_callable": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": ".filewrapper()",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
@@ -2506,7 +2566,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": ".init()",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
@@ -2573,40 +2633,40 @@
       "source_location": "L86"
     },
     {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_close",
-      "label": ".close()",
+      "id": "native_ios_finanzapp_theme_theme_getcurrentmonth",
+      "label": "getCurrentMonth()",
       "_callable": true,
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
-      "norm_label": ".close()",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
-      "source_location": "L98"
+      "norm_label": "getcurrentmonth()",
+      "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
+      "source_location": "L204"
     },
     {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_delete",
-      "label": ".delete()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".delete()",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
-      "source_location": "L104"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_init",
+      "id": "native_ios_finanzapp_views_addtransactionview_addtransactionview_init",
       "label": ".init()",
       "_callable": true,
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": ".init()",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
-      "source_location": "L16"
+      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
+      "source_location": "L18"
+    },
+    {
+      "id": "native_ios_finanzapp_views_addtransactionview_typechip_init",
+      "label": ".init()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "AddTransactionView",
+      "file_type": "code",
+      "norm_label": ".init()",
+      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
+      "source_location": "L193"
     },
     {
       "id": "native_ios_finanzapp_views_transactionsview_filterchip_init",
@@ -2614,7 +2674,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": ".init()",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
@@ -2626,7 +2686,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": ".monthlabel()",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
@@ -2643,30 +2703,6 @@
       "norm_label": ".daytransactions()",
       "source_file": "Native_iOS/FinanzApp/Theme/Localization.swift",
       "source_location": "L312"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_addrecurring",
-      "label": ".addRecurring()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": ".dailyChartCard",
-      "file_type": "code",
-      "norm_label": ".addrecurring()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L347"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_deleterecurring",
-      "label": ".deleteRecurring()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 28,
-      "community_name": ".dailyChartCard",
-      "file_type": "code",
-      "norm_label": ".deleterecurring()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L360"
     },
     {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_deletetransaction",
@@ -2777,136 +2813,40 @@
       "source_location": "L8"
     },
     {
-      "id": "native_ios_finanzapp_theme_theme_formatcurrency",
-      "label": "formatCurrency()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "TransactionRow",
-      "file_type": "code",
-      "norm_label": "formatcurrency()",
-      "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
-      "source_location": "L224"
-    },
-    {
-      "id": "native_ios_finanzapp_theme_theme_formatdateshort",
-      "label": "formatDateShort()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "TransactionRow",
-      "file_type": "code",
-      "norm_label": "formatdateshort()",
-      "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
-      "source_location": "L212"
-    },
-    {
-      "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager_cancelreminder",
-      "label": ".cancelReminder()",
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_close",
+      "label": ".close()",
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "NotificationManager",
+      "community_name": "SwipeToDeleteRow",
       "file_type": "code",
-      "norm_label": ".cancelreminder()",
-      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
-      "source_location": "L41"
+      "norm_label": ".close()",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
+      "source_location": "L98"
     },
     {
-      "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager_currentauthorizationstatus",
-      "label": ".currentAuthorizationStatus()",
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_delete",
+      "label": ".delete()",
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "NotificationManager",
+      "community_name": "SwipeToDeleteRow",
       "file_type": "code",
-      "norm_label": ".currentauthorizationstatus()",
-      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
-      "source_location": "L17"
+      "norm_label": ".delete()",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
+      "source_location": "L104"
     },
     {
-      "id": "native_ios_finanzapp_services_notificationmanager_notificationmanager_requestauthorization",
-      "label": ".requestAuthorization()",
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_init",
+      "label": ".init()",
       "_callable": true,
       "_origin": "ast",
       "community": 36,
-      "community_name": "NotificationManager",
+      "community_name": "SwipeToDeleteRow",
       "file_type": "code",
-      "norm_label": ".requestauthorization()",
-      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
-      "source_location": "L11"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_cleanupoldautobackups",
-      "label": ".cleanupOldAutoBackups()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": ".performAutoBackupIfNeeded",
-      "file_type": "code",
-      "norm_label": ".cleanupoldautobackups()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L501"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_createbackup",
-      "label": ".createBackup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": ".performAutoBackupIfNeeded",
-      "file_type": "code",
-      "norm_label": ".createbackup()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L389"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_performautobackupifneeded",
-      "label": ".performAutoBackupIfNeeded()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": ".performAutoBackupIfNeeded",
-      "file_type": "code",
-      "norm_label": ".performautobackupifneeded()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L468"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_resolvedautobackupfolder",
-      "label": ".resolvedAutoBackupFolder()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": ".performAutoBackupIfNeeded",
-      "file_type": "code",
-      "norm_label": ".resolvedautobackupfolder()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L444"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_setautobackupfolder",
-      "label": ".setAutoBackupFolder()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": ".performAutoBackupIfNeeded",
-      "file_type": "code",
-      "norm_label": ".setautobackupfolder()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L428"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_writeautobackup",
-      "label": ".writeAutoBackup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 37,
-      "community_name": ".performAutoBackupIfNeeded",
-      "file_type": "code",
-      "norm_label": ".writeautobackup()",
-      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L495"
+      "norm_label": ".init()",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
+      "source_location": "L16"
     },
     {
       "id": "native_ios_shared_shareddata_color_init",
@@ -2933,16 +2873,28 @@
       "source_location": "L142"
     },
     {
-      "id": "native_ios_finanzapp_views_components_levelupoverlay_levelupoverlay_dismiss",
-      "label": ".dismiss()",
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_addcategory",
+      "label": ".addCategory()",
       "_callable": true,
       "_origin": "ast",
-      "community": 39,
-      "community_name": ".dismiss",
+      "community": 40,
+      "community_name": ".refresh",
       "file_type": "code",
-      "norm_label": ".dismiss()",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/LevelUpOverlay.swift",
-      "source_location": "L53"
+      "norm_label": ".addcategory()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L329"
+    },
+    {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_addrecurring",
+      "label": ".addRecurring()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": ".refresh",
+      "file_type": "code",
+      "norm_label": ".addrecurring()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L347"
     },
     {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_addtransaction",
@@ -2950,7 +2902,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 40,
-      "community_name": ".processRecurringIfNeeded",
+      "community_name": ".refresh",
       "file_type": "code",
       "norm_label": ".addtransaction()",
       "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
@@ -2962,35 +2914,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 40,
-      "community_name": ".processRecurringIfNeeded",
+      "community_name": ".refresh",
       "file_type": "code",
       "norm_label": ".checkexpensealertthresholds()",
       "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
       "source_location": "L108"
     },
     {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_init",
-      "label": ".init()",
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_deletecategory",
+      "label": ".deleteCategory()",
       "_callable": true,
       "_origin": "ast",
       "community": 40,
-      "community_name": ".processRecurringIfNeeded",
+      "community_name": ".refresh",
       "file_type": "code",
-      "norm_label": ".init()",
+      "norm_label": ".deletecategory()",
       "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L126"
+      "source_location": "L335"
     },
     {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_load",
-      "label": ".load()",
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_deleterecurring",
+      "label": ".deleteRecurring()",
       "_callable": true,
       "_origin": "ast",
       "community": 40,
-      "community_name": ".processRecurringIfNeeded",
+      "community_name": ".refresh",
       "file_type": "code",
-      "norm_label": ".load()",
+      "norm_label": ".deleterecurring()",
       "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
-      "source_location": "L128"
+      "source_location": "L360"
     },
     {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_processrecurringifneeded",
@@ -2998,11 +2950,59 @@
       "_callable": true,
       "_origin": "ast",
       "community": 40,
-      "community_name": ".processRecurringIfNeeded",
+      "community_name": ".refresh",
       "file_type": "code",
       "norm_label": ".processrecurringifneeded()",
       "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
       "source_location": "L368"
+    },
+    {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_refresh",
+      "label": ".refresh()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": ".refresh",
+      "file_type": "code",
+      "norm_label": ".refresh()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L137"
+    },
+    {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_updatecategory",
+      "label": ".updateCategory()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 40,
+      "community_name": ".refresh",
+      "file_type": "code",
+      "norm_label": ".updatecategory()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L340"
+    },
+    {
+      "id": "native_ios_finanzapp_theme_theme_formatcurrency",
+      "label": "formatCurrency()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "formatCurrency",
+      "file_type": "code",
+      "norm_label": "formatcurrency()",
+      "source_file": "Native_iOS/FinanzApp/Theme/Theme.swift",
+      "source_location": "L224"
+    },
+    {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_updaterecurring",
+      "label": ".updateRecurring()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "formatCurrency",
+      "file_type": "code",
+      "norm_label": ".updaterecurring()",
+      "source_file": "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift",
+      "source_location": "L355"
     },
     {
       "id": "native_ios_finanzapp_database_databasemanager_databasemanager_getallcategories",
@@ -3166,7 +3166,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 76,
-      "community_name": "AppDelegate",
+      "community_name": ".userNotificationCenter",
       "file_type": "code",
       "norm_label": ".usernotificationcenter()",
       "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
@@ -3254,7 +3254,7 @@
       "file_type": "code",
       "norm_label": ".barfill()",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L197"
+      "source_location": "L215"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_handletouch",
@@ -3266,7 +3266,7 @@
       "file_type": "code",
       "norm_label": ".handletouch()",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L151"
+      "source_location": "L169"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_hitslice",
@@ -3278,7 +3278,7 @@
       "file_type": "code",
       "norm_label": ".hitslice()",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L141"
+      "source_location": "L159"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_range",
@@ -3290,7 +3290,7 @@
       "file_type": "code",
       "norm_label": ".range()",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L136"
+      "source_location": "L154"
     },
     {
       "id": "native_ios_finanzapp_theme_localization_l_xpearnedthismonth",
@@ -5115,22 +5115,11 @@
       "source_location": "L10"
     },
     {
-      "id": "namespace",
-      "label": "Namespace",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "TabItem",
-      "file_type": "code",
-      "norm_label": "namespace",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "native_ios_finanzapp_app_finanzapp_swift_any",
       "label": "Any",
       "_origin": "ast",
       "community": 10,
-      "community_name": "TabItem",
+      "community_name": "AppDelegate",
       "file_type": "code",
       "norm_label": "any",
       "source_file": "",
@@ -5141,42 +5130,53 @@
       "label": "Bool",
       "_origin": "ast",
       "community": 10,
-      "community_name": "TabItem",
+      "community_name": "AppDelegate",
       "file_type": "code",
       "norm_label": "bool",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_app_finanzapp_swift_string",
-      "label": "String",
+      "id": "nsobject",
+      "label": "NSObject",
       "_origin": "ast",
       "community": 10,
-      "community_name": "TabItem",
+      "community_name": "AppDelegate",
       "file_type": "code",
-      "norm_label": "string",
+      "norm_label": "nsobject",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_app_finanzapp_tabitem_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "TabItem",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
-      "source_location": "L172"
     },
     {
       "id": "uiapplication",
       "label": "UIApplication",
       "_origin": "ast",
       "community": 10,
-      "community_name": "TabItem",
+      "community_name": "AppDelegate",
       "file_type": "code",
       "norm_label": "uiapplication",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "uiapplicationdelegate",
+      "label": "UIApplicationDelegate",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "AppDelegate",
+      "file_type": "code",
+      "norm_label": "uiapplicationdelegate",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "unusernotificationcenterdelegate",
+      "label": "UNUserNotificationCenterDelegate",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "AppDelegate",
+      "file_type": "code",
+      "norm_label": "unusernotificationcenterdelegate",
       "source_file": "",
       "source_location": ""
     },
@@ -5203,6 +5203,17 @@
       "source_location": "L714"
     },
     {
+      "id": "native_ios_finanzapp_views_settingsview_formfield_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "View",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
+      "source_location": "L959"
+    },
+    {
       "id": "native_ios_finanzapp_views_settingsview_inforow_body",
       "label": ".body",
       "_origin": "ast",
@@ -5223,17 +5234,6 @@
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
       "source_location": "L947"
-    },
-    {
-      "id": "native_ios_finanzapp_views_settingsview_settingsview_backupsection",
-      "label": ".backupSection",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "View",
-      "file_type": "code",
-      "norm_label": ".backupsection",
-      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
-      "source_location": "L509"
     },
     {
       "id": "native_ios_finanzapp_views_settingsview_settingsview_budgetsection",
@@ -5278,6 +5278,28 @@
       "norm_label": ".regionsection",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
       "source_location": "L234"
+    },
+    {
+      "id": "native_ios_finanzapp_views_settingsview_swift_content",
+      "label": "Content",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "View",
+      "file_type": "code",
+      "norm_label": "content",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_settingsview_swift_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 11,
+      "community_name": "View",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "native_ios_finanzapp_views_settingsview_swift_void",
@@ -5404,6 +5426,17 @@
       "source_location": ""
     },
     {
+      "id": "native_ios_finanzapp_services_notificationmanager",
+      "label": "NotificationManager.swift",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Gamification",
+      "file_type": "code",
+      "norm_label": "notificationmanager.swift",
+      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
+      "source_location": "L1"
+    },
+    {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_monthlybudget",
       "label": ".monthlyBudget",
       "_origin": "ast",
@@ -5415,6 +5448,18 @@
       "source_location": "L31"
     },
     {
+      "id": "usernotifications",
+      "label": "UserNotifications",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Gamification",
+      "file_type": "code",
+      "norm_label": "usernotifications",
+      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
+      "source_location": "L2",
+      "type": "module"
+    },
+    {
       "id": "font",
       "label": "Font",
       "_origin": "ast",
@@ -5424,6 +5469,17 @@
       "norm_label": "font",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_app_finanzapp_contentview_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "CategoryIconView",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
+      "source_location": "L40"
     },
     {
       "id": "native_ios_finanzapp_theme_theme_swift_cgfloat",
@@ -5448,28 +5504,6 @@
       "source_location": "L18"
     },
     {
-      "id": "native_ios_finanzapp_views_addrecurringview_addrecurringview_cansubmit",
-      "label": ".canSubmit",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "CategoryIconView",
-      "file_type": "code",
-      "norm_label": ".cansubmit",
-      "source_file": "Native_iOS/FinanzApp/Views/AddRecurringView.swift",
-      "source_location": "L182"
-    },
-    {
-      "id": "native_ios_finanzapp_views_addrecurringview_swift_bool",
-      "label": "Bool",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "CategoryIconView",
-      "file_type": "code",
-      "norm_label": "bool",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "native_ios_finanzapp_views_addtransactionview_addtransactionview_body",
       "label": ".body",
       "_origin": "ast",
@@ -5492,17 +5526,6 @@
       "source_location": "L17"
     },
     {
-      "id": "native_ios_finanzapp_views_components_categorypicker",
-      "label": "CategoryPicker.swift",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "CategoryIconView",
-      "file_type": "code",
-      "norm_label": "categorypicker.swift",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/CategoryPicker.swift",
-      "source_location": "L1"
-    },
-    {
       "id": "native_ios_finanzapp_views_components_categorypicker_categorypicker_body",
       "label": ".body",
       "_origin": "ast",
@@ -5514,28 +5537,6 @@
       "source_location": "L13"
     },
     {
-      "id": "native_ios_finanzapp_views_components_categorypicker_categorypicker_filteredcategories",
-      "label": ".filteredCategories",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "CategoryIconView",
-      "file_type": "code",
-      "norm_label": ".filteredcategories",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/CategoryPicker.swift",
-      "source_location": "L9"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_categorypicker_swift_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "CategoryIconView",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "native_ios_finanzapp_views_components_transactionrow_transactionrow_body",
       "label": ".body",
       "_origin": "ast",
@@ -5545,6 +5546,17 @@
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/Components/TransactionRow.swift",
       "source_location": "L7"
+    },
+    {
+      "id": "native_ios_finanzapp_views_homeview_homeview_topcategorieslist",
+      "label": ".topCategoriesList",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "CategoryIconView",
+      "file_type": "code",
+      "norm_label": ".topcategorieslist",
+      "source_file": "Native_iOS/FinanzApp/Views/HomeView.swift",
+      "source_location": "L284"
     },
     {
       "id": "native_ios_finanzapp_views_settingsview_categoryrow_body",
@@ -5642,6 +5654,28 @@
       "community_name": "Theme.swift",
       "file_type": "code",
       "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_services_notificationmanager_swift_bool",
+      "label": "Bool",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "SettingsView",
+      "file_type": "code",
+      "norm_label": "bool",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_services_notificationmanager_swift_void",
+      "label": "Void",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "SettingsView",
+      "file_type": "code",
+      "norm_label": "void",
       "source_file": "",
       "source_location": ""
     },
@@ -5778,6 +5812,17 @@
       "source_location": ""
     },
     {
+      "id": "unauthorizationstatus",
+      "label": "UNAuthorizationStatus",
+      "_origin": "ast",
+      "community": 16,
+      "community_name": "SettingsView",
+      "file_type": "code",
+      "norm_label": "unauthorizationstatus",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "native_ios_finanzapp_viewmodels_appviewmodel_appviewmodel_autobackupsdirectory",
       "label": ".autoBackupsDirectory",
       "_origin": "ast",
@@ -5888,17 +5933,6 @@
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_views_settingsview_categoryformsheet_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "AppViewModel",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
-      "source_location": "L794"
-    },
-    {
       "id": "observableobject",
       "label": "ObservableObject",
       "_origin": "ast",
@@ -5917,6 +5951,17 @@
       "community_name": "AppViewModel",
       "file_type": "code",
       "norm_label": "set",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "url",
+      "label": "URL",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "AppViewModel",
+      "file_type": "code",
+      "norm_label": "url",
       "source_file": "",
       "source_location": ""
     },
@@ -6317,77 +6362,132 @@
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_views_addtransactionview_addtransactionview_cansubmit",
-      "label": ".canSubmit",
+      "id": "native_ios_finanzapp_views_recurringview",
+      "label": "RecurringView.swift",
       "_origin": "ast",
       "community": 21,
-      "community_name": "AddTransactionView",
+      "community_name": "RecurringRow",
       "file_type": "code",
-      "norm_label": ".cansubmit",
-      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
-      "source_location": "L186"
+      "norm_label": "recurringview.swift",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L1"
     },
     {
-      "id": "native_ios_finanzapp_views_addtransactionview_swift_bool",
+      "id": "native_ios_finanzapp_views_recurringview_brandtoggle_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "RecurringRow",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L192"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_recurringrow_category",
+      "label": ".category",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "RecurringRow",
+      "file_type": "code",
+      "norm_label": ".category",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L135"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_recurringrow_categoryname",
+      "label": ".categoryName",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "RecurringRow",
+      "file_type": "code",
+      "norm_label": ".categoryname",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L139"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_recurringrow_color",
+      "label": ".color",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "RecurringRow",
+      "file_type": "code",
+      "norm_label": ".color",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L143"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_recurringview_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "RecurringRow",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L22"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_summarydivider_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "RecurringRow",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L124"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_summarystat_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "RecurringRow",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L105"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_swift_bool",
       "label": "Bool",
       "_origin": "ast",
       "community": 21,
-      "community_name": "AddTransactionView",
+      "community_name": "RecurringRow",
       "file_type": "code",
       "norm_label": "bool",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_views_addtransactionview_swift_color",
+      "id": "native_ios_finanzapp_views_recurringview_swift_color",
       "label": "Color",
       "_origin": "ast",
       "community": 21,
-      "community_name": "AddTransactionView",
+      "community_name": "RecurringRow",
       "file_type": "code",
       "norm_label": "color",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_views_addtransactionview_swift_string",
+      "id": "native_ios_finanzapp_views_recurringview_swift_string",
       "label": "String",
       "_origin": "ast",
       "community": 21,
-      "community_name": "AddTransactionView",
+      "community_name": "RecurringRow",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_views_addtransactionview_swift_void",
-      "label": "Void",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "AddTransactionView",
-      "file_type": "code",
-      "norm_label": "void",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_addtransactionview_typechip_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 21,
-      "community_name": "AddTransactionView",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
-      "source_location": "L196"
-    },
-    {
       "id": "filedocument",
       "label": "FileDocument",
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": "filedocument",
       "source_file": "",
@@ -6398,51 +6498,29 @@
       "label": "FileWrapper",
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": "filewrapper",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_views_settingsview_formfield_body",
-      "label": ".body",
+      "id": "native_ios_finanzapp_views_settingsview_settingsview_backupsection",
+      "label": ".backupSection",
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
-      "norm_label": ".body",
+      "norm_label": ".backupsection",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
-      "source_location": "L959"
-    },
-    {
-      "id": "native_ios_finanzapp_views_settingsview_swift_content",
-      "label": "Content",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "String",
-      "file_type": "code",
-      "norm_label": "content",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_settingsview_swift_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 22,
-      "community_name": "String",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
+      "source_location": "L509"
     },
     {
       "id": "native_ios_finanzapp_views_settingsview_textfiledocument_readablecontenttypes",
       "label": ".readableContentTypes",
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": ".readablecontenttypes",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
@@ -6453,7 +6531,7 @@
       "label": ".writableContentTypes",
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": ".writablecontenttypes",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
@@ -6464,7 +6542,7 @@
       "label": ".finanzBackup",
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": ".finanzbackup",
       "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
@@ -6475,7 +6553,7 @@
       "label": "ReadConfiguration",
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": "readconfiguration",
       "source_file": "",
@@ -6486,7 +6564,7 @@
       "label": "WriteConfiguration",
       "_origin": "ast",
       "community": 22,
-      "community_name": "String",
+      "community_name": "TextFileDocument",
       "file_type": "code",
       "norm_label": "writeconfiguration",
       "source_file": "",
@@ -6636,17 +6714,6 @@
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/Components/GlassView.swift",
       "source_location": "L21"
-    },
-    {
-      "id": "native_ios_finanzapp_views_transactionsview_fab_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 24,
-      "community_name": "MainTabView",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
-      "source_location": "L155"
     },
     {
       "id": "native_ios_finanzapp_views_components_glassview",
@@ -6836,330 +6903,121 @@
       "source_location": "L79"
     },
     {
-      "id": "native_ios_finanzapp_app_finanzapp_maintabview_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
-      "source_location": "L73"
-    },
-    {
       "id": "native_ios_finanzapp_theme_localization_l_monthsshort",
       "label": ".monthsShort",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": ".monthsshort",
       "source_file": "Native_iOS/FinanzApp/Theme/Localization.swift",
       "source_location": "L275"
     },
     {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow",
-      "label": "SwipeToDeleteRow.swift",
+      "id": "native_ios_finanzapp_views_addtransactionview",
+      "label": "AddTransactionView.swift",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
-      "norm_label": "swipetodeleterow.swift",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
+      "norm_label": "addtransactionview.swift",
+      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
       "source_location": "L1"
     },
     {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_bool",
+      "id": "native_ios_finanzapp_views_addtransactionview_addtransactionview_cansubmit",
+      "label": ".canSubmit",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "AddTransactionView",
+      "file_type": "code",
+      "norm_label": ".cansubmit",
+      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
+      "source_location": "L186"
+    },
+    {
+      "id": "native_ios_finanzapp_views_addtransactionview_swift_bool",
       "label": "Bool",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "bool",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_cgfloat",
-      "label": "CGFloat",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "cgfloat",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_content",
-      "label": "Content",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "content",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_void",
-      "label": "Void",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "void",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
-      "source_location": "L43"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_isarmed",
-      "label": ".isArmed",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".isarmed",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
-      "source_location": "L41"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_revealed",
-      "label": ".revealed",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".revealed",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
-      "source_location": "L40"
-    },
-    {
-      "id": "native_ios_finanzapp_views_homeview_homeview_recenttransactionslist",
-      "label": ".recentTransactionsList",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".recenttransactionslist",
-      "source_file": "Native_iOS/FinanzApp/Views/HomeView.swift",
-      "source_location": "L331"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview",
-      "label": "RecurringView.swift",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "recurringview.swift",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L1"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_brandtoggle_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L192"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringrow_category",
-      "label": ".category",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".category",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L135"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringrow_categoryname",
-      "label": ".categoryName",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".categoryname",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L139"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringrow_color",
-      "label": ".color",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".color",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L143"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringview_activerecurring",
-      "label": ".activeRecurring",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".activerecurring",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L7"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringview_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L22"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringview_monthlytotal",
-      "label": ".monthlyTotal",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".monthlytotal",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L11"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringview_nextduedays",
-      "label": ".nextDueDays",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".nextduedays",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L15"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_summarydivider_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L124"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_summarystat_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L105"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_swift_bool",
-      "label": "Bool",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "bool",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_swift_color",
+      "id": "native_ios_finanzapp_views_addtransactionview_swift_color",
       "label": "Color",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "color",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_views_recurringview_swift_double",
-      "label": "Double",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "double",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_swift_int",
-      "label": "Int",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "SwipeToDeleteRow",
-      "file_type": "code",
-      "norm_label": "int",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_swift_string",
+      "id": "native_ios_finanzapp_views_addtransactionview_swift_string",
       "label": "String",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
       "source_location": ""
     },
     {
+      "id": "native_ios_finanzapp_views_addtransactionview_swift_void",
+      "label": "Void",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "AddTransactionView",
+      "file_type": "code",
+      "norm_label": "void",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_addtransactionview_typechip_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "AddTransactionView",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
+      "source_location": "L196"
+    },
+    {
       "id": "native_ios_finanzapp_views_transactionsview",
       "label": "TransactionsView.swift",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "transactionsview.swift",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
       "source_location": "L1"
     },
     {
+      "id": "native_ios_finanzapp_views_transactionsview_fab_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "AddTransactionView",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
+      "source_location": "L155"
+    },
+    {
       "id": "native_ios_finanzapp_views_transactionsview_filterchip_body",
       "label": ".body",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
@@ -7170,7 +7028,7 @@
       "label": "Bool",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "bool",
       "source_file": "",
@@ -7181,7 +7039,7 @@
       "label": "Int",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "int",
       "source_file": "",
@@ -7192,7 +7050,7 @@
       "label": "String",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
@@ -7203,7 +7061,7 @@
       "label": "Void",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": "void",
       "source_file": "",
@@ -7214,7 +7072,7 @@
       "label": ".body",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
@@ -7225,7 +7083,7 @@
       "label": ".filtered",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": ".filtered",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
@@ -7236,7 +7094,7 @@
       "label": ".months",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": ".months",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
@@ -7247,22 +7105,11 @@
       "label": ".selectedMonthLabel",
       "_origin": "ast",
       "community": 27,
-      "community_name": "SwipeToDeleteRow",
+      "community_name": "AddTransactionView",
       "file_type": "code",
       "norm_label": ".selectedmonthlabel",
       "source_file": "Native_iOS/FinanzApp/Views/TransactionsView.swift",
       "source_location": "L23"
-    },
-    {
-      "id": "native_ios_finanzapp_viewmodels_appviewmodel_swift_int64",
-      "label": "Int64",
-      "_origin": "ast",
-      "community": 28,
-      "community_name": ".dailyChartCard",
-      "file_type": "code",
-      "norm_label": "int64",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "native_ios_finanzapp_views_homeview_homeview_dailychartcard",
@@ -7342,138 +7189,6 @@
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_views_components_balancecard",
-      "label": "BalanceCard.swift",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": "balancecard.swift",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
-      "source_location": "L1"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_balancecard_amountdec",
-      "label": ".amountDec",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": ".amountdec",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
-      "source_location": "L52"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_balancecard_amountint",
-      "label": ".amountInt",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": ".amountint",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
-      "source_location": "L42"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_balancecard_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
-      "source_location": "L9"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_flowchip_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
-      "source_location": "L77"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_flowchip_flowamount",
-      "label": ".flowAmount",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": ".flowamount",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
-      "source_location": "L66"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_swift_color",
-      "label": "Color",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": "color",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_swift_double",
-      "label": "Double",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": "double",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_balancecard_swift_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_quickaddbar",
-      "label": "QuickAddBar.swift",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": "quickaddbar.swift",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/QuickAddBar.swift",
-      "source_location": "L1"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_quickaddbar_quickaddbar_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/QuickAddBar.swift",
-      "source_location": "L7"
-    },
-    {
-      "id": "native_ios_finanzapp_views_components_quickaddbar_swift_void",
-      "label": "Void",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "HomeView",
-      "file_type": "code",
-      "norm_label": "void",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "native_ios_finanzapp_views_homeview",
       "label": "HomeView.swift",
       "_origin": "ast",
@@ -7505,6 +7220,17 @@
       "norm_label": ".header",
       "source_file": "Native_iOS/FinanzApp/Views/HomeView.swift",
       "source_location": "L77"
+    },
+    {
+      "id": "native_ios_finanzapp_views_homeview_homeview_recenttransactionslist",
+      "label": ".recentTransactionsList",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "HomeView",
+      "file_type": "code",
+      "norm_label": ".recenttransactionslist",
+      "source_file": "Native_iOS/FinanzApp/Views/HomeView.swift",
+      "source_location": "L331"
     },
     {
       "id": "native_ios_finanzapp_views_homeview_sectionheader_body",
@@ -7608,17 +7334,6 @@
       "source_location": "L1"
     },
     {
-      "id": "native_ios_finanzapp_views_components_sectioncard",
-      "label": "SectionCard.swift",
-      "_origin": "ast",
-      "community": 32,
-      "community_name": "SectionCard",
-      "file_type": "code",
-      "norm_label": "sectioncard.swift",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/SectionCard.swift",
-      "source_location": "L1"
-    },
-    {
       "id": "native_ios_finanzapp_views_components_sectioncard_sectioncard_body",
       "label": ".body",
       "_origin": "ast",
@@ -7650,28 +7365,6 @@
       "norm_label": "string",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "native_ios_finanzapp_views_addrecurringview",
-      "label": "AddRecurringView.swift",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "SwiftUI",
-      "file_type": "code",
-      "norm_label": "addrecurringview.swift",
-      "source_file": "Native_iOS/FinanzApp/Views/AddRecurringView.swift",
-      "source_location": "L1"
-    },
-    {
-      "id": "native_ios_finanzapp_views_addtransactionview",
-      "label": "AddTransactionView.swift",
-      "_origin": "ast",
-      "community": 33,
-      "community_name": "SwiftUI",
-      "file_type": "code",
-      "norm_label": "addtransactionview.swift",
-      "source_file": "Native_iOS/FinanzApp/Views/AddTransactionView.swift",
-      "source_location": "L1"
     },
     {
       "id": "native_ios_finanzapp_views_components_applogo",
@@ -7729,6 +7422,50 @@
       "source_location": ""
     },
     {
+      "id": "native_ios_finanzapp_views_components_categorypicker",
+      "label": "CategoryPicker.swift",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "SwiftUI",
+      "file_type": "code",
+      "norm_label": "categorypicker.swift",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/CategoryPicker.swift",
+      "source_location": "L1"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_categorypicker_categorypicker_filteredcategories",
+      "label": ".filteredCategories",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "SwiftUI",
+      "file_type": "code",
+      "norm_label": ".filteredcategories",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/CategoryPicker.swift",
+      "source_location": "L9"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_categorypicker_swift_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "SwiftUI",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_sectioncard",
+      "label": "SectionCard.swift",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "SwiftUI",
+      "file_type": "code",
+      "norm_label": "sectioncard.swift",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/SectionCard.swift",
+      "source_location": "L1"
+    },
+    {
       "id": "native_ios_finanzapp_views_components_transactionrow",
       "label": "TransactionRow.swift",
       "_origin": "ast",
@@ -7750,17 +7487,6 @@
       "source_file": "Native_iOS/Shared/SharedData.swift",
       "source_location": "L2",
       "type": "module"
-    },
-    {
-      "id": "native_ios_finanzapp_theme_theme_swift_double",
-      "label": "Double",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "TransactionRow",
-      "file_type": "code",
-      "norm_label": "double",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "native_ios_finanzapp_views_components_transactionrow_swift_color",
@@ -7818,17 +7544,6 @@
       "source_location": "L51"
     },
     {
-      "id": "native_ios_finanzapp_views_components_transactionrow_transactionrow_formattedamount",
-      "label": ".formattedAmount",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "TransactionRow",
-      "file_type": "code",
-      "norm_label": ".formattedamount",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/TransactionRow.swift",
-      "source_location": "L64"
-    },
-    {
       "id": "native_ios_finanzapp_views_components_transactionrow_transactionrow_timeago",
       "label": ".timeAgo",
       "_origin": "ast",
@@ -7838,39 +7553,6 @@
       "norm_label": ".timeago",
       "source_file": "Native_iOS/FinanzApp/Views/Components/TransactionRow.swift",
       "source_location": "L55"
-    },
-    {
-      "id": "native_ios_finanzapp_views_homeview_homeview_insightcards",
-      "label": ".insightCards",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "TransactionRow",
-      "file_type": "code",
-      "norm_label": ".insightcards",
-      "source_file": "Native_iOS/FinanzApp/Views/HomeView.swift",
-      "source_location": "L245"
-    },
-    {
-      "id": "native_ios_finanzapp_views_homeview_homeview_topcategorieslist",
-      "label": ".topCategoriesList",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "TransactionRow",
-      "file_type": "code",
-      "norm_label": ".topcategorieslist",
-      "source_file": "Native_iOS/FinanzApp/Views/HomeView.swift",
-      "source_location": "L284"
-    },
-    {
-      "id": "native_ios_finanzapp_views_recurringview_recurringrow_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 34,
-      "community_name": "TransactionRow",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
-      "source_location": "L147"
     },
     {
       "id": "hashable",
@@ -8049,46 +7731,200 @@
       "source_location": "L51"
     },
     {
-      "id": "native_ios_finanzapp_services_notificationmanager_swift_bool",
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow",
+      "label": "SwipeToDeleteRow.swift",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "SwipeToDeleteRow",
+      "file_type": "code",
+      "norm_label": "swipetodeleterow.swift",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
+      "source_location": "L1"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_bool",
       "label": "Bool",
       "_origin": "ast",
       "community": 36,
-      "community_name": "NotificationManager",
+      "community_name": "SwipeToDeleteRow",
       "file_type": "code",
       "norm_label": "bool",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "native_ios_finanzapp_services_notificationmanager_swift_void",
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_cgfloat",
+      "label": "CGFloat",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "SwipeToDeleteRow",
+      "file_type": "code",
+      "norm_label": "cgfloat",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_content",
+      "label": "Content",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "SwipeToDeleteRow",
+      "file_type": "code",
+      "norm_label": "content",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "SwipeToDeleteRow",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swift_void",
       "label": "Void",
       "_origin": "ast",
       "community": 36,
-      "community_name": "NotificationManager",
+      "community_name": "SwipeToDeleteRow",
       "file_type": "code",
       "norm_label": "void",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "unauthorizationstatus",
-      "label": "UNAuthorizationStatus",
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_body",
+      "label": ".body",
       "_origin": "ast",
       "community": 36,
-      "community_name": "NotificationManager",
+      "community_name": "SwipeToDeleteRow",
       "file_type": "code",
-      "norm_label": "unauthorizationstatus",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
+      "source_location": "L43"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_isarmed",
+      "label": ".isArmed",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "SwipeToDeleteRow",
+      "file_type": "code",
+      "norm_label": ".isarmed",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
+      "source_location": "L41"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_swipetodeleterow_swipetodeleterow_revealed",
+      "label": ".revealed",
+      "_origin": "ast",
+      "community": 36,
+      "community_name": "SwipeToDeleteRow",
+      "file_type": "code",
+      "norm_label": ".revealed",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift",
+      "source_location": "L40"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard",
+      "label": "BalanceCard.swift",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": "balancecard.swift",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
+      "source_location": "L1"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard_balancecard_amountdec",
+      "label": ".amountDec",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": ".amountdec",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
+      "source_location": "L52"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard_balancecard_amountint",
+      "label": ".amountInt",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": ".amountint",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
+      "source_location": "L42"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard_balancecard_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
+      "source_location": "L9"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard_flowchip_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
+      "source_location": "L77"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard_flowchip_flowamount",
+      "label": ".flowAmount",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": ".flowamount",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift",
+      "source_location": "L66"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard_swift_color",
+      "label": "Color",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": "color",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "url",
-      "label": "URL",
+      "id": "native_ios_finanzapp_views_components_balancecard_swift_double",
+      "label": "Double",
       "_origin": "ast",
       "community": 37,
-      "community_name": ".performAutoBackupIfNeeded",
+      "community_name": "BalanceCard",
       "file_type": "code",
-      "norm_label": "url",
+      "norm_label": "double",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_balancecard_swift_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 37,
+      "community_name": "BalanceCard",
+      "file_type": "code",
+      "norm_label": "string",
       "source_file": "",
       "source_location": ""
     },
@@ -8142,7 +7978,7 @@
       "label": "LevelUpOverlay.swift",
       "_origin": "ast",
       "community": 39,
-      "community_name": ".dismiss",
+      "community_name": "LevelUpOverlay",
       "file_type": "code",
       "norm_label": "levelupoverlay.swift",
       "source_file": "Native_iOS/FinanzApp/Views/Components/LevelUpOverlay.swift",
@@ -8153,7 +7989,7 @@
       "label": ".body",
       "_origin": "ast",
       "community": 39,
-      "community_name": ".dismiss",
+      "community_name": "LevelUpOverlay",
       "file_type": "code",
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/Components/LevelUpOverlay.swift",
@@ -8164,7 +8000,7 @@
       "label": "Int",
       "_origin": "ast",
       "community": 39,
-      "community_name": ".dismiss",
+      "community_name": "LevelUpOverlay",
       "file_type": "code",
       "norm_label": "int",
       "source_file": "",
@@ -8175,7 +8011,7 @@
       "label": "Void",
       "_origin": "ast",
       "community": 39,
-      "community_name": ".dismiss",
+      "community_name": "LevelUpOverlay",
       "file_type": "code",
       "norm_label": "void",
       "source_file": "",
@@ -8545,6 +8381,204 @@
       "source_location": "L666"
     },
     {
+      "id": "native_ios_finanzapp_viewmodels_appviewmodel_swift_int64",
+      "label": "Int64",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": ".refresh",
+      "file_type": "code",
+      "norm_label": "int64",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_settingsview_categoryformsheet_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 40,
+      "community_name": ".refresh",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/SettingsView.swift",
+      "source_location": "L794"
+    },
+    {
+      "id": "native_ios_finanzapp_app_finanzapp_maintabview_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "RecurringView",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
+      "source_location": "L73"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_recurringview_activerecurring",
+      "label": ".activeRecurring",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "RecurringView",
+      "file_type": "code",
+      "norm_label": ".activerecurring",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L7"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_recurringview_monthlytotal",
+      "label": ".monthlyTotal",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "RecurringView",
+      "file_type": "code",
+      "norm_label": ".monthlytotal",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L11"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_recurringview_nextduedays",
+      "label": ".nextDueDays",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "RecurringView",
+      "file_type": "code",
+      "norm_label": ".nextduedays",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L15"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_swift_double",
+      "label": "Double",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "RecurringView",
+      "file_type": "code",
+      "norm_label": "double",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_swift_int",
+      "label": "Int",
+      "_origin": "ast",
+      "community": 41,
+      "community_name": "RecurringView",
+      "file_type": "code",
+      "norm_label": "int",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_theme_theme_swift_double",
+      "label": "Double",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "formatCurrency",
+      "file_type": "code",
+      "norm_label": "double",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_transactionrow_transactionrow_formattedamount",
+      "label": ".formattedAmount",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "formatCurrency",
+      "file_type": "code",
+      "norm_label": ".formattedamount",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/TransactionRow.swift",
+      "source_location": "L64"
+    },
+    {
+      "id": "native_ios_finanzapp_views_homeview_homeview_insightcards",
+      "label": ".insightCards",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "formatCurrency",
+      "file_type": "code",
+      "norm_label": ".insightcards",
+      "source_file": "Native_iOS/FinanzApp/Views/HomeView.swift",
+      "source_location": "L245"
+    },
+    {
+      "id": "native_ios_finanzapp_views_recurringview_recurringrow_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 42,
+      "community_name": "formatCurrency",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/RecurringView.swift",
+      "source_location": "L147"
+    },
+    {
+      "id": "native_ios_finanzapp_views_addrecurringview",
+      "label": "AddRecurringView.swift",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "AddRecurringView",
+      "file_type": "code",
+      "norm_label": "addrecurringview.swift",
+      "source_file": "Native_iOS/FinanzApp/Views/AddRecurringView.swift",
+      "source_location": "L1"
+    },
+    {
+      "id": "native_ios_finanzapp_views_addrecurringview_addrecurringview_cansubmit",
+      "label": ".canSubmit",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "AddRecurringView",
+      "file_type": "code",
+      "norm_label": ".cansubmit",
+      "source_file": "Native_iOS/FinanzApp/Views/AddRecurringView.swift",
+      "source_location": "L182"
+    },
+    {
+      "id": "native_ios_finanzapp_views_addrecurringview_swift_bool",
+      "label": "Bool",
+      "_origin": "ast",
+      "community": 43,
+      "community_name": "AddRecurringView",
+      "file_type": "code",
+      "norm_label": "bool",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_quickaddbar",
+      "label": "QuickAddBar.swift",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "QuickAddBar",
+      "file_type": "code",
+      "norm_label": "quickaddbar.swift",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/QuickAddBar.swift",
+      "source_location": "L1"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_quickaddbar_quickaddbar_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "QuickAddBar",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/QuickAddBar.swift",
+      "source_location": "L7"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_quickaddbar_swift_void",
+      "label": "Void",
+      "_origin": "ast",
+      "community": 44,
+      "community_name": "QuickAddBar",
+      "file_type": "code",
+      "norm_label": "void",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "app",
       "label": "App",
       "_origin": "ast",
@@ -8552,6 +8586,17 @@
       "community_name": "FinanzApp.swift",
       "file_type": "code",
       "norm_label": "app",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "namespace",
+      "label": "Namespace",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "FinanzApp.swift",
+      "file_type": "code",
+      "norm_label": "namespace",
       "source_file": "",
       "source_location": ""
     },
@@ -8567,17 +8612,6 @@
       "source_location": "L1"
     },
     {
-      "id": "native_ios_finanzapp_app_finanzapp_contentview_body",
-      "label": ".body",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "FinanzApp.swift",
-      "file_type": "code",
-      "norm_label": ".body",
-      "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
-      "source_location": "L40"
-    },
-    {
       "id": "native_ios_finanzapp_app_finanzapp_finanzapp_body",
       "label": ".body",
       "_origin": "ast",
@@ -8589,15 +8623,26 @@
       "source_location": "L27"
     },
     {
-      "id": "native_ios_finanzapp_services_notificationmanager",
-      "label": "NotificationManager.swift",
+      "id": "native_ios_finanzapp_app_finanzapp_swift_string",
+      "label": "String",
       "_origin": "ast",
       "community": 45,
       "community_name": "FinanzApp.swift",
       "file_type": "code",
-      "norm_label": "notificationmanager.swift",
-      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
-      "source_location": "L1"
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "native_ios_finanzapp_app_finanzapp_tabitem_body",
+      "label": ".body",
+      "_origin": "ast",
+      "community": 45,
+      "community_name": "FinanzApp.swift",
+      "file_type": "code",
+      "norm_label": ".body",
+      "source_file": "Native_iOS/FinanzApp/App/FinanzApp.swift",
+      "source_location": "L172"
     },
     {
       "id": "scene",
@@ -8609,18 +8654,6 @@
       "norm_label": "scene",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "usernotifications",
-      "label": "UserNotifications",
-      "_origin": "ast",
-      "community": 45,
-      "community_name": "FinanzApp.swift",
-      "file_type": "code",
-      "norm_label": "usernotifications",
-      "source_file": "Native_iOS/FinanzApp/Services/NotificationManager.swift",
-      "source_location": "L2",
-      "type": "module"
     },
     {
       "id": "appentity",
@@ -9178,31 +9211,9 @@
       "label": "Void",
       "_origin": "ast",
       "community": 76,
-      "community_name": "AppDelegate",
+      "community_name": ".userNotificationCenter",
       "file_type": "code",
       "norm_label": "void",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "nsobject",
-      "label": "NSObject",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "AppDelegate",
-      "file_type": "code",
-      "norm_label": "nsobject",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "uiapplicationdelegate",
-      "label": "UIApplicationDelegate",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "AppDelegate",
-      "file_type": "code",
-      "norm_label": "uiapplicationdelegate",
       "source_file": "",
       "source_location": ""
     },
@@ -9211,7 +9222,7 @@
       "label": "UNNotification",
       "_origin": "ast",
       "community": 76,
-      "community_name": "AppDelegate",
+      "community_name": ".userNotificationCenter",
       "file_type": "code",
       "norm_label": "unnotification",
       "source_file": "",
@@ -9222,7 +9233,7 @@
       "label": "UNNotificationPresentationOptions",
       "_origin": "ast",
       "community": 76,
-      "community_name": "AppDelegate",
+      "community_name": ".userNotificationCenter",
       "file_type": "code",
       "norm_label": "unnotificationpresentationoptions",
       "source_file": "",
@@ -9233,7 +9244,7 @@
       "label": "UNNotificationResponse",
       "_origin": "ast",
       "community": 76,
-      "community_name": "AppDelegate",
+      "community_name": ".userNotificationCenter",
       "file_type": "code",
       "norm_label": "unnotificationresponse",
       "source_file": "",
@@ -9244,20 +9255,9 @@
       "label": "UNUserNotificationCenter",
       "_origin": "ast",
       "community": 76,
-      "community_name": "AppDelegate",
+      "community_name": ".userNotificationCenter",
       "file_type": "code",
       "norm_label": "unusernotificationcenter",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "unusernotificationcenterdelegate",
-      "label": "UNUserNotificationCenterDelegate",
-      "_origin": "ast",
-      "community": 76,
-      "community_name": "AppDelegate",
-      "file_type": "code",
-      "norm_label": "unusernotificationcenterdelegate",
       "source_file": "",
       "source_location": ""
     },
@@ -9380,7 +9380,7 @@
       "file_type": "code",
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L209"
+      "source_location": "L227"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_dailybarchart_barspacing",
@@ -9391,7 +9391,7 @@
       "file_type": "code",
       "norm_label": ".barspacing",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L176"
+      "source_location": "L194"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_dailybarchart_body",
@@ -9402,7 +9402,7 @@
       "file_type": "code",
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L178"
+      "source_location": "L196"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_dailybarchart_maxvalue",
@@ -9413,7 +9413,7 @@
       "file_type": "code",
       "norm_label": ".maxvalue",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L175"
+      "source_location": "L193"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_body",
@@ -9424,7 +9424,7 @@
       "file_type": "code",
       "norm_label": ".body",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L99"
+      "source_location": "L117"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_capclearance",
@@ -9435,7 +9435,18 @@
       "file_type": "code",
       "norm_label": ".capclearance",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L31"
+      "source_location": "L49"
+    },
+    {
+      "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_effectivelinewidth",
+      "label": ".effectiveLineWidth",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "GapDonutChart",
+      "file_type": "code",
+      "norm_label": ".effectivelinewidth",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
+      "source_location": "L34"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_layout",
@@ -9446,7 +9457,7 @@
       "file_type": "code",
       "norm_label": ".layout",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L46"
+      "source_location": "L65"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_ring",
@@ -9457,7 +9468,7 @@
       "file_type": "code",
       "norm_label": ".ring",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L114"
+      "source_location": "L132"
     },
     {
       "id": "native_ios_finanzapp_views_components_chartview_gapdonutchart_total",
@@ -13151,7 +13162,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L199",
+      "source_location": "L217",
       "weight": 1.0
     },
     {
@@ -13163,7 +13174,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L183",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
@@ -13175,7 +13186,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L184",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
@@ -13187,7 +13198,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L105",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart_effectivelinewidth",
+      "target": "native_ios_finanzapp_views_components_chartview_swift_cgfloat",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -13199,7 +13222,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L153",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -13211,7 +13234,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L160",
+      "source_location": "L178",
       "weight": 1.0
     },
     {
@@ -13223,7 +13246,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L138",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -14567,7 +14590,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L131",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
@@ -15803,7 +15826,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L207",
+      "source_location": "L225",
       "weight": 1.0
     },
     {
@@ -15815,7 +15838,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L172",
+      "source_location": "L190",
       "weight": 1.0
     },
     {
@@ -15827,7 +15850,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L175",
+      "source_location": "L193",
       "weight": 1.0
     },
     {
@@ -15839,7 +15862,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L176",
+      "source_location": "L194",
       "weight": 1.0
     },
     {
@@ -15852,18 +15875,6 @@
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
       "source_location": "L19",
-      "weight": 1.0
-    },
-    {
-      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
-      "target": "native_ios_finanzapp_views_components_chartview_swift_cgfloat",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -15892,6 +15903,18 @@
     },
     {
       "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
+      "target": "native_ios_finanzapp_views_components_chartview_swift_cgfloat",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
       "target": "native_ios_finanzapp_views_components_chartview_swift_double",
       "relation": "references",
       "_origin": "ast",
@@ -15899,7 +15922,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L46",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -19067,7 +19090,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L197",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -19079,7 +19102,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L141",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -19091,7 +19114,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L136",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -21011,7 +21034,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L141",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -21023,7 +21046,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L136",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -21932,17 +21955,6 @@
     },
     {
       "source": "native_ios_finanzapp_views_components_chartview",
-      "target": "native_ios_finanzapp_views_components_chartview_dailybarchart",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L170",
-      "weight": 1.0
-    },
-    {
-      "source": "native_ios_finanzapp_views_components_chartview",
       "target": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
       "relation": "contains",
       "_origin": "ast",
@@ -21954,13 +21966,24 @@
     },
     {
       "source": "native_ios_finanzapp_views_components_chartview",
+      "target": "native_ios_finanzapp_views_components_chartview_dailybarchart",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
+      "source_location": "L188",
+      "weight": 1.0
+    },
+    {
+      "source": "native_ios_finanzapp_views_components_chartview",
       "target": "native_ios_finanzapp_views_components_chartview_chartlegend",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L206",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -22906,7 +22929,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L206",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -22917,7 +22940,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L170",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -27372,7 +27395,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L209",
+      "source_location": "L227",
       "weight": 1.0
     },
     {
@@ -27383,7 +27406,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L175",
+      "source_location": "L193",
       "weight": 1.0
     },
     {
@@ -27394,7 +27417,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L176",
+      "source_location": "L194",
       "weight": 1.0
     },
     {
@@ -27405,7 +27428,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L178",
+      "source_location": "L196",
       "weight": 1.0
     },
     {
@@ -27416,7 +27439,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L197",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
+      "target": "native_ios_finanzapp_views_components_chartview_gapdonutchart_body",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
@@ -27427,7 +27461,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L114",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -27438,7 +27472,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L136",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -27449,7 +27483,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L141",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -27460,7 +27494,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L151",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -27476,13 +27510,24 @@
     },
     {
       "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
+      "target": "native_ios_finanzapp_views_components_chartview_gapdonutchart_effectivelinewidth",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
       "target": "native_ios_finanzapp_views_components_chartview_gapdonutchart_capclearance",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L31",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -27493,18 +27538,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L46",
-      "weight": 1.0
-    },
-    {
-      "source": "native_ios_finanzapp_views_components_chartview_gapdonutchart",
-      "target": "native_ios_finanzapp_views_components_chartview_gapdonutchart_body",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L99",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -29781,7 +29815,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L65",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -29793,7 +29827,7 @@
       "confidence_score": 0.8,
       "context": "call",
       "source_file": "Native_iOS/FinanzApp/Views/Components/ChartView.swift",
-      "source_location": "L117",
+      "source_location": "L135",
       "weight": 1.0
     },
     {
@@ -31212,5 +31246,5 @@
       "source_file": "Native_iOS/project.yml"
     }
   ],
-  "built_at_commit": "fc44cfa5da1b3c0b51a088b7d9f8a04f2f671861"
+  "built_at_commit": "4d87c2f3eaffda38f2c281a0ac29fc5bf19229b0"
 }
