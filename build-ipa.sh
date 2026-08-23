@@ -13,7 +13,7 @@ NATIVE_DIR="$PROJECT_DIR/Native_iOS"
 PROJECT="FinanzApp.xcodeproj"
 SCHEME="FinanzApp"
 BUNDLE_ID="marino.finanzapp.app"
-TEAM_ID="VVGS6626NR"
+TEAM_ID="6C53L638P6"
 EXPORT_METHOD="development"
 
 ARCHIVE_PATH="/tmp/FinanzApp-build.xcarchive"

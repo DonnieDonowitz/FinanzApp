@@ -106,13 +106,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		05EF7BBA88DE4DFE476DDEC0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		2524EF74AF2DF18C2A7C5807 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +199,6 @@
 				7EF3FFDC04CAC2364A43F2CD /* App */,
 				67BFDBEF481D03D25D873B56 /* Database */,
 				A15EC4A195728A4FC14141B5 /* Models */,
-				05EF7BBA88DE4DFE476DDEC0 /* Resources */,
 				A0691D5E15B43CF0CB79CA34 /* Services */,
 				27E70040AAAD9F8240DB2F4B /* Theme */,
 				ED5BFAC05E22337F7076778B /* ViewModels */,
@@ -304,11 +296,11 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					0CB1F4401335A9DECDEC5FEA = {
-						DevelopmentTeam = VVGS6626NR;
+						DevelopmentTeam = 6C53L638P6;
 						ProvisioningStyle = Automatic;
 					};
 					BD02E146ECF55859DD3579D8 = {
-						DevelopmentTeam = VVGS6626NR;
+						DevelopmentTeam = 6C53L638P6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -443,7 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = VVGS6626NR;
+				DEVELOPMENT_TEAM = 6C53L638P6;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -518,7 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = VVGS6626NR;
+				DEVELOPMENT_TEAM = 6C53L638P6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

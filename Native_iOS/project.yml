@@ -10,7 +10,7 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    DEVELOPMENT_TEAM: "VVGS6626NR"
+    DEVELOPMENT_TEAM: "6C53L638P6"
     CODE_SIGN_STYLE: Automatic
 
 targets:
