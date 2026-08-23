@@ -1,914 +1,236 @@
 {
-  ".claude/launch.json": {
-    "mtime": 1786644785.819752,
-    "seen": 1787157921.702205,
-    "ast_hash": "169c1de4bbb8bda5dd5de004424610fd",
-    "semantic_hash": "169c1de4bbb8bda5dd5de004424610fd"
-  },
-  ".claude/settings.json": {
-    "mtime": 1779641383.4168398,
-    "seen": 1787157921.702208,
-    "ast_hash": "dc580fca35a0e98ed20777ede5e545a1",
-    "semantic_hash": "dc580fca35a0e98ed20777ede5e545a1"
-  },
-  ".claude/settings.local.json": {
-    "mtime": 1785587555.8048167,
-    "seen": 1787157921.702209,
-    "ast_hash": "af4ad7232a32dfb97e2de1b3993fda2b",
-    "semantic_hash": "af4ad7232a32dfb97e2de1b3993fda2b"
-  },
-  "App.tsx": {
-    "mtime": 1783969335.6959496,
-    "seen": 1787157921.702209,
-    "ast_hash": "15c2778c63c8354b51cdc766139f32d7",
-    "semantic_hash": "15c2778c63c8354b51cdc766139f32d7"
-  },
   "Native_iOS/FinanzApp/App/FinanzApp.swift": {
-    "mtime": 1785942902.2428908,
-    "seen": 1787157921.70221,
+    "mtime": 1787350889.4715405,
+    "seen": 1787493634.513694,
     "ast_hash": "16d72b81b4fd8882a81a69294d5b5acb",
     "semantic_hash": "16d72b81b4fd8882a81a69294d5b5acb"
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/Contents.json": {
     "mtime": 1785507450.5920486,
     "seen": 1787157921.70221,
-    "ast_hash": "a467495afd1eaa789473410b589ba163",
-    "semantic_hash": "a467495afd1eaa789473410b589ba163"
+    "ast_hash": "",
+    "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Assets.xcassets/Contents.json": {
     "mtime": 1785173988.3857367,
     "seen": 1787157921.7022111,
-    "ast_hash": "9deb2ada1cc834bbebf8bbad9c8978a1",
-    "semantic_hash": "9deb2ada1cc834bbebf8bbad9c8978a1"
+    "ast_hash": "",
+    "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Database/DatabaseManager.swift": {
-    "mtime": 1785507127.0807576,
-    "seen": 1787157921.7022111,
+    "mtime": 1787350889.4730687,
+    "seen": 1787493634.513697,
     "ast_hash": "2397e693bfe4116a3f1e6a830bd94946",
     "semantic_hash": "2397e693bfe4116a3f1e6a830bd94946"
   },
   "Native_iOS/FinanzApp/Models/Models.swift": {
-    "mtime": 1786261827.6775794,
-    "seen": 1787157921.702212,
+    "mtime": 1787350889.4732928,
+    "seen": 1787493634.513698,
     "ast_hash": "4b124656ed8f708408132f0fb213eebd",
     "semantic_hash": "4b124656ed8f708408132f0fb213eebd"
   },
   "Native_iOS/FinanzApp/Models/Scheduling.swift": {
-    "mtime": 1785173770.3951066,
-    "seen": 1787157921.702212,
+    "mtime": 1787350889.473353,
+    "seen": 1787493634.513698,
     "ast_hash": "0acedae3bb219bed344b8ef14500ef48",
     "semantic_hash": "0acedae3bb219bed344b8ef14500ef48"
   },
   "Native_iOS/FinanzApp/Services/NotificationManager.swift": {
-    "mtime": 1785446381.4323022,
-    "seen": 1787157921.702212,
+    "mtime": 1787350889.4734561,
+    "seen": 1787493634.513699,
     "ast_hash": "08578c5077998cbc0dd67033ed7ef1c5",
     "semantic_hash": "08578c5077998cbc0dd67033ed7ef1c5"
   },
   "Native_iOS/FinanzApp/Theme/Localization.swift": {
-    "mtime": 1786815630.1671526,
-    "seen": 1787157921.702213,
+    "mtime": 1787350889.4735994,
+    "seen": 1787493634.513699,
     "ast_hash": "a1375edceac31f60bdb81a7f942d4863",
     "semantic_hash": "a1375edceac31f60bdb81a7f942d4863"
   },
   "Native_iOS/FinanzApp/Theme/Theme.swift": {
-    "mtime": 1786261818.5051315,
-    "seen": 1787157921.702213,
+    "mtime": 1787350889.4737592,
+    "seen": 1787493634.5137,
     "ast_hash": "8ebfc37427cbabf71b7f73e09ce729d2",
     "semantic_hash": "8ebfc37427cbabf71b7f73e09ce729d2"
   },
   "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift": {
-    "mtime": 1786815587.7888284,
-    "seen": 1787157921.702214,
+    "mtime": 1787350889.4738991,
+    "seen": 1787493634.5137,
     "ast_hash": "0da12f3b8846cedca89f6436dd3204ed",
     "semantic_hash": "0da12f3b8846cedca89f6436dd3204ed"
   },
   "Native_iOS/FinanzApp/Views/AddRecurringView.swift": {
-    "mtime": 1786261701.957232,
-    "seen": 1787157921.702214,
+    "mtime": 1787350889.4741523,
+    "seen": 1787493634.5137012,
     "ast_hash": "a29e6cbd20a2226413f11642734f4139",
     "semantic_hash": "a29e6cbd20a2226413f11642734f4139"
   },
   "Native_iOS/FinanzApp/Views/AddTransactionView.swift": {
-    "mtime": 1786262029.4289072,
-    "seen": 1787157921.702214,
+    "mtime": 1787350889.4742892,
+    "seen": 1787493634.5137012,
     "ast_hash": "bd83f774c2bedfa4466879156dbf6be5",
     "semantic_hash": "bd83f774c2bedfa4466879156dbf6be5"
   },
   "Native_iOS/FinanzApp/Views/AnnualSummaryView.swift": {
-    "mtime": 1785439132.496783,
-    "seen": 1787157921.702215,
+    "mtime": 1787350889.4744287,
+    "seen": 1787493634.513702,
     "ast_hash": "cdaf4c034185ca7f664105fbde7ecf1d",
     "semantic_hash": "cdaf4c034185ca7f664105fbde7ecf1d"
   },
   "Native_iOS/FinanzApp/Views/Components/AppLogo.swift": {
-    "mtime": 1785343321.1337495,
-    "seen": 1787157921.702215,
+    "mtime": 1787350889.474536,
+    "seen": 1787493634.513702,
     "ast_hash": "43f901b5501d14b240b945bc01842f44",
     "semantic_hash": "43f901b5501d14b240b945bc01842f44"
   },
   "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift": {
-    "mtime": 1785446474.987479,
-    "seen": 1787157921.702215,
+    "mtime": 1787350889.474603,
+    "seen": 1787493634.5137029,
     "ast_hash": "2833b9cdb9c78634299981c096104eaf",
     "semantic_hash": "2833b9cdb9c78634299981c096104eaf"
   },
   "Native_iOS/FinanzApp/Views/Components/CategoryPicker.swift": {
-    "mtime": 1786261676.9804518,
-    "seen": 1787157921.702216,
+    "mtime": 1787350889.4746659,
+    "seen": 1787493634.5137029,
     "ast_hash": "07c5d960106d66121c01d1116a53e1ba",
     "semantic_hash": "07c5d960106d66121c01d1116a53e1ba"
   },
   "Native_iOS/FinanzApp/Views/Components/ChartView.swift": {
-    "mtime": 1785343321.0449793,
-    "seen": 1787157921.702216,
+    "mtime": 1787350889.475915,
+    "seen": 1787493634.5137029,
     "ast_hash": "764b2e37c84ecc7deeb2d94245a911d7",
     "semantic_hash": "764b2e37c84ecc7deeb2d94245a911d7"
   },
   "Native_iOS/FinanzApp/Views/Components/ConfirmDialog.swift": {
-    "mtime": 1785343321.091818,
-    "seen": 1787157921.702216,
+    "mtime": 1787350889.4760292,
+    "seen": 1787493634.5137038,
     "ast_hash": "b694f3dd3baa0e8194fdb62c654d2cf9",
     "semantic_hash": "b694f3dd3baa0e8194fdb62c654d2cf9"
   },
   "Native_iOS/FinanzApp/Views/Components/EmptyState.swift": {
-    "mtime": 1785343321.1101797,
-    "seen": 1787157921.7022169,
+    "mtime": 1787350889.4761112,
+    "seen": 1787493634.5137038,
     "ast_hash": "d2bf19720a9d554ebdf884c710452c85",
     "semantic_hash": "d2bf19720a9d554ebdf884c710452c85"
   },
   "Native_iOS/FinanzApp/Views/Components/GlassView.swift": {
-    "mtime": 1785447566.5957956,
-    "seen": 1787157921.7022169,
+    "mtime": 1787350889.476185,
+    "seen": 1787493634.513705,
     "ast_hash": "b24d4618639fbd1bc45ea00e52209623",
     "semantic_hash": "b24d4618639fbd1bc45ea00e52209623"
   },
   "Native_iOS/FinanzApp/Views/Components/QuickAddBar.swift": {
-    "mtime": 1785501799.3187711,
-    "seen": 1787157921.702218,
+    "mtime": 1787350889.4762537,
+    "seen": 1787493634.513705,
     "ast_hash": "3f66bc3af6f4bd8359c726c240fa8636",
     "semantic_hash": "3f66bc3af6f4bd8359c726c240fa8636"
   },
   "Native_iOS/FinanzApp/Views/Components/SectionCard.swift": {
-    "mtime": 1785343321.1541624,
-    "seen": 1787157921.702218,
+    "mtime": 1787350889.476325,
+    "seen": 1787493634.513705,
     "ast_hash": "8f11663ccc545f9aca7f7c6b78b02b18",
     "semantic_hash": "8f11663ccc545f9aca7f7c6b78b02b18"
   },
   "Native_iOS/FinanzApp/Views/Components/SwipeToDeleteRow.swift": {
-    "mtime": 1785698714.5043087,
-    "seen": 1787157921.702219,
+    "mtime": 1787350889.4764748,
+    "seen": 1787493634.513706,
     "ast_hash": "4b261cf0cd3d23990251a1c48185fbcc",
     "semantic_hash": "4b261cf0cd3d23990251a1c48185fbcc"
   },
   "Native_iOS/FinanzApp/Views/Components/TransactionRow.swift": {
-    "mtime": 1786261716.896286,
-    "seen": 1787157921.702219,
+    "mtime": 1787350889.476537,
+    "seen": 1787493634.513706,
     "ast_hash": "875f87010bce14bdf8ba1bdc37399048",
     "semantic_hash": "875f87010bce14bdf8ba1bdc37399048"
   },
   "Native_iOS/FinanzApp/Views/HomeView.swift": {
-    "mtime": 1786297119.3638272,
-    "seen": 1787157921.702219,
+    "mtime": 1787350889.4767098,
+    "seen": 1787493634.513707,
     "ast_hash": "e5bca1b9de63ce5cd3cc99948ae9e1af",
     "semantic_hash": "e5bca1b9de63ce5cd3cc99948ae9e1af"
   },
   "Native_iOS/FinanzApp/Views/RecurringView.swift": {
-    "mtime": 1786261775.457845,
-    "seen": 1787157921.70222,
+    "mtime": 1787350889.4769535,
+    "seen": 1787493634.513707,
     "ast_hash": "af9e368f68858816648f61731c7a16e4",
     "semantic_hash": "af9e368f68858816648f61731c7a16e4"
   },
   "Native_iOS/FinanzApp/Views/SettingsView.swift": {
-    "mtime": 1786815617.7184474,
-    "seen": 1787157921.70222,
+    "mtime": 1787350889.477026,
+    "seen": 1787493634.513707,
     "ast_hash": "646fa83fc4acdb7a7fad8e525628dc0e",
     "semantic_hash": "646fa83fc4acdb7a7fad8e525628dc0e"
   },
   "Native_iOS/FinanzApp/Views/StatisticsView.swift": {
-    "mtime": 1786379998.9028606,
-    "seen": 1787157921.70222,
+    "mtime": 1787350889.4770982,
+    "seen": 1787493634.513708,
     "ast_hash": "3697182d7dcbee7e15c99bdfa1c49c89",
     "semantic_hash": "3697182d7dcbee7e15c99bdfa1c49c89"
   },
   "Native_iOS/FinanzApp/Views/TransactionsView.swift": {
-    "mtime": 1785698919.6107273,
-    "seen": 1787157921.7022212,
+    "mtime": 1787350889.4772515,
+    "seen": 1787493634.513708,
     "ast_hash": "9d62abf4ede5fb061515aafae1ed2751",
     "semantic_hash": "9d62abf4ede5fb061515aafae1ed2751"
   },
   "Native_iOS/FinanzAppWidget/Assets.xcassets/Contents.json": {
     "mtime": 1785173989.1579995,
     "seen": 1787157921.7022212,
-    "ast_hash": "9deb2ada1cc834bbebf8bbad9c8978a1",
-    "semantic_hash": "9deb2ada1cc834bbebf8bbad9c8978a1"
+    "ast_hash": "",
+    "semantic_hash": ""
   },
   "Native_iOS/FinanzAppWidget/Widgets.swift": {
-    "mtime": 1785507387.2094545,
-    "seen": 1787157921.702222,
+    "mtime": 1787350889.4776416,
+    "seen": 1787493634.513709,
     "ast_hash": "1d75f19061c0af9a82b83387f70b3757",
     "semantic_hash": "1d75f19061c0af9a82b83387f70b3757"
   },
   "Native_iOS/Shared/SharedData.swift": {
-    "mtime": 1785507357.9704099,
-    "seen": 1787157921.702222,
+    "mtime": 1787350889.4778137,
+    "seen": 1787493634.513709,
     "ast_hash": "9b6ac82ca4f00cabd59c5935df05f4c8",
     "semantic_hash": "9b6ac82ca4f00cabd59c5935df05f4c8"
   },
-  "PartitaIVA/PartitaIVA/App/MainTabView.swift": {
-    "mtime": 1786630802.9870696,
-    "seen": 1787157921.702222,
-    "ast_hash": "f62fa017e57236436ad9807d329f2488",
-    "semantic_hash": "f62fa017e57236436ad9807d329f2488"
-  },
-  "PartitaIVA/PartitaIVA/App/PartitaIVAApp.swift": {
-    "mtime": 1786555501.354899,
-    "seen": 1787157921.702223,
-    "ast_hash": "52b57002df6039596e36bad9df40d3c3",
-    "semantic_hash": "52b57002df6039596e36bad9df40d3c3"
-  },
-  "PartitaIVA/PartitaIVA/Assets.xcassets/AppIcon.appiconset/Contents.json": {
-    "mtime": 1786644755.0125284,
-    "seen": 1787157921.702223,
-    "ast_hash": "c5d5aeafe79232c2195e36ca041e38c5",
-    "semantic_hash": "c5d5aeafe79232c2195e36ca041e38c5"
-  },
-  "PartitaIVA/PartitaIVA/Assets.xcassets/Contents.json": {
-    "mtime": 1786554839.1960433,
-    "seen": 1787157921.702223,
-    "ast_hash": "9deb2ada1cc834bbebf8bbad9c8978a1",
-    "semantic_hash": "9deb2ada1cc834bbebf8bbad9c8978a1"
-  },
-  "PartitaIVA/PartitaIVA/Models/Expense.swift": {
-    "mtime": 1786554957.7384057,
-    "seen": 1787157921.7022238,
-    "ast_hash": "656bc632b79ba1fac0d07783bdb60ac5",
-    "semantic_hash": "656bc632b79ba1fac0d07783bdb60ac5"
-  },
-  "PartitaIVA/PartitaIVA/Models/Invoice.swift": {
-    "mtime": 1786554951.4092824,
-    "seen": 1787157921.7022238,
-    "ast_hash": "366b1ed3772b65f0ccc129cffcc6abbd",
-    "semantic_hash": "366b1ed3772b65f0ccc129cffcc6abbd"
-  },
-  "PartitaIVA/PartitaIVA/Models/TaxProfile.swift": {
-    "mtime": 1786632406.2372105,
-    "seen": 1787157921.7022238,
-    "ast_hash": "ff40d8319ce9a9b066de76af5259cf63",
-    "semantic_hash": "ff40d8319ce9a9b066de76af5259cf63"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/ATECOCoefficients.swift": {
-    "mtime": 1786554986.0944438,
-    "seen": 1787157921.702225,
-    "ast_hash": "0db8d293721a8be9a3daeba0f0c8844c",
-    "semantic_hash": "0db8d293721a8be9a3daeba0f0c8844c"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/AccantonamentoEngine.swift": {
-    "mtime": 1786555136.827497,
-    "seen": 1787157921.702225,
-    "ast_hash": "ab275c09472f27a427910694b9f8c493",
-    "semantic_hash": "ab275c09472f27a427910694b9f8c493"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/CassePrevidenziali.swift": {
-    "mtime": 1786632368.312155,
-    "seen": 1787157921.702226,
-    "ast_hash": "a64f91a0966ea053baeeb01a81e4cb1f",
-    "semantic_hash": "a64f91a0966ea053baeeb01a81e4cb1f"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/ExpenseCategories.swift": {
-    "mtime": 1786555022.555264,
-    "seen": 1787157921.702226,
-    "ast_hash": "1bba05dbf3cad9d0d101ac1c61e06199",
-    "semantic_hash": "1bba05dbf3cad9d0d101ac1c61e06199"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/ForfettarioEngine.swift": {
-    "mtime": 1786644219.827875,
-    "seen": 1787157921.702226,
-    "ast_hash": "36c980968223d123e1fb96b0a698c1aa",
-    "semantic_hash": "36c980968223d123e1fb96b0a698c1aa"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/INPSCalculator.swift": {
-    "mtime": 1786632591.3520288,
-    "seen": 1787157921.7022269,
-    "ast_hash": "c7047d7b9711a3336830719a004dbd5f",
-    "semantic_hash": "c7047d7b9711a3336830719a004dbd5f"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/IRPEFCalculator.swift": {
-    "mtime": 1786555076.3001783,
-    "seen": 1787157921.7022269,
-    "ast_hash": "b72940021446cff5d661bd2ef6a8b4bc",
-    "semantic_hash": "b72940021446cff5d661bd2ef6a8b4bc"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/OrdinarioEngine.swift": {
-    "mtime": 1786644229.2236938,
-    "seen": 1787157921.7022269,
-    "ast_hash": "cab68c54ef9b62808875604c820991ca",
-    "semantic_hash": "cab68c54ef9b62808875604c820991ca"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/RegionalDefaults.swift": {
-    "mtime": 1786555010.4723666,
-    "seen": 1787157921.702228,
-    "ast_hash": "7f51b0099e5b038c7e3711593209ceb9",
-    "semantic_hash": "7f51b0099e5b038c7e3711593209ceb9"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/TaxComputation.swift": {
-    "mtime": 1786644209.557273,
-    "seen": 1787157921.702228,
-    "ast_hash": "254a5d427c4134e995d142ea68d5780d",
-    "semantic_hash": "254a5d427c4134e995d142ea68d5780d"
-  },
-  "PartitaIVA/PartitaIVA/TaxEngine/TaxRates.swift": {
-    "mtime": 1786554971.6306424,
-    "seen": 1787157921.702228,
-    "ast_hash": "23e0bfc227380a1e57e65750141966df",
-    "semantic_hash": "23e0bfc227380a1e57e65750141966df"
-  },
-  "PartitaIVA/PartitaIVA/Theme/Theme.swift": {
-    "mtime": 1786554860.873154,
-    "seen": 1787157921.702229,
-    "ast_hash": "2160c210265eec2a7c781186046bc33f",
-    "semantic_hash": "2160c210265eec2a7c781186046bc33f"
-  },
-  "PartitaIVA/PartitaIVA/ViewModels/DashboardViewModel.swift": {
-    "mtime": 1786644260.5124905,
-    "seen": 1787157921.702229,
-    "ast_hash": "b88e5e1dc55b76aa45822c102bc3b370",
-    "semantic_hash": "b88e5e1dc55b76aa45822c102bc3b370"
-  },
-  "PartitaIVA/PartitaIVA/ViewModels/TaxProfileViewModel.swift": {
-    "mtime": 1786555168.3435705,
-    "seen": 1787157921.702229,
-    "ast_hash": "7baa7856f076f0f5f93957fbaafe25b0",
-    "semantic_hash": "7baa7856f076f0f5f93957fbaafe25b0"
-  },
-  "PartitaIVA/PartitaIVA/Views/Components/Card.swift": {
-    "mtime": 1786554880.1945226,
-    "seen": 1787157921.70223,
-    "ast_hash": "b6c50301836f851b892597d5309a3d71",
-    "semantic_hash": "b6c50301836f851b892597d5309a3d71"
-  },
-  "PartitaIVA/PartitaIVA/Views/Dashboard/AccantonamentoCard.swift": {
-    "mtime": 1786555295.5347934,
-    "seen": 1787157921.70223,
-    "ast_hash": "ee48140debd42690a435ecd317bc07b6",
-    "semantic_hash": "ee48140debd42690a435ecd317bc07b6"
-  },
-  "PartitaIVA/PartitaIVA/Views/Dashboard/DashboardView.swift": {
-    "mtime": 1786644298.567976,
-    "seen": 1787157921.702231,
-    "ast_hash": "d660685bdde309030cccc2727e07b189",
-    "semantic_hash": "d660685bdde309030cccc2727e07b189"
-  },
-  "PartitaIVA/PartitaIVA/Views/Expenses/AddExpenseView.swift": {
-    "mtime": 1786630844.3773334,
-    "seen": 1787157921.702231,
-    "ast_hash": "44802e30da700204b784032731615dbc",
-    "semantic_hash": "44802e30da700204b784032731615dbc"
-  },
-  "PartitaIVA/PartitaIVA/Views/Expenses/ExpenseRow.swift": {
-    "mtime": 1786555370.9800146,
-    "seen": 1787157921.702231,
-    "ast_hash": "7fd86a03580989252f99397185c6523a",
-    "semantic_hash": "7fd86a03580989252f99397185c6523a"
-  },
-  "PartitaIVA/PartitaIVA/Views/Expenses/ExpensesListView.swift": {
-    "mtime": 1786630822.0454874,
-    "seen": 1787157921.7022321,
-    "ast_hash": "3fceb93a4b704e100d6d3f77a3ee5f12",
-    "semantic_hash": "3fceb93a4b704e100d6d3f77a3ee5f12"
-  },
-  "PartitaIVA/PartitaIVA/Views/Invoices/AddInvoiceView.swift": {
-    "mtime": 1786555351.1688774,
-    "seen": 1787157921.7022321,
-    "ast_hash": "44cc321b7f733b5792d401297d295f68",
-    "semantic_hash": "44cc321b7f733b5792d401297d295f68"
-  },
-  "PartitaIVA/PartitaIVA/Views/Invoices/InvoiceRow.swift": {
-    "mtime": 1786555333.2342582,
-    "seen": 1787157921.7022321,
-    "ast_hash": "881c23716222b115bea1cea79d4baa87",
-    "semantic_hash": "881c23716222b115bea1cea79d4baa87"
-  },
-  "PartitaIVA/PartitaIVA/Views/Invoices/InvoicesListView.swift": {
-    "mtime": 1786555361.3722227,
-    "seen": 1787157921.702233,
-    "ast_hash": "b458118fb628b642a9f56064591a118d",
-    "semantic_hash": "b458118fb628b642a9f56064591a118d"
-  },
-  "PartitaIVA/PartitaIVA/Views/Onboarding/ActivityDetailsStepView.swift": {
-    "mtime": 1786630784.297281,
-    "seen": 1787157921.702233,
-    "ast_hash": "1c912e685de21e952418ad25963ed1d4",
-    "semantic_hash": "1c912e685de21e952418ad25963ed1d4"
-  },
-  "PartitaIVA/PartitaIVA/Views/Onboarding/CassaDetailSection.swift": {
-    "mtime": 1786632485.6483092,
-    "seen": 1787157921.702234,
-    "ast_hash": "82c01a59fb604cbb9729069af9c383ab",
-    "semantic_hash": "82c01a59fb604cbb9729069af9c383ab"
-  },
-  "PartitaIVA/PartitaIVA/Views/Onboarding/CassaPickerSheet.swift": {
-    "mtime": 1786632454.066832,
-    "seen": 1787157921.702234,
-    "ast_hash": "894aae5ec96485a7c81e52596012ff95",
-    "semantic_hash": "894aae5ec96485a7c81e52596012ff95"
-  },
-  "PartitaIVA/PartitaIVA/Views/Onboarding/INPSStepView.swift": {
-    "mtime": 1786632507.7941992,
-    "seen": 1787157921.702234,
-    "ast_hash": "b69213e07d5cc5a4574a7885281977ce",
-    "semantic_hash": "b69213e07d5cc5a4574a7885281977ce"
-  },
-  "PartitaIVA/PartitaIVA/Views/Onboarding/LocationStepView.swift": {
-    "mtime": 1786557969.4709263,
-    "seen": 1787157921.702235,
-    "ast_hash": "8a08d4a2c6bc25159b4452bd6902fdfa",
-    "semantic_hash": "8a08d4a2c6bc25159b4452bd6902fdfa"
-  },
-  "PartitaIVA/PartitaIVA/Views/Onboarding/OnboardingContainerView.swift": {
-    "mtime": 1786555205.82165,
-    "seen": 1787157921.702235,
-    "ast_hash": "5ba28c37420174fa14d0c547f30f753b",
-    "semantic_hash": "5ba28c37420174fa14d0c547f30f753b"
-  },
-  "PartitaIVA/PartitaIVA/Views/Onboarding/RegimeStepView.swift": {
-    "mtime": 1786555236.5119052,
-    "seen": 1787157921.702235,
-    "ast_hash": "dce76f8cfad5af8449686024d0498bab",
-    "semantic_hash": "dce76f8cfad5af8449686024d0498bab"
-  },
-  "PartitaIVA/PartitaIVA/Views/Onboarding/SummaryStepView.swift": {
-    "mtime": 1786630793.0211525,
-    "seen": 1787157921.702236,
-    "ast_hash": "0afcfe8e8c2b99b6fc0fb45f469c4e30",
-    "semantic_hash": "0afcfe8e8c2b99b6fc0fb45f469c4e30"
-  },
-  "PartitaIVA/PartitaIVA/Views/Onboarding/WelcomeStepView.swift": {
-    "mtime": 1786644505.4536605,
-    "seen": 1787157921.702236,
-    "ast_hash": "1b8f078cafc43b6a5b2278ff9bd9806c",
-    "semantic_hash": "1b8f078cafc43b6a5b2278ff9bd9806c"
-  },
-  "PartitaIVA/PartitaIVA/Views/Settings/CSVExporter.swift": {
-    "mtime": 1786555484.9272087,
-    "seen": 1787157921.702237,
-    "ast_hash": "78acb86893f5014bdb15c67d3e1064de",
-    "semantic_hash": "78acb86893f5014bdb15c67d3e1064de"
-  },
-  "PartitaIVA/PartitaIVA/Views/Settings/CassaReferenceDetailView.swift": {
-    "mtime": 1786632526.6086504,
-    "seen": 1787157921.702237,
-    "ast_hash": "3bf063f37c20f04b23bdfced63cd4b19",
-    "semantic_hash": "3bf063f37c20f04b23bdfced63cd4b19"
-  },
-  "PartitaIVA/PartitaIVA/Views/Settings/DisclaimerView.swift": {
-    "mtime": 1786644491.2783265,
-    "seen": 1787157921.702237,
-    "ast_hash": "2e6f00e1639cf7dc53cdd1e03160b456",
-    "semantic_hash": "2e6f00e1639cf7dc53cdd1e03160b456"
-  },
-  "PartitaIVA/PartitaIVA/Views/Settings/EditProfileView.swift": {
-    "mtime": 1786555451.4548938,
-    "seen": 1787157921.7022378,
-    "ast_hash": "84b95a4e7818ad8b16952f2498c4bc95",
-    "semantic_hash": "84b95a4e7818ad8b16952f2498c4bc95"
-  },
-  "PartitaIVA/PartitaIVA/Views/Settings/FiscalParametersView.swift": {
-    "mtime": 1786632534.2978218,
-    "seen": 1787157921.7022378,
-    "ast_hash": "56caef2cc5a08e98ef7f8faac0f6bcae",
-    "semantic_hash": "56caef2cc5a08e98ef7f8faac0f6bcae"
-  },
-  "PartitaIVA/PartitaIVA/Views/Settings/SettingsView.swift": {
-    "mtime": 1786555494.6966672,
-    "seen": 1787157921.702239,
-    "ast_hash": "69df6709b2b111c54c6b81a64bc86116",
-    "semantic_hash": "69df6709b2b111c54c6b81a64bc86116"
-  },
-  "PartitaIVA/PartitaIVA/Views/Summary/AnnualSummaryView.swift": {
-    "mtime": 1786555411.0202527,
-    "seen": 1787157921.702239,
-    "ast_hash": "d4cde8843d29eb61285575adaf131d67",
-    "semantic_hash": "d4cde8843d29eb61285575adaf131d67"
-  },
-  "PartitaIVA/PartitaIVA/Views/Summary/SimulatorView.swift": {
-    "mtime": 1786644326.8016002,
-    "seen": 1787157921.702239,
-    "ast_hash": "d54db1c5e0150f214ecf69c1b7af9e3a",
-    "semantic_hash": "d54db1c5e0150f214ecf69c1b7af9e3a"
-  },
-  "PartitaIVA/PartitaIVATests/TaxEngineTests.swift": {
-    "mtime": 1786644373.4674149,
-    "seen": 1787157921.70224,
-    "ast_hash": "9e14957ddca4d308606b066e09cd8f31",
-    "semantic_hash": "9e14957ddca4d308606b066e09cd8f31"
-  },
-  "app.json": {
-    "mtime": 1785170985.792595,
-    "seen": 1787157921.70224,
-    "ast_hash": "d7da1e6920cc2f55c02aa54b151cf777",
-    "semantic_hash": "d7da1e6920cc2f55c02aa54b151cf777"
-  },
   "build-ipa.sh": {
-    "mtime": 1785158021.402713,
-    "seen": 1787157921.70224,
-    "ast_hash": "fa6f363ed12bf1f7684f4f21c733af09",
-    "semantic_hash": "fa6f363ed12bf1f7684f4f21c733af09"
-  },
-  "eas.json": {
-    "mtime": 1780143913.943105,
-    "seen": 1787157921.702241,
-    "ast_hash": "4d496376b01134112a2213039b87341d",
-    "semantic_hash": "4d496376b01134112a2213039b87341d"
-  },
-  "index.ts": {
-    "mtime": 1779641369.9597127,
-    "seen": 1787157921.7022421,
-    "ast_hash": "33caa6d28d87fc7e637c033d0d7124b1",
-    "semantic_hash": "33caa6d28d87fc7e637c033d0d7124b1"
-  },
-  "metro.config.js": {
-    "mtime": 1779652073.5270088,
-    "seen": 1787157921.7022421,
-    "ast_hash": "35c6fa9be86cd6f69847e08864896c96",
-    "semantic_hash": "35c6fa9be86cd6f69847e08864896c96"
-  },
-  "package.json": {
-    "mtime": 1785170982.3481224,
-    "seen": 1787157921.7022421,
-    "ast_hash": "bb53d2e44683429eb2670e76a74dcbb9",
-    "semantic_hash": "bb53d2e44683429eb2670e76a74dcbb9"
-  },
-  "src/components/AppLogo.tsx": {
-    "mtime": 1783981249.559458,
-    "seen": 1787157921.702243,
-    "ast_hash": "4c673b31123fd26650fd1cefb864f725",
-    "semantic_hash": "4c673b31123fd26650fd1cefb864f725"
-  },
-  "src/components/BackgroundGradient.tsx": {
-    "mtime": 1784024634.726399,
-    "seen": 1787157921.702243,
-    "ast_hash": "502c8fcde8e045ab87ca194e80014125",
-    "semantic_hash": "502c8fcde8e045ab87ca194e80014125"
-  },
-  "src/components/BalanceCard.tsx": {
-    "mtime": 1785315259.168656,
-    "seen": 1787157921.702243,
-    "ast_hash": "350acb01833be31dd8c5f2cf4c29b699",
-    "semantic_hash": "350acb01833be31dd8c5f2cf4c29b699"
-  },
-  "src/components/CategoryIcon.tsx": {
-    "mtime": 1785315244.1024542,
-    "seen": 1787157921.702244,
-    "ast_hash": "e17f83c30df77df4a514824330ad6c5e",
-    "semantic_hash": "e17f83c30df77df4a514824330ad6c5e"
-  },
-  "src/components/CategoryPicker.tsx": {
-    "mtime": 1783967216.3187113,
-    "seen": 1787157921.702244,
-    "ast_hash": "ccd48be2ee324bd1890e51a558400542",
-    "semantic_hash": "ccd48be2ee324bd1890e51a558400542"
-  },
-  "src/components/ChartView.tsx": {
-    "mtime": 1783967238.6204991,
-    "seen": 1787157921.702244,
-    "ast_hash": "e6628b2e944006c48f8a3594f6c4e9c1",
-    "semantic_hash": "e6628b2e944006c48f8a3594f6c4e9c1"
-  },
-  "src/components/ConfirmDialog.tsx": {
-    "mtime": 1783968263.7938933,
-    "seen": 1787157921.7022452,
-    "ast_hash": "18fc1fe67a42000421863bfca3d0d5db",
-    "semantic_hash": "18fc1fe67a42000421863bfca3d0d5db"
-  },
-  "src/components/EmptyState.tsx": {
-    "mtime": 1783967252.49036,
-    "seen": 1787157921.7022452,
-    "ast_hash": "b7443a12c297abe40e930d5134272fb7",
-    "semantic_hash": "b7443a12c297abe40e930d5134272fb7"
-  },
-  "src/components/FilterBar.tsx": {
-    "mtime": 1783967185.3397875,
-    "seen": 1787157921.7022452,
-    "ast_hash": "b875eb9657f8eb01e5e840de73e60739",
-    "semantic_hash": "b875eb9657f8eb01e5e840de73e60739"
-  },
-  "src/components/GlassView.tsx": {
-    "mtime": 1783981938.7102797,
-    "seen": 1787157921.702246,
-    "ast_hash": "dd0c10bd08f222d34e97dd0365eceddc",
-    "semantic_hash": "dd0c10bd08f222d34e97dd0365eceddc"
-  },
-  "src/components/QuickAddBar.tsx": {
-    "mtime": 1783595973.380718,
-    "seen": 1787157921.702246,
-    "ast_hash": "4b2b2b2e895e63b2f49513e45c7441c9",
-    "semantic_hash": "4b2b2b2e895e63b2f49513e45c7441c9"
-  },
-  "src/components/RecurringItem.tsx": {
-    "mtime": 1783982056.388928,
-    "seen": 1787157921.702246,
-    "ast_hash": "747fe2cd8d4fd08adaf7174d6f538a1a",
-    "semantic_hash": "747fe2cd8d4fd08adaf7174d6f538a1a"
-  },
-  "src/components/SectionCard.tsx": {
-    "mtime": 1783967152.8180838,
-    "seen": 1787157921.702247,
-    "ast_hash": "bd5e4c28b9d83d0478ddd6f66454ab19",
-    "semantic_hash": "bd5e4c28b9d83d0478ddd6f66454ab19"
-  },
-  "src/components/TabIcons.tsx": {
-    "mtime": 1784027910.6173587,
-    "seen": 1787157921.702247,
-    "ast_hash": "c3394f21bb5d4847d4e218aeb2b59289",
-    "semantic_hash": "c3394f21bb5d4847d4e218aeb2b59289"
-  },
-  "src/components/TransactionForm.tsx": {
-    "mtime": 1784027926.00922,
-    "seen": 1787157921.7022479,
-    "ast_hash": "9f0a1988117fa9144e9d2b285f95ba61",
-    "semantic_hash": "9f0a1988117fa9144e9d2b285f95ba61"
-  },
-  "src/components/TransactionItem.tsx": {
-    "mtime": 1783982632.792644,
-    "seen": 1787157921.7022479,
-    "ast_hash": "ecd695c6da98d0c407e45daca5a3f96f",
-    "semantic_hash": "ecd695c6da98d0c407e45daca5a3f96f"
-  },
-  "src/components/TransactionList.tsx": {
-    "mtime": 1783967257.4726279,
-    "seen": 1787157921.7022479,
-    "ast_hash": "89b588dbeade957d04e3137c4474217e",
-    "semantic_hash": "89b588dbeade957d04e3137c4474217e"
-  },
-  "src/components/UIIcons.tsx": {
-    "mtime": 1779949797.428477,
-    "seen": 1787157921.702249,
-    "ast_hash": "9fddba343841240373c53a81f9ed564d",
-    "semantic_hash": "9fddba343841240373c53a81f9ed564d"
-  },
-  "src/context/AppContext.tsx": {
-    "mtime": 1785158011.1912074,
-    "seen": 1787157921.702249,
-    "ast_hash": "6d5f4e0974502679a03fd63f76f0ca10",
-    "semantic_hash": "6d5f4e0974502679a03fd63f76f0ca10"
-  },
-  "src/context/AppReducer.ts": {
-    "mtime": 1780324710.7230957,
-    "seen": 1787157921.702249,
-    "ast_hash": "71184c49c3ac685e5d7e587aef807b25",
-    "semantic_hash": "71184c49c3ac685e5d7e587aef807b25"
-  },
-  "src/context/types.ts": {
-    "mtime": 1780352444.8816915,
-    "seen": 1787157921.70225,
-    "ast_hash": "9ef441839ecccbefd3cafc011638c524",
-    "semantic_hash": "9ef441839ecccbefd3cafc011638c524"
-  },
-  "src/database/helpers.ts": {
-    "mtime": 1779643920.8646986,
-    "seen": 1787157921.70225,
-    "ast_hash": "603b682a78dd2b3b4e42fd2850b0a80c",
-    "semantic_hash": "603b682a78dd2b3b4e42fd2850b0a80c"
-  },
-  "src/database/schema.ts": {
-    "mtime": 1780401157.6960475,
-    "seen": 1787157921.70225,
-    "ast_hash": "4a34fa2d26a2656eea8679b17be046c9",
-    "semantic_hash": "4a34fa2d26a2656eea8679b17be046c9"
-  },
-  "src/database/seed.ts": {
-    "mtime": 1780352428.8530257,
-    "seen": 1787157921.702251,
-    "ast_hash": "306a1a7b1f4744876e79fc8e6894c72c",
-    "semantic_hash": "306a1a7b1f4744876e79fc8e6894c72c"
-  },
-  "src/hooks/useCategories.ts": {
-    "mtime": 1779948457.3170354,
-    "seen": 1787157921.702251,
-    "ast_hash": "847a8d1f661de82d71dae21263bfc471",
-    "semantic_hash": "847a8d1f661de82d71dae21263bfc471"
-  },
-  "src/hooks/useRecurring.ts": {
-    "mtime": 1779642075.7352912,
-    "seen": 1787157921.7022521,
-    "ast_hash": "f159382609ef96dc3d6d03de702c22c8",
-    "semantic_hash": "f159382609ef96dc3d6d03de702c22c8"
-  },
-  "src/hooks/useTheme.ts": {
-    "mtime": 1783980697.8980238,
-    "seen": 1787157921.7022521,
-    "ast_hash": "b6fe52a3394d4d40adb8990d913ec139",
-    "semantic_hash": "b6fe52a3394d4d40adb8990d913ec139"
-  },
-  "src/hooks/useTransactions.ts": {
-    "mtime": 1779644212.2007396,
-    "seen": 1787157921.7022521,
-    "ast_hash": "d2ec8a88f99e0eeeca5c9e09b1b1f17c",
-    "semantic_hash": "d2ec8a88f99e0eeeca5c9e09b1b1f17c"
-  },
-  "src/navigation/AppNavigator.tsx": {
-    "mtime": 1785315272.9060085,
-    "seen": 1787157921.702253,
-    "ast_hash": "f41f099d0cf984a880598c3e2683f1eb",
-    "semantic_hash": "f41f099d0cf984a880598c3e2683f1eb"
-  },
-  "src/screens/AddRecurringScreen.tsx": {
-    "mtime": 1784027934.4976456,
-    "seen": 1787157921.702253,
-    "ast_hash": "1107b0a999717b7ff73cd890e36b99fb",
-    "semantic_hash": "1107b0a999717b7ff73cd890e36b99fb"
-  },
-  "src/screens/AddTransactionScreen.tsx": {
-    "mtime": 1783969350.0022817,
-    "seen": 1787157921.702253,
-    "ast_hash": "9ef333a20f429154a68fa7f377925ad9",
-    "semantic_hash": "9ef333a20f429154a68fa7f377925ad9"
-  },
-  "src/screens/AnnualSummaryScreen.tsx": {
-    "mtime": 1783969349.3479187,
-    "seen": 1787157921.702254,
-    "ast_hash": "0da0e3dbd294184b6b81db6e44cbfe96",
-    "semantic_hash": "0da0e3dbd294184b6b81db6e44cbfe96"
-  },
-  "src/screens/HomeScreen.tsx": {
-    "mtime": 1784029333.6293042,
-    "seen": 1787157921.702254,
-    "ast_hash": "3d104bf921545951fae9f3ff38a0db13",
-    "semantic_hash": "3d104bf921545951fae9f3ff38a0db13"
-  },
-  "src/screens/ManageCategoriesScreen.tsx": {
-    "mtime": 1785315384.019148,
-    "seen": 1787157921.702255,
-    "ast_hash": "6c6308bfece0792c1403b44db11d954b",
-    "semantic_hash": "6c6308bfece0792c1403b44db11d954b"
-  },
-  "src/screens/RecurringScreen.tsx": {
-    "mtime": 1784029789.1146622,
-    "seen": 1787157921.702255,
-    "ast_hash": "8d17a2d964eb84657458ba1db6c33035",
-    "semantic_hash": "8d17a2d964eb84657458ba1db6c33035"
-  },
-  "src/screens/SettingsScreen.tsx": {
-    "mtime": 1785315323.846018,
-    "seen": 1787157921.702255,
-    "ast_hash": "30052143a00ce370aa11677d7c02371e",
-    "semantic_hash": "30052143a00ce370aa11677d7c02371e"
-  },
-  "src/screens/StatisticsScreen.tsx": {
-    "mtime": 1785172228.699015,
-    "seen": 1787157921.7022562,
-    "ast_hash": "518ce446838d426296f4e913cc9c1e04",
-    "semantic_hash": "518ce446838d426296f4e913cc9c1e04"
-  },
-  "src/screens/TransactionsScreen.tsx": {
-    "mtime": 1783982084.0920901,
-    "seen": 1787157921.7022562,
-    "ast_hash": "fbb84bc1e38e31942012de7941078ff2",
-    "semantic_hash": "fbb84bc1e38e31942012de7941078ff2"
-  },
-  "src/utils/backup.ts": {
-    "mtime": 1783979900.08456,
-    "seen": 1787157921.7022562,
-    "ast_hash": "5e8a89ab2d612ec2605253bc293a9cde",
-    "semantic_hash": "5e8a89ab2d612ec2605253bc293a9cde"
-  },
-  "src/utils/colors.ts": {
-    "mtime": 1783982571.9195254,
-    "seen": 1787157921.702257,
-    "ast_hash": "49ffcc32e70ea6a1fa71fa0d1f142fcf",
-    "semantic_hash": "49ffcc32e70ea6a1fa71fa0d1f142fcf"
-  },
-  "src/utils/constants.ts": {
-    "mtime": 1785315238.4864614,
-    "seen": 1787157921.702257,
-    "ast_hash": "395f9d1a2a5e683ff140e59f10902f30",
-    "semantic_hash": "395f9d1a2a5e683ff140e59f10902f30"
-  },
-  "src/utils/csvExport.ts": {
-    "mtime": 1780167551.7340105,
-    "seen": 1787157921.702257,
-    "ast_hash": "bb2ed01cccd33e996cc7ad5f6ec2e117",
-    "semantic_hash": "bb2ed01cccd33e996cc7ad5f6ec2e117"
-  },
-  "src/utils/csvImport.ts": {
-    "mtime": 1780319422.017172,
-    "seen": 1787157921.7022579,
-    "ast_hash": "a19f66dbc2c24fa3b8a6b249b1ed7a2a",
-    "semantic_hash": "a19f66dbc2c24fa3b8a6b249b1ed7a2a"
-  },
-  "src/utils/format.ts": {
-    "mtime": 1785173222.7956526,
-    "seen": 1787157921.7022579,
-    "ast_hash": "115ea385411ffd70e43ed3c529b32321",
-    "semantic_hash": "115ea385411ffd70e43ed3c529b32321"
-  },
-  "src/utils/scheduling.ts": {
-    "mtime": 1779641864.7171774,
-    "seen": 1787157921.7022579,
-    "ast_hash": "3010981de1c6719263c62a0bf8838640",
-    "semantic_hash": "3010981de1c6719263c62a0bf8838640"
-  },
-  "tsconfig.json": {
-    "mtime": 1779641369.9570174,
-    "seen": 1787157921.7022588,
-    "ast_hash": "a5df9ddad82c56de332cbb7d00dd294b",
-    "semantic_hash": "a5df9ddad82c56de332cbb7d00dd294b"
-  },
-  "AGENTS.md": {
-    "mtime": 1779641383.416671,
-    "seen": 1787157921.7022588,
-    "ast_hash": "0168b78417bf60f34fd1233c69591023",
-    "semantic_hash": "0168b78417bf60f34fd1233c69591023"
+    "mtime": 1787493580.7649102,
+    "seen": 1787493634.51371,
+    "ast_hash": "3bbac9391a7d447dfbb87da07c1dbb6b",
+    "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1779641383.4167545,
-    "seen": 1787157921.70226,
-    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
-    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
+    "mtime": 1787491408.0994244,
+    "seen": 1787493634.5137112,
+    "ast_hash": "05839e9bed659988165727194296bd0f",
+    "semantic_hash": ""
   },
   "Native_iOS/project.yml": {
-    "mtime": 1786297439.280501,
-    "seen": 1787157921.70226,
-    "ast_hash": "f22658775665e4389ca05cf0d3bd8fbf",
-    "semantic_hash": "f22658775665e4389ca05cf0d3bd8fbf"
-  },
-  "PartitaIVA/project.yml": {
-    "mtime": 1786644485.9964666,
-    "seen": 1787157921.70226,
-    "ast_hash": "2ebaf6483b63173b7344e7db33f1a7fc",
-    "semantic_hash": "2ebaf6483b63173b7344e7db33f1a7fc"
+    "mtime": 1787493578.3724484,
+    "seen": 1787493634.5137112,
+    "ast_hash": "f9e855fa9b3249eb19f7e241ed204af4",
+    "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/AppIcon-Dark.png": {
-    "mtime": 1785507441.373528,
-    "seen": 1787157921.702261,
+    "mtime": 1787350889.472129,
+    "seen": 1787493634.5137122,
     "ast_hash": "17218cf5ee010c2a5619df1bb27e580b",
     "semantic_hash": "17218cf5ee010c2a5619df1bb27e580b"
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/AppIcon.png": {
-    "mtime": 1785447720.0287485,
-    "seen": 1787157921.702261,
+    "mtime": 1787350889.4726858,
+    "seen": 1787493634.5137122,
     "ast_hash": "8efb3bae4b493e30a8fc5137284571f3",
     "semantic_hash": "8efb3bae4b493e30a8fc5137284571f3"
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/icon-dark.svg": {
-    "mtime": 1785507441.370897,
-    "seen": 1787157921.702261,
+    "mtime": 1787350889.4728298,
+    "seen": 1787493634.513713,
     "ast_hash": "545a2083c19b75daeb428ebb7ee5405f",
     "semantic_hash": "545a2083c19b75daeb428ebb7ee5405f"
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/icon.svg": {
-    "mtime": 1785447720.0319195,
-    "seen": 1787157921.702262,
+    "mtime": 1787350889.4728897,
+    "seen": 1787493634.513713,
     "ast_hash": "30a610b4ec11b07bb0ff15dd59e2cabb",
     "semantic_hash": "30a610b4ec11b07bb0ff15dd59e2cabb"
-  },
-  "PartitaIVA/PartitaIVA/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png": {
-    "mtime": 1786644748.635728,
-    "seen": 1787157921.702262,
-    "ast_hash": "7a32e6abf3552b3855ee085e9d3e8ec2",
-    "semantic_hash": "7a32e6abf3552b3855ee085e9d3e8ec2"
-  },
-  "assets/Logo.png": {
-    "mtime": 1783979497.9746935,
-    "seen": 1787157921.702262,
-    "ast_hash": "e49feca2f1e849ac3ddf337b9b2c51eb",
-    "semantic_hash": "e49feca2f1e849ac3ddf337b9b2c51eb"
-  },
-  "assets/android-icon-background.png": {
-    "mtime": 1779641369.95732,
-    "seen": 1787157921.702263,
-    "ast_hash": "2d65569cc0e2afdcea0af9f9902d4173",
-    "semantic_hash": "2d65569cc0e2afdcea0af9f9902d4173"
-  },
-  "assets/android-icon-foreground.png": {
-    "mtime": 1779641369.9577744,
-    "seen": 1787157921.702263,
-    "ast_hash": "72e71a9c846c6aa4ae32476641a00e18",
-    "semantic_hash": "72e71a9c846c6aa4ae32476641a00e18"
-  },
-  "assets/android-icon-monochrome.png": {
-    "mtime": 1779641369.9582443,
-    "seen": 1787157921.702264,
-    "ast_hash": "1e097dab989759fc0b69440092ca22cd",
-    "semantic_hash": "1e097dab989759fc0b69440092ca22cd"
-  },
-  "assets/favicon.png": {
-    "mtime": 1779641369.9584002,
-    "seen": 1787157921.702264,
-    "ast_hash": "d9f444efbdfbe7931aa93beada07318a",
-    "semantic_hash": "d9f444efbdfbe7931aa93beada07318a"
-  },
-  "assets/icon.png": {
-    "mtime": 1783979498.0012805,
-    "seen": 1787157921.702264,
-    "ast_hash": "e49feca2f1e849ac3ddf337b9b2c51eb",
-    "semantic_hash": "e49feca2f1e849ac3ddf337b9b2c51eb"
-  },
-  "assets/splash-icon.png": {
-    "mtime": 1779641369.959537,
-    "seen": 1787157921.702265,
-    "ast_hash": "97dae5a0e62ad8551d8a31897b425e63",
-    "semantic_hash": "97dae5a0e62ad8551d8a31897b425e63"
   }
 }
