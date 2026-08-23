@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		004D774C164CEADAA760C7BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FDEE69A391A4EE5216231F /* Assets.xcassets */; };
+		02DD4E2F8429AF7EA1A8997A /* Gamification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8960D9B36B3A20A37E0807 /* Gamification.swift */; };
 		04E8D206931644A51B3F8697 /* CategoryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2D3C54F5DD42A81680981F /* CategoryPicker.swift */; };
-		0908A67416EB07DD6A90826D /* AnnualSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444793A887BF716536FF4AD /* AnnualSummaryView.swift */; };
+		0D30C01953B46D2ED4F89354 /* LevelUpOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4B95E04220CD9302C6890E /* LevelUpOverlay.swift */; };
 		1370F542E68C814F4B570ADE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A56DE7F8E5E29EDDBB570 /* HomeView.swift */; };
 		17AA67C2736176D83EA726BF /* SectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1307FED9F61A991A84033FDB /* SectionCard.swift */; };
 		25F00ECCED6211AE7C59E482 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D45E0CFEC17B9A36B703CF /* Localization.swift */; };
@@ -29,6 +30,7 @@
 		B3154F8487F29E2C3B5EA759 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC97B701C24A26A3C0C7F85 /* AppViewModel.swift */; };
 		B729A85FA98D2B2A11BA3C51 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ABCEDDD12F56D5A4D4099A /* DatabaseManager.swift */; };
 		BD8F2E121919F80F5C7AC592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9223BE3C1423904DFCDD63 /* Assets.xcassets */; };
+		BF5A017F846F47308AEA1D75 /* QuickAddTransactionIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F0C75263A48131CCD88D0 /* QuickAddTransactionIntent.swift */; };
 		C046105EC38FE6997A427E8C /* GlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADFD126FA76736337BF5ED0 /* GlassView.swift */; };
 		C238EA5C7D17408EECDAB3BC /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF32AC2C5DC4C94A9D71BC6 /* Theme.swift */; };
 		CEB99D493CB1581A377841D1 /* QuickAddBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4547C0E6D8A03B23DD7B09 /* QuickAddBar.swift */; };
@@ -37,6 +39,7 @@
 		EE2DBC79C917B832BC01E69B /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1594359D922E2F3968B4EB /* SharedData.swift */; };
 		F0AF118822190958806AD074 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445E237CCECDC9A704C57A0C /* EmptyState.swift */; };
 		F1D3F73C76D88E9DBCD192FA /* AddRecurringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EAAC5FF6F828FC3AC89B27 /* AddRecurringView.swift */; };
+		F6D72DFE0A184A805FEEA100 /* BudgetEditSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06D4E99990F7B024C14BAB5 /* BudgetEditSheet.swift */; };
 		F7A7D146E2F5E49A025E6721 /* RecurringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779CD4FC3F849105F3FD8380 /* RecurringView.swift */; };
 		FA001E3FA7AB47BFE65A3FD5 /* FinanzAppWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AB8612D4FCD846A813F08680 /* FinanzAppWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -86,26 +89,37 @@
 		8EE93FAB5BE3AE9711C4E4D0 /* ConfirmDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDialog.swift; sourceTree = "<group>"; };
 		8FF32AC2C5DC4C94A9D71BC6 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		91C6502B60AB616BD1A433F3 /* FinanzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanzApp.swift; sourceTree = "<group>"; };
+		957F0C75263A48131CCD88D0 /* QuickAddTransactionIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddTransactionIntent.swift; sourceTree = "<group>"; };
+		A06D4E99990F7B024C14BAB5 /* BudgetEditSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetEditSheet.swift; sourceTree = "<group>"; };
 		A41D79F2CC27BF14CBF01352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AB8612D4FCD846A813F08680 /* FinanzAppWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = FinanzAppWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE68B42A66020C592B2B2111 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		B3D45E0CFEC17B9A36B703CF /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
-		B444793A887BF716536FF4AD /* AnnualSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnualSummaryView.swift; sourceTree = "<group>"; };
 		BA3A56DE7F8E5E29EDDBB570 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BE1594359D922E2F3968B4EB /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		C4FDEE69A391A4EE5216231F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C63BB9D000C4F702C56EB39C /* AppLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogo.swift; sourceTree = "<group>"; };
+		CC8960D9B36B3A20A37E0807 /* Gamification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamification.swift; sourceTree = "<group>"; };
 		CE9223BE3C1423904DFCDD63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2AF55709B2DC474D64BAF66 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DADFD126FA76736337BF5ED0 /* GlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassView.swift; sourceTree = "<group>"; };
 		DBC97B701C24A26A3C0C7F85 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		DBD444C8F20A4C2786CACFDF /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		E2ABCEDDD12F56D5A4D4099A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		EE4B95E04220CD9302C6890E /* LevelUpOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpOverlay.swift; sourceTree = "<group>"; };
 		FCD72596392B3F66B6D4D119 /* Widgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widgets.swift; sourceTree = "<group>"; };
 		FE113645CBA20A7F5C6A563B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		03B074AF7DDC41478BADD38F /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				957F0C75263A48131CCD88D0 /* QuickAddTransactionIntent.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
 		2524EF74AF2DF18C2A7C5807 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,11 +142,13 @@
 			children = (
 				C63BB9D000C4F702C56EB39C /* AppLogo.swift */,
 				618FB2164C028DFC84D81FD2 /* BalanceCard.swift */,
+				A06D4E99990F7B024C14BAB5 /* BudgetEditSheet.swift */,
 				0B2D3C54F5DD42A81680981F /* CategoryPicker.swift */,
 				8348BB44F196804B3BFC360E /* ChartView.swift */,
 				8EE93FAB5BE3AE9711C4E4D0 /* ConfirmDialog.swift */,
 				445E237CCECDC9A704C57A0C /* EmptyState.swift */,
 				DADFD126FA76736337BF5ED0 /* GlassView.swift */,
+				EE4B95E04220CD9302C6890E /* LevelUpOverlay.swift */,
 				3B4547C0E6D8A03B23DD7B09 /* QuickAddBar.swift */,
 				1307FED9F61A991A84033FDB /* SectionCard.swift */,
 				1348E083DC13A9E9961991E6 /* SwipeToDeleteRow.swift */,
@@ -158,7 +174,6 @@
 				3653678063F47AE653D35A4F /* Components */,
 				80EAAC5FF6F828FC3AC89B27 /* AddRecurringView.swift */,
 				59B2903E30321F95D1B353E1 /* AddTransactionView.swift */,
-				B444793A887BF716536FF4AD /* AnnualSummaryView.swift */,
 				BA3A56DE7F8E5E29EDDBB570 /* HomeView.swift */,
 				779CD4FC3F849105F3FD8380 /* RecurringView.swift */,
 				D2AF55709B2DC474D64BAF66 /* SettingsView.swift */,
@@ -198,6 +213,7 @@
 			children = (
 				7EF3FFDC04CAC2364A43F2CD /* App */,
 				67BFDBEF481D03D25D873B56 /* Database */,
+				03B074AF7DDC41478BADD38F /* Intents */,
 				A15EC4A195728A4FC14141B5 /* Models */,
 				A0691D5E15B43CF0CB79CA34 /* Services */,
 				27E70040AAAD9F8240DB2F4B /* Theme */,
@@ -221,6 +237,7 @@
 		A15EC4A195728A4FC14141B5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CC8960D9B36B3A20A37E0807 /* Gamification.swift */,
 				572DEAFBD7B57112A3D749BB /* Models.swift */,
 				5D9619A27BCD56B65580D1DF /* Scheduling.swift */,
 			);
@@ -360,22 +377,25 @@
 			files = (
 				F1D3F73C76D88E9DBCD192FA /* AddRecurringView.swift in Sources */,
 				456891BF0AC76A28D678EC75 /* AddTransactionView.swift in Sources */,
-				0908A67416EB07DD6A90826D /* AnnualSummaryView.swift in Sources */,
 				2A4AD9973DF285A13BB89103 /* AppLogo.swift in Sources */,
 				B3154F8487F29E2C3B5EA759 /* AppViewModel.swift in Sources */,
 				E5BAC3DB8109E866F3D504CF /* BalanceCard.swift in Sources */,
+				F6D72DFE0A184A805FEEA100 /* BudgetEditSheet.swift in Sources */,
 				04E8D206931644A51B3F8697 /* CategoryPicker.swift in Sources */,
 				9D6A398A503902850A54D8A4 /* ChartView.swift in Sources */,
 				73C96DF5D4465B0C1051DE14 /* ConfirmDialog.swift in Sources */,
 				B729A85FA98D2B2A11BA3C51 /* DatabaseManager.swift in Sources */,
 				F0AF118822190958806AD074 /* EmptyState.swift in Sources */,
 				4A0AD94384AF0288F73B38B4 /* FinanzApp.swift in Sources */,
+				02DD4E2F8429AF7EA1A8997A /* Gamification.swift in Sources */,
 				C046105EC38FE6997A427E8C /* GlassView.swift in Sources */,
 				1370F542E68C814F4B570ADE /* HomeView.swift in Sources */,
+				0D30C01953B46D2ED4F89354 /* LevelUpOverlay.swift in Sources */,
 				25F00ECCED6211AE7C59E482 /* Localization.swift in Sources */,
 				490566882859127B88ADFEDD /* Models.swift in Sources */,
 				583E6AE39E59A704CDDBAE76 /* NotificationManager.swift in Sources */,
 				CEB99D493CB1581A377841D1 /* QuickAddBar.swift in Sources */,
+				BF5A017F846F47308AEA1D75 /* QuickAddTransactionIntent.swift in Sources */,
 				F7A7D146E2F5E49A025E6721 /* RecurringView.swift in Sources */,
 				5EED989BC0FF90046E1E0D9A /* Scheduling.swift in Sources */,
 				17AA67C2736176D83EA726BF /* SectionCard.swift in Sources */,

@@ -7,7 +7,7 @@ import Foundation
 /// derived from the chosen category's own type, so the intent doesn't need a separate,
 /// possibly-inconsistent "type" parameter.
 struct CategoryEntity: AppEntity {
-    let id: Int64
+    let id: Int
     let name: String
     let type: String
     let colorHex: String
@@ -22,15 +22,15 @@ struct CategoryEntity: AppEntity {
 }
 
 struct CategoryEntityQuery: EntityQuery {
-    func entities(for identifiers: [Int64]) async throws -> [CategoryEntity] {
+    func entities(for identifiers: [Int]) async throws -> [CategoryEntity] {
         DatabaseManager.shared.getAllCategories()
-            .filter { identifiers.contains($0.id) }
-            .map { CategoryEntity(id: $0.id, name: $0.name, type: $0.type, colorHex: $0.color) }
+            .filter { identifiers.contains(Int($0.id)) }
+            .map { CategoryEntity(id: Int($0.id), name: $0.name, type: $0.type, colorHex: $0.color) }
     }
 
     func suggestedEntities() async throws -> [CategoryEntity] {
         DatabaseManager.shared.getAllCategories()
-            .map { CategoryEntity(id: $0.id, name: $0.name, type: $0.type, colorHex: $0.color) }
+            .map { CategoryEntity(id: Int($0.id), name: $0.name, type: $0.type, colorHex: $0.color) }
     }
 }
 
@@ -61,7 +61,7 @@ struct QuickAddTransactionIntent: AppIntent {
     @MainActor
     func perform() async throws -> some IntentResult & ProvidesDialog {
         let db = DatabaseManager.shared
-        let tx = Transaction(amount: amount, description: note ?? "", categoryId: category.id, date: Date.currentString, type: category.type, recurringId: nil)
+        let tx = Transaction(amount: amount, description: note ?? "", categoryId: Int64(category.id), date: Date.currentString, type: category.type, recurringId: nil)
         _ = db.addTransaction(tx)
         WidgetCenter.shared.reloadAllTimelines()
         return .result(dialog: IntentDialog(stringLiteral: L.quickAddConfirmation(amount: formatCurrency(amount), category: category.name)))
