@@ -166,7 +166,7 @@ struct StatisticsView: View {
         let income = vm.incomeForMonth(selectedMonth)
         let expense = vm.expenseForMonth(selectedMonth)
         let balance = income - expense
-        let xp = Gamification.monthXP(spent: expense, budget: vm.monthlyBudget)
+        let xp = Gamification.monthXP(income: income, spent: expense, budget: vm.monthlyBudget)
 
         return GlassView {
             VStack(spacing: 10) {

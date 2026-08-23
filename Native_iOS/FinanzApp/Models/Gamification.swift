@@ -58,14 +58,16 @@ enum Gamification {
         return LevelInfo(level: level, xpIntoLevel: xpIntoLevel, xpForNextLevel: xpForNext, progress: progress)
     }
 
-    /// XP earned/lost for a single month: +10 XP per euro spent under budget,
-    /// -1 XP per euro spent over budget. Returns 0 if no budget is configured yet.
-    static func monthXP(spent: Double, budget: Double) -> Double {
+    /// XP earned/lost for a single month, combining two components. Returns 0 if no budget is
+    /// configured yet.
+    /// - Spending discipline: +5 XP per euro spent under budget, -1 XP per euro spent over.
+    /// - Earnings bonus: +1 XP per euro of income beyond the budget (e.g. earn 1000, budget
+    ///   500 → 500 euro "avanzano" → +500 XP), independent of how much was actually spent.
+    static func monthXP(income: Double, spent: Double, budget: Double) -> Double {
         guard budget > 0 else { return 0 }
-        if spent <= budget {
-            return (budget - spent) * 10
-        }
-        return -(spent - budget)
+        let spendXP = spent <= budget ? (budget - spent) * 5 : -(spent - budget)
+        let earningsBonusXP = income > budget ? income - budget : 0
+        return spendXP + earningsBonusXP
     }
 
     /// Lifetime total XP across every calendar month that has at least one transaction,
@@ -74,16 +76,19 @@ enum Gamification {
         guard budget > 0 else { return 0 }
         var months = Set<String>()
         var expenseByMonth: [String: Double] = [:]
+        var incomeByMonth: [String: Double] = [:]
         for t in transactions {
             guard t.date.count >= 7 else { continue }
             let month = String(t.date.prefix(7))
             months.insert(month)
             if t.type == "expense" {
                 expenseByMonth[month, default: 0] += t.amount
+            } else {
+                incomeByMonth[month, default: 0] += t.amount
             }
         }
         let sum = months.reduce(0.0) { acc, month in
-            acc + monthXP(spent: expenseByMonth[month] ?? 0, budget: budget)
+            acc + monthXP(income: incomeByMonth[month] ?? 0, spent: expenseByMonth[month] ?? 0, budget: budget)
         }
         return max(0, sum)
     }
