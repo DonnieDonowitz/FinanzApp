@@ -62,11 +62,14 @@ enum Gamification {
     /// configured yet.
     /// - Spending discipline: +5 XP per euro spent under budget, -1 XP per euro spent over.
     /// - Earnings bonus: +1 XP per euro of income beyond the budget (e.g. earn 1000, budget
-    ///   500 → 500 euro "avanzano" → +500 XP), independent of how much was actually spent.
+    ///   500 → 500 euro "avanzano" → +500 XP), but only when the month's actual balance
+    ///   (income - spent) is still positive — earning a lot doesn't earn a bonus if it was
+    ///   all spent (or overspent) anyway.
     static func monthXP(income: Double, spent: Double, budget: Double) -> Double {
         guard budget > 0 else { return 0 }
         let spendXP = spent <= budget ? (budget - spent) * 5 : -(spent - budget)
-        let earningsBonusXP = income > budget ? income - budget : 0
+        let balance = income - spent
+        let earningsBonusXP = (income > budget && balance > 0) ? income - budget : 0
         return spendXP + earningsBonusXP
     }
 

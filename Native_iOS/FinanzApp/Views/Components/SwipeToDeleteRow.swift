@@ -31,7 +31,6 @@ struct SwipeToDeleteRow<Content: View>: View {
 
     @State private var offset: CGFloat = 0
     @State private var showDeleteConfirm = false
-    @State private var isDeleting = false
     /// Absolute point distance rather than a fraction of the row's width — simpler and immune
     /// to a GeometryReader-measured width not landing before the gesture completes.
     private let fullSwipeThreshold: CGFloat = 220
@@ -58,15 +57,12 @@ struct SwipeToDeleteRow<Content: View>: View {
                 .frame(maxHeight: .infinity)
                 .background(AppColors.expense)
                 .clipped()
-                .opacity(isDeleting ? 0 : 1)
             }
 
             content()
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .contentShape(Rectangle())
-                .offset(x: isDeleting ? -460 : offset)
-                .opacity(isDeleting ? 0 : 1)
-                .scaleEffect(isDeleting ? 0.82 : 1, anchor: .trailing)
+                .offset(x: offset)
                 .gesture(
                     DragGesture(minimumDistance: 12)
                         .onChanged { value in
@@ -83,6 +79,14 @@ struct SwipeToDeleteRow<Content: View>: View {
                 .onTapGesture { onTap?() }
         }
         .frame(maxWidth: .infinity)
+        // Applies when this row is removed from its parent ForEach (see `delete()`): SwiftUI
+        // animates the exit itself — sliding further in the swipe direction while fading out —
+        // as one continuous motion together with the list collapsing to fill the gap, the same
+        // way a native List's swipe-to-delete reads. No hand-timed second animation stage needed.
+        .transition(.asymmetric(
+            insertion: .opacity,
+            removal: .move(edge: .leading).combined(with: .opacity)
+        ))
         .alert(confirmTitle, isPresented: $showDeleteConfirm) {
             Button(L.cancel, role: .cancel) { close() }
             Button(L.delete, role: .destructive) { delete() }
@@ -97,17 +101,9 @@ struct SwipeToDeleteRow<Content: View>: View {
         }
     }
 
-    /// The row first flies out to the left and fades/shrinks away, then — once it's off
-    /// screen — the underlying data is actually removed, letting the rows below collapse
-    /// upward smoothly instead of the row just vanishing in place.
     private func delete() {
-        withAnimation(.easeIn(duration: 0.24)) {
-            isDeleting = true
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) {
-            withAnimation(.easeInOut(duration: 0.32)) {
-                onDelete()
-            }
+        withAnimation(.spring(response: 0.4, dampingFraction: 0.85)) {
+            onDelete()
         }
     }
 }

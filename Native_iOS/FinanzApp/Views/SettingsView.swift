@@ -11,9 +11,13 @@ struct SettingsView: View {
     @State private var showCategoryManager = false
     @State private var showBudgetEdit = false
 
-    @State private var showBackupImporter = false
+    // Two `.fileImporter` modifiers stacked on the same view silently break: only one of them
+    // ever presents (here, the folder picker won the underlying UIKit presentation slot and
+    // "Restore Backup" never showed anything). A single fileImporter, switched on this kind,
+    // avoids the conflict entirely.
+    private enum ImporterKind { case restoreBackup, autoBackupFolder }
+    @State private var activeImporter: ImporterKind?
     @State private var showBackupExport = false
-    @State private var showBackupFolderPicker = false
     @State private var backupDocument = TextFileDocument(text: "")
     @State private var showRestoreConfirm = false
     @State private var pendingRestoreJSON: String?
@@ -53,32 +57,40 @@ struct SettingsView: View {
                 showBackupResult = true
             }
         }
-        .fileImporter(isPresented: $showBackupImporter, allowedContentTypes: [.finanzBackup, .json, .plainText]) { result in
+        .fileImporter(
+            isPresented: Binding(
+                get: { activeImporter != nil },
+                set: { if !$0 { activeImporter = nil } }
+            ),
+            allowedContentTypes: activeImporter == .autoBackupFolder ? [.folder] : [.finanzBackup, .json, .plainText]
+        ) { result in
             // The completion handler fires while the document picker is still dismissing;
             // presenting a new alert synchronously here gets silently dropped by SwiftUI, so
             // the follow-up alert is scheduled on the next run loop turn instead.
             func present(_ action: @escaping () -> Void) {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: action)
             }
-            switch result {
-            case .success(let url):
-                guard url.startAccessingSecurityScopedResource() else { return }
-                defer { url.stopAccessingSecurityScopedResource() }
-                if let content = try? String(contentsOf: url, encoding: .utf8) {
-                    pendingRestoreJSON = content
-                    present { showRestoreConfirm = true }
-                } else {
-                    backupResultMessage = L.backupReadError
+            switch activeImporter {
+            case .autoBackupFolder:
+                if case .success(let url) = result {
+                    vm.setAutoBackupFolder(url)
+                }
+            case .restoreBackup, nil:
+                switch result {
+                case .success(let url):
+                    guard url.startAccessingSecurityScopedResource() else { return }
+                    defer { url.stopAccessingSecurityScopedResource() }
+                    if let content = try? String(contentsOf: url, encoding: .utf8) {
+                        pendingRestoreJSON = content
+                        present { showRestoreConfirm = true }
+                    } else {
+                        backupResultMessage = L.backupReadError
+                        present { showBackupResult = true }
+                    }
+                case .failure:
+                    backupResultMessage = L.fileOpenError
                     present { showBackupResult = true }
                 }
-            case .failure:
-                backupResultMessage = L.fileOpenError
-                present { showBackupResult = true }
-            }
-        }
-        .fileImporter(isPresented: $showBackupFolderPicker, allowedContentTypes: [.folder]) { result in
-            if case .success(let url) = result {
-                vm.setAutoBackupFolder(url)
             }
         }
         .alert(L.restoreConfirmTitle, isPresented: $showRestoreConfirm) {
@@ -497,7 +509,7 @@ struct SettingsView: View {
                     }
                     Divider().background(AppColors.divider).padding(.leading, 52)
                     SettingsRow(icon: "arrow.uturn.backward.circle.fill", label: L.restoreBackup) {
-                        showBackupImporter = true
+                        activeImporter = .restoreBackup
                     }
                 }
                 .padding(.vertical, 4)
@@ -560,7 +572,7 @@ struct SettingsView: View {
                                 .foregroundStyle(AppColors.text)
                             Spacer()
                             Menu {
-                                Button(L.chooseFolder) { showBackupFolderPicker = true }
+                                Button(L.chooseFolder) { activeImporter = .autoBackupFolder }
                                 if vm.autoBackupFolderName != nil {
                                     Button(L.backupFolderDefault, role: .destructive) { vm.clearAutoBackupFolder() }
                                 }

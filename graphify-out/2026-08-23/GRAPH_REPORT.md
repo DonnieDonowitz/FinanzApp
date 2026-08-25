@@ -1,16 +1,16 @@
 # Graph Report - FinanzApp  (2026-08-23)
 
 ## Corpus Check
-- 38 files · ~39,817 words
+- 38 files · ~39,606 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 847 nodes · 1832 edges · 56 communities (46 shown, 10 thin omitted)
+- 846 nodes · 1830 edges · 52 communities (42 shown, 10 thin omitted)
 - Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 170 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4d87c2f3`
+- Built from commit: `fc44cfa5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,7 +25,7 @@
 - StatisticsView
 - QuickActionsEntry
 - GapDonutChart
-- AppDelegate
+- TabItem
 - View
 - Gamification
 - CategoryIconView
@@ -36,13 +36,13 @@
 - Int
 - ConfirmDialog
 - StatsWidgetView
-- RecurringRow
-- TextFileDocument
+- AddTransactionView
+- String
 - BackupFrequency
 - MainTabView
 - GlassView
 - Date
-- AddTransactionView
+- SwipeToDeleteRow
 - .dailyChartCard
 - StatsEntry
 - .budgetCard
@@ -51,17 +51,12 @@
 - SwiftUI
 - TransactionRow
 - AppLanguage
-- SwipeToDeleteRow
-- BalanceCard
+- NotificationManager
+- .performAutoBackupIfNeeded
 - SharedData.swift
-- LevelUpOverlay
-- .refresh
-- RecurringView
-- formatCurrency
-- AddRecurringView
-- QuickAddBar
+- .dismiss
 - FinanzApp.swift
-- .userNotificationCenter
+- AppDelegate
 - EmptyState
 - App Group group.com.finanzapp.app
 - CLAUDE.md AGENTS.md Include Directive
@@ -90,10 +85,10 @@
   Native_iOS/FinanzApp/Views/Components/EmptyState.swift → Native_iOS/FinanzApp/Views/Components/GlassView.swift
 - `.body` --calls--> `GlassView`  [INFERRED]
   Native_iOS/FinanzApp/Views/Components/SectionCard.swift → Native_iOS/FinanzApp/Views/Components/GlassView.swift
+- `.body` --calls--> `BackgroundGradient`  [INFERRED]
+  Native_iOS/FinanzApp/App/FinanzApp.swift → Native_iOS/FinanzApp/Theme/Theme.swift
 - `.body` --calls--> `LevelUpOverlay`  [INFERRED]
   Native_iOS/FinanzApp/App/FinanzApp.swift → Native_iOS/FinanzApp/Views/Components/LevelUpOverlay.swift
-- `.body` --calls--> `HomeView`  [INFERRED]
-  Native_iOS/FinanzApp/App/FinanzApp.swift → Native_iOS/FinanzApp/Views/HomeView.swift
 
 ## Import Cycles
 - None detected.
@@ -101,7 +96,7 @@
 ## Hyperedges (group relationships)
 - **FinanzApp / FinanzAppWidget App Group Data Sharing** — native_ios_project_finanzapp, native_ios_project_finanzappwidget, native_ios_project_app_group [EXTRACTED 1.00]
 
-## Communities (56 total, 10 thin omitted)
+## Communities (52 total, 10 thin omitted)
 
 ### Community 0 - "L"
 Cohesion: 0.03
@@ -116,8 +111,8 @@ Cohesion: 0.08
 Nodes (23): Codable, Identifiable, DatabaseManager, .dbPath, Any, Bool, Int, Int64 (+15 more)
 
 ### Community 3 - "HomeView"
-Cohesion: 0.19
-Nodes (11): HomeView, .body, .header, .recentTransactionsList, SectionHeader, .body, Binding, Bool (+3 more)
+Cohesion: 0.09
+Nodes (23): BalanceCard, .amountDec, .amountInt, .body, FlowChip, .body, .flowAmount, Color (+15 more)
 
 ### Community 4 - "AppColors"
 Cohesion: 0.06
@@ -141,35 +136,35 @@ Nodes (8): Context, QuickActionsEntry, QuickActionsProvider, StatsProvider, Void
 
 ### Community 9 - "GapDonutChart"
 Cohesion: 0.13
-Nodes (22): CGPoint, ChartLegend, .body, DailyBarChart, .barSpacing, .body, .maxValue, GapDonutChart (+14 more)
+Nodes (21): CGPoint, ChartLegend, .body, DailyBarChart, .barSpacing, .body, .maxValue, GapDonutChart (+13 more)
 
-### Community 10 - "AppDelegate"
+### Community 10 - "TabItem"
 Cohesion: 0.25
-Nodes (7): AppDelegate, Any, Bool, NSObject, UIApplication, UIApplicationDelegate, UNUserNotificationCenterDelegate
+Nodes (7): Namespace, Any, Bool, String, TabItem, .body, UIApplication
 
 ### Community 11 - "View"
-Cohesion: 0.16
-Nodes (21): View, CategoryFormSheet, CategoryManagerView, .body, CategoryRow, FormField, .body, InfoRow (+13 more)
+Cohesion: 0.18
+Nodes (18): View, CategoryFormSheet, CategoryManagerView, .body, CategoryRow, InfoRow, .body, SectionLabel (+10 more)
 
 ### Community 12 - "Gamification"
-Cohesion: 0.13
-Nodes (11): Foundation, Gamification, LevelInfo, Double, Int, Scheduling, Bool, String (+3 more)
+Cohesion: 0.16
+Nodes (9): Foundation, Gamification, LevelInfo, Double, Int, Scheduling, Bool, String (+1 more)
 
 ### Community 13 - "CategoryIconView"
-Cohesion: 0.24
-Nodes (14): Font, .body, .categoryName, BackgroundGradient, CategoryIconView, resolvedIcon(), CGFloat, .body (+6 more)
+Cohesion: 0.15
+Nodes (19): Font, .categoryName, BackgroundGradient, categoryIcon(), CategoryIconView, resolvedIcon(), CGFloat, AddRecurringView (+11 more)
 
 ### Community 14 - "Int"
 Cohesion: 0.22
 Nodes (3): Int, Int, .levelCard
 
 ### Community 15 - "Theme.swift"
-Cohesion: 0.18
-Nodes (15): AppTinting, categoryIcon(), .body, Color, ColorScheme, .tinting, DarkTints, formatDate() (+7 more)
+Cohesion: 0.19
+Nodes (14): AppTinting, .body, Color, ColorScheme, .tinting, DarkTints, formatDate(), frequencyLabel() (+6 more)
 
 ### Community 16 - "SettingsView"
-Cohesion: 0.13
-Nodes (18): NotificationManager, Bool, Void, ImporterKind, autoBackupFolder, restoreBackup, SettingsView, .appearanceSection (+10 more)
+Cohesion: 0.19
+Nodes (14): ImporterKind, autoBackupFolder, restoreBackup, SettingsView, .appearanceSection, .autoBackupSection, .body, .expenseAlertSection (+6 more)
 
 ### Community 17 - "AppViewModel"
 Cohesion: 0.12
@@ -183,21 +178,21 @@ Nodes (5): ConfirmDialog, .body, Bool, String, Void
 Cohesion: 0.18
 Nodes (12): QuickActionButton, .body, .body, StatsWidgetView, .body, .monthName, .progressBar, .statusColor (+4 more)
 
-### Community 21 - "RecurringRow"
-Cohesion: 0.16
-Nodes (14): BrandToggle, .body, RecurringRow, .category, .categoryName, .color, .body, SummaryDivider (+6 more)
+### Community 21 - "AddTransactionView"
+Cohesion: 0.33
+Nodes (8): AddTransactionView, .canSubmit, Bool, Color, String, Void, TypeChip, .body
 
-### Community 22 - "TextFileDocument"
-Cohesion: 0.17
-Nodes (10): FileDocument, FileWrapper, .backupSection, TextFileDocument, .readableContentTypes, .writableContentTypes, UTType, .finanzBackup (+2 more)
+### Community 22 - "String"
+Cohesion: 0.14
+Nodes (13): FileDocument, FileWrapper, FormField, .body, Content, String, TextFileDocument, .readableContentTypes (+5 more)
 
 ### Community 23 - "BackupFrequency"
 Cohesion: 0.18
 Nodes (9): Combine, BackupFrequency, daily, .label, .minimumDays, monthly, weekly, TopCategory (+1 more)
 
 ### Community 24 - "MainTabView"
-Cohesion: 0.38
-Nodes (6): LinearGradient, MainTabView, .tabBar, Int, .body, .body
+Cohesion: 0.32
+Nodes (7): LinearGradient, MainTabView, .tabBar, Int, .body, .body, .body
 
 ### Community 25 - "GlassView"
 Cohesion: 0.17
@@ -207,69 +202,49 @@ Nodes (13): GlassIntensity, regular, strong, GlassView, .bg, .border, .highlight
 Cohesion: 0.29
 Nodes (6): Date, .currentMonth, .currentString, .fullIT, .shortIT, .yearMonth
 
-### Community 27 - "AddTransactionView"
-Cohesion: 0.11
-Nodes (23): .monthsShort, getCurrentMonth(), AddTransactionView, .canSubmit, Bool, Color, String, Void (+15 more)
+### Community 27 - "SwipeToDeleteRow"
+Cohesion: 0.05
+Nodes (44): .body, .monthsShort, Bool, CGFloat, Content, String, Void, SwipeToDeleteRow (+36 more)
 
 ### Community 29 - "StatsEntry"
 Cohesion: 0.29
 Nodes (7): StatsEntry, .isOverBudget, .progress, .remaining, Bool, Double, Int
 
 ### Community 32 - "SectionCard"
-Cohesion: 0.60
+Cohesion: 0.47
 Nodes (4): SectionCard, .body, Content, String
 
 ### Community 33 - "SwiftUI"
-Cohesion: 0.14
-Nodes (9): AppLogo, .body, BudgetEditSheet, .parsedAmount, Double, CategoryPicker, .filteredCategories, String (+1 more)
+Cohesion: 0.18
+Nodes (6): AppLogo, .body, BudgetEditSheet, .parsedAmount, Double, SwiftUI
 
 ### Community 34 - "TransactionRow"
-Cohesion: 0.29
-Nodes (7): Color, String, TransactionRow, .category, .categoryColor, .categoryName, .timeAgo
+Cohesion: 0.15
+Nodes (14): formatCurrency(), formatDateShort(), Double, Color, String, TransactionRow, .category, .categoryColor (+6 more)
 
 ### Community 35 - "AppLanguage"
 Cohesion: 0.12
 Nodes (18): Hashable, AppLanguage, de, en, es, fr, .id, it (+10 more)
 
-### Community 36 - "SwipeToDeleteRow"
-Cohesion: 0.22
-Nodes (9): Bool, CGFloat, Content, String, Void, SwipeToDeleteRow, .body, .isArmed (+1 more)
-
-### Community 37 - "BalanceCard"
-Cohesion: 0.24
-Nodes (10): BalanceCard, .amountDec, .amountInt, .body, FlowChip, .body, .flowAmount, Color (+2 more)
+### Community 36 - "NotificationManager"
+Cohesion: 0.33
+Nodes (4): NotificationManager, Bool, Void, UNAuthorizationStatus
 
 ### Community 38 - "SharedData.swift"
 Cohesion: 0.29
 Nodes (5): .mediumBody, .smallBody, Color, widgetCurrency(), SQLite3
 
-### Community 39 - "LevelUpOverlay"
+### Community 39 - ".dismiss"
 Cohesion: 0.40
 Nodes (4): LevelUpOverlay, .body, Int, Void
 
-### Community 41 - "RecurringView"
-Cohesion: 0.29
-Nodes (7): .body, RecurringView, .activeRecurring, .monthlyTotal, .nextDueDays, Double, Int
-
-### Community 42 - "formatCurrency"
-Cohesion: 0.33
-Nodes (5): formatCurrency(), Double, .formattedAmount, .insightCards, .body
-
-### Community 43 - "AddRecurringView"
-Cohesion: 0.50
-Nodes (3): AddRecurringView, .canSubmit, Bool
-
-### Community 44 - "QuickAddBar"
-Cohesion: 0.50
-Nodes (3): QuickAddBar, .body, Void
-
 ### Community 45 - "FinanzApp.swift"
 Cohesion: 0.22
-Nodes (9): App, Namespace, ContentView, FinanzApp, .body, String, TabItem, .body (+1 more)
+Nodes (8): App, ContentView, .body, FinanzApp, .body, Notification.Name, Scene, UserNotifications
 
-### Community 76 - ".userNotificationCenter"
-Cohesion: 0.33
-Nodes (5): Void, UNNotification, UNNotificationPresentationOptions, UNNotificationResponse, UNUserNotificationCenter
+### Community 76 - "AppDelegate"
+Cohesion: 0.20
+Nodes (9): AppDelegate, Void, NSObject, UIApplicationDelegate, UNNotification, UNNotificationPresentationOptions, UNNotificationResponse, UNUserNotificationCenter (+1 more)
 
 ### Community 82 - "EmptyState"
 Cohesion: 0.50
@@ -291,17 +266,17 @@ Nodes (4): Double, .summaryCard, Color, String
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `AppViewModel` connect `AppViewModel` to `DatabaseManager`, `HomeView`, `StatisticsView`, `View`, `Gamification`, `CategoryIconView`, `Int`, `SettingsView`, `Int`, `RecurringRow`, `BackupFrequency`, `MainTabView`, `GlassView`, `AddTransactionView`, `.dailyChartCard`, `SwiftUI`, `TransactionRow`, `AppLanguage`, `.refresh`, `RecurringView`, `formatCurrency`, `AddRecurringView`, `FinanzApp.swift`, `String`?**
+- **Why does `AppViewModel` connect `AppViewModel` to `DatabaseManager`, `HomeView`, `StatisticsView`, `View`, `Gamification`, `CategoryIconView`, `Int`, `SettingsView`, `Int`, `AddTransactionView`, `BackupFrequency`, `MainTabView`, `GlassView`, `SwipeToDeleteRow`, `.dailyChartCard`, `SwiftUI`, `TransactionRow`, `AppLanguage`, `.performAutoBackupIfNeeded`, `.processRecurringIfNeeded`, `FinanzApp.swift`, `String`?**
   _High betweenness centrality (0.240) - this node is a cross-community bridge._
-- **Why does `L` connect `L` to `AppLanguage`, `CategoryEntity`, `String`, `View`, `CategoryIconView`, `Int`, `AddTransactionView`, `.dailyChartCard`, `.budgetCard`?**
+- **Why does `L` connect `L` to `AppLanguage`, `CategoryEntity`, `String`, `View`, `CategoryIconView`, `Int`, `SwipeToDeleteRow`, `.dailyChartCard`, `.budgetCard`?**
   _High betweenness centrality (0.226) - this node is a cross-community bridge._
-- **Why does `View` connect `View` to `HomeView`, `Widgets.swift`, `StatisticsView`, `GapDonutChart`, `CategoryIconView`, `SettingsView`, `ConfirmDialog`, `StatsWidgetView`, `RecurringRow`, `MainTabView`, `GlassView`, `AddTransactionView`, `SectionCard`, `SwiftUI`, `TransactionRow`, `SwipeToDeleteRow`, `BalanceCard`, `LevelUpOverlay`, `RecurringView`, `AddRecurringView`, `QuickAddBar`, `FinanzApp.swift`, `EmptyState`, `String`?**
-  _High betweenness centrality (0.221) - this node is a cross-community bridge._
+- **Why does `View` connect `View` to `HomeView`, `Widgets.swift`, `StatisticsView`, `GapDonutChart`, `TabItem`, `CategoryIconView`, `SettingsView`, `ConfirmDialog`, `StatsWidgetView`, `AddTransactionView`, `String`, `MainTabView`, `GlassView`, `SwipeToDeleteRow`, `SectionCard`, `SwiftUI`, `TransactionRow`, `.dismiss`, `FinanzApp.swift`, `EmptyState`, `String`?**
+  _High betweenness centrality (0.220) - this node is a cross-community bridge._
 - **What connects `.dbPath`, `AppIntents`, `.parameterSummary` to the rest of the system?**
   _146 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `L` be split into smaller, more focused modules?**
   _Cohesion score 0.027583527583527584 - nodes in this community are weakly interconnected._
 - **Should `DatabaseManager` be split into smaller, more focused modules?**
-  _Cohesion score 0.0798076923076923 - nodes in this community are weakly interconnected._
-- **Should `AppColors` be split into smaller, more focused modules?**
-  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08346134152585766 - nodes in this community are weakly interconnected._
+- **Should `HomeView` be split into smaller, more focused modules?**
+  _Cohesion score 0.09195402298850575 - nodes in this community are weakly interconnected._
