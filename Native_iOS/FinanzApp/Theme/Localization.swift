@@ -79,6 +79,7 @@ enum L {
     // MARK: - Tab bar
     static var tabHome: String { t(it: "Home", en: "Home", de: "Start", fr: "Accueil", es: "Inicio") }
     static var tabMovements: String { t(it: "Movimenti", en: "Transactions", de: "Bewegungen", fr: "Mouvements", es: "Movimientos") }
+    static var tabStatistics: String { t(it: "Statistiche", en: "Stats", de: "Statistik", fr: "Stats", es: "Estadísticas") }
     static var tabRecurring: String { t(it: "Ricorrenti", en: "Recurring", de: "Wiederkehrend", fr: "Récurrents", es: "Recurrentes") }
     static var tabSettings: String { t(it: "Impostazioni", en: "Settings", de: "Einstellungen", fr: "Réglages", es: "Ajustes") }
 

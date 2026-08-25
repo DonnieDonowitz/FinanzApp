@@ -9,7 +9,6 @@ struct SettingsView: View {
     @AppStorage("reminderMinute") private var reminderMinute: Int = 0
 
     @State private var showCategoryManager = false
-    @State private var showStatistics = false
     @State private var showBudgetEdit = false
 
     @State private var showBackupImporter = false
@@ -44,9 +43,6 @@ struct SettingsView: View {
         .scrollIndicators(.hidden)
         .sheet(isPresented: $showCategoryManager) {
             CategoryManagerView().environmentObject(vm)
-        }
-        .sheet(isPresented: $showStatistics) {
-            StatisticsView().environmentObject(vm)
         }
         .sheet(isPresented: $showBudgetEdit) {
             BudgetEditSheet().environmentObject(vm)
@@ -482,10 +478,6 @@ struct SettingsView: View {
                 VStack(spacing: 0) {
                     SettingsRow(icon: "tag.fill", label: L.categories) {
                         showCategoryManager = true
-                    }
-                    Divider().background(AppColors.divider).padding(.leading, 52)
-                    SettingsRow(icon: "chart.bar.fill", label: L.statistics) {
-                        showStatistics = true
                     }
                 }
                 .padding(.vertical, 4)

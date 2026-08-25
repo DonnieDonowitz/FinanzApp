@@ -5,7 +5,6 @@ struct TransactionsView: View {
     @State private var selectedMonth: String = getCurrentMonth()
     @State private var selectedType: String = "all"
     @State private var showAddSheet = false
-    @State private var showStats = false
     @State private var editingTransaction: Transaction?
 
     private var months: [String] {
@@ -41,16 +40,6 @@ struct TransactionsView: View {
                         .foregroundStyle(AppColors.text)
                         .tracking(-0.2)
                     Spacer()
-                    Button { showStats = true } label: {
-                        HStack(spacing: 4) {
-                            Image(systemName: "chart.bar.fill").font(.system(size: 12, weight: .semibold)).foregroundStyle(AppColors.textSecondary)
-                            Text(L.statistics)
-                                .font(.system(size: 13, weight: .semibold))
-                                .foregroundStyle(AppColors.textSecondary)
-                        }
-                        .padding(.horizontal, 12).padding(.vertical, 6)
-                        .background(AppColors.glass).clipShape(Capsule())
-                    }
                 }
                 .padding(.horizontal, 24).padding(.top, 12)
 
@@ -126,7 +115,6 @@ struct TransactionsView: View {
         .scrollIndicators(.hidden)
         .overlay(alignment: .bottomTrailing) { FAB { showAddSheet = true } }
         .sheet(isPresented: $showAddSheet) { AddTransactionView().environmentObject(vm) }
-        .sheet(isPresented: $showStats) { StatisticsView().environmentObject(vm) }
         .sheet(item: $editingTransaction) { tx in
             AddTransactionView(editTransaction: tx).environmentObject(vm)
         }

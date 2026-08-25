@@ -49,19 +49,20 @@ struct QuickAddTransactionIntent: AppIntent {
     @Parameter(title: "Categoria")
     var category: CategoryEntity
 
-    @Parameter(title: "Nota")
-    var note: String?
+    // Required (not `String?`) and folded into the main summary sentence below — that's what
+    // makes Shortcuts/Back Tap actually prompt for it every run instead of silently skipping
+    // it as an optional trailing parameter.
+    @Parameter(title: "Descrizione")
+    var note: String
 
     static var parameterSummary: some ParameterSummary {
-        Summary("Aggiungi \(\.$amount) a \(\.$category)") {
-            \.$note
-        }
+        Summary("Aggiungi \(\.$amount) a \(\.$category): \(\.$note)")
     }
 
     @MainActor
     func perform() async throws -> some IntentResult & ProvidesDialog {
         let db = DatabaseManager.shared
-        let tx = Transaction(amount: amount, description: note ?? "", categoryId: category.id, date: Date.currentString, type: category.type, recurringId: nil)
+        let tx = Transaction(amount: amount, description: note, categoryId: category.id, date: Date.currentString, type: category.type, recurringId: nil)
         _ = db.addTransaction(tx)
         WidgetCenter.shared.reloadAllTimelines()
         return .result(dialog: IntentDialog(stringLiteral: L.quickAddConfirmation(amount: formatCurrency(amount), category: category.name)))

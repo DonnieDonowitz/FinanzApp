@@ -83,18 +83,22 @@ struct MainTabView: View {
                     .opacity(selectedTab == 0 ? 1 : 0)
                     .allowsHitTesting(selectedTab == 0)
                     .accessibilityHidden(selectedTab != 0)
-                TransactionsView()
+                StatisticsView()
                     .opacity(selectedTab == 1 ? 1 : 0)
                     .allowsHitTesting(selectedTab == 1)
                     .accessibilityHidden(selectedTab != 1)
-                RecurringView()
+                TransactionsView()
                     .opacity(selectedTab == 2 ? 1 : 0)
                     .allowsHitTesting(selectedTab == 2)
                     .accessibilityHidden(selectedTab != 2)
-                SettingsView()
+                RecurringView()
                     .opacity(selectedTab == 3 ? 1 : 0)
                     .allowsHitTesting(selectedTab == 3)
                     .accessibilityHidden(selectedTab != 3)
+                SettingsView()
+                    .opacity(selectedTab == 4 ? 1 : 0)
+                    .allowsHitTesting(selectedTab == 4)
+                    .accessibilityHidden(selectedTab != 4)
             }
             .environmentObject(vm)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -110,12 +114,14 @@ struct MainTabView: View {
         HStack(spacing: 0) {
             TabItem(icon: "house.fill", label: L.tabHome, isActive: selectedTab == 0, isDark: vm.isDarkMode)
                 .onTapGesture { selectedTab = 0 }
-            TabItem(icon: "list.bullet", label: L.tabMovements, isActive: selectedTab == 1, isDark: vm.isDarkMode)
+            TabItem(icon: "chart.bar.fill", label: L.tabStatistics, isActive: selectedTab == 1, isDark: vm.isDarkMode)
                 .onTapGesture { selectedTab = 1 }
-            TabItem(icon: "arrow.triangle.2.circlepath", label: L.tabRecurring, isActive: selectedTab == 2, isDark: vm.isDarkMode)
+            TabItem(icon: "list.bullet", label: L.tabMovements, isActive: selectedTab == 2, isDark: vm.isDarkMode)
                 .onTapGesture { selectedTab = 2 }
-            TabItem(icon: "gearshape.fill", label: L.tabSettings, isActive: selectedTab == 3, isDark: vm.isDarkMode)
+            TabItem(icon: "arrow.triangle.2.circlepath", label: L.tabRecurring, isActive: selectedTab == 3, isDark: vm.isDarkMode)
                 .onTapGesture { selectedTab = 3 }
+            TabItem(icon: "gearshape.fill", label: L.tabSettings, isActive: selectedTab == 4, isDark: vm.isDarkMode)
+                .onTapGesture { selectedTab = 4 }
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 16)

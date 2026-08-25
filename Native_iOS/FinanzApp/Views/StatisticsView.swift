@@ -14,7 +14,6 @@ enum StatsPeriod: String, CaseIterable {
 
 struct StatisticsView: View {
     @EnvironmentObject var vm: AppViewModel
-    @Environment(\.dismiss) var dismiss
 
     @State private var period: StatsPeriod = .month
     @State private var selectedMonth: String = Date.currentMonth
@@ -50,13 +49,6 @@ struct StatisticsView: View {
                 }
             }
             .scrollIndicators(.hidden)
-        }
-        .overlay(alignment: .topTrailing) {
-            Button(L.close) { dismiss() }
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(AppColors.text)
-                .padding(.horizontal, 16)
-                .padding(.top, 14)
         }
         .onChange(of: period) { _, _ in selectedSliceId = nil }
         .onChange(of: selectedMonth) { _, _ in selectedSliceId = nil }
