@@ -26,7 +26,7 @@ struct SettingsView: View {
 
     @State private var showReminderDeniedAlert = false
     @State private var showExpenseAlertDeniedAlert = false
-    @State private var newThresholdText = ""
+    @State private var thresholdText = ""
 
     var body: some View {
         ScrollView {
@@ -348,7 +348,7 @@ struct SettingsView: View {
     private var expenseAlertSection: some View {
         VStack(spacing: 8) {
             SectionLabel(L.expenseAlerts)
-            GlassView(radius: 28) {
+            GlassView(radius: 22) {
                 VStack(spacing: 0) {
                     HStack {
                         Image(systemName: "exclamationmark.triangle.fill").font(.system(size: 16, weight: .medium)).foregroundStyle(AppColors.text.opacity(0.85))
@@ -366,12 +366,31 @@ struct SettingsView: View {
                     .padding(16)
 
                     if vm.expenseAlertsEnabled {
-                        ForEach(vm.expenseAlertThresholds, id: \.self) { threshold in
-                            Divider().background(AppColors.divider).padding(.leading, 52)
-                            thresholdRow(threshold)
-                        }
                         Divider().background(AppColors.divider).padding(.leading, 52)
-                        addThresholdRow
+                        HStack {
+                            Text(L.expenseAlertThresholdLabel)
+                                .font(.system(size: 15, weight: .medium))
+                                .foregroundStyle(AppColors.text)
+                            Spacer()
+                            TextField(L.thresholdPlaceholder, text: $thresholdText)
+                                .keyboardType(.numberPad)
+                                .multilineTextAlignment(.trailing)
+                                .font(.system(size: 15, weight: .semibold))
+                                .foregroundStyle(AppColors.text)
+                                .frame(width: 50)
+                                .onChange(of: thresholdText) { _, newValue in
+                                    let digits = newValue.filter(\.isNumber)
+                                    if digits != newValue { thresholdText = digits }
+                                    vm.setExpenseAlertThreshold(min(Int(digits) ?? 0, 500))
+                                }
+                            Text("%")
+                                .font(.system(size: 15, weight: .semibold))
+                                .foregroundStyle(AppColors.textSecondary)
+                        }
+                        .padding(16)
+                        .onAppear {
+                            if vm.expenseAlertThreshold > 0 { thresholdText = "\(vm.expenseAlertThreshold)" }
+                        }
                     }
                 }
             }
@@ -381,58 +400,6 @@ struct SettingsView: View {
                 .foregroundStyle(AppColors.textTertiary)
                 .padding(.horizontal, 24)
         }
-    }
-
-    private func thresholdRow(_ threshold: Int) -> some View {
-        let isCustom = !AppViewModel.defaultExpenseAlertThresholds.contains(threshold)
-        return HStack {
-            Button {
-                vm.setThreshold(threshold, enabled: !vm.isThresholdEnabled(threshold))
-            } label: {
-                HStack(spacing: 10) {
-                    Image(systemName: vm.isThresholdEnabled(threshold) ? "checkmark.square.fill" : "square")
-                        .font(.system(size: 18))
-                        .foregroundStyle(vm.isThresholdEnabled(threshold) ? AppColors.primary : AppColors.textTertiary)
-                    Text("\(threshold)%")
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundStyle(AppColors.text)
-                }
-            }
-            Spacer()
-            if isCustom {
-                Button {
-                    vm.removeCustomThreshold(threshold)
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .font(.system(size: 16))
-                        .foregroundStyle(AppColors.textTertiary)
-                }
-            }
-        }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 10)
-    }
-
-    private var addThresholdRow: some View {
-        HStack(spacing: 10) {
-            Image(systemName: "plus.circle").font(.system(size: 16)).foregroundStyle(AppColors.textTertiary)
-            TextField(L.thresholdPlaceholder, text: $newThresholdText)
-                .keyboardType(.numberPad)
-                .font(.system(size: 15, weight: .medium))
-                .foregroundStyle(AppColors.text)
-            Spacer()
-            Button(L.addCustomThreshold) {
-                if let value = Int(newThresholdText) {
-                    vm.addCustomThreshold(value)
-                }
-                newThresholdText = ""
-            }
-            .font(.system(size: 13, weight: .semibold))
-            .foregroundStyle(AppColors.primary)
-            .disabled(Int(newThresholdText) == nil)
-        }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 10)
     }
 
     private func handleExpenseAlertToggle(_ enabled: Bool) {
@@ -543,27 +510,6 @@ struct SettingsView: View {
                     .padding(16)
 
                     if vm.autoBackupEnabled {
-                        Divider().background(AppColors.divider).padding(.leading, 52)
-                        VStack(alignment: .leading, spacing: 10) {
-                            Text(L.backupFrequency)
-                                .font(.system(size: 12, weight: .semibold))
-                                .foregroundStyle(AppColors.textSecondary)
-                            HStack(spacing: 8) {
-                                ForEach(BackupFrequency.allCases, id: \.self) { freq in
-                                    Text(freq.label)
-                                        .font(.system(size: 12.5, weight: .bold))
-                                        .foregroundStyle(vm.autoBackupFrequency == freq ? Color(hex: "#0B1120") : AppColors.textSecondary)
-                                        .frame(maxWidth: .infinity)
-                                        .padding(.vertical, 8)
-                                        .background(vm.autoBackupFrequency == freq ? Color.white.opacity(0.9) : AppColors.glass)
-                                        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                                        .onTapGesture { vm.setAutoBackupFrequency(freq) }
-                                }
-                            }
-                        }
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 14)
-
                         Divider().background(AppColors.divider).padding(.leading, 52)
                         HStack {
                             Image(systemName: "folder.fill").font(.system(size: 16, weight: .medium)).foregroundStyle(AppColors.text.opacity(0.85)).frame(width: 20)
@@ -706,7 +652,7 @@ struct CategoryManagerView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                AppColors.bg.first!.ignoresSafeArea()
+                AppColors.bg.ignoresSafeArea()
 
                 ScrollView {
                     VStack(spacing: 12) {
@@ -786,7 +732,7 @@ struct CategoryFormSheet: View {
     var body: some View {
         NavigationView {
             ZStack {
-                AppColors.bg.first!.ignoresSafeArea()
+                AppColors.bg.ignoresSafeArea()
                 ScrollView {
                     VStack(spacing: 16) {
                         FormField(L.name) {
@@ -855,9 +801,9 @@ struct CategoryFormSheet: View {
                                     Button { type = t } label: {
                                         Text(t == "expense" ? L.expense : L.income)
                                             .font(.system(size: 13, weight: .bold))
-                                            .foregroundStyle(type == t ? .black : AppColors.textSecondary)
+                                            .foregroundStyle(type == t ? .white : AppColors.textSecondary)
                                             .padding(.horizontal, 14).padding(.vertical, 8)
-                                            .background(type == t ? Color.white.opacity(0.92) : AppColors.glass)
+                                            .background(type == t ? AppColors.primary : AppColors.glass)
                                             .clipShape(Capsule())
                                     }
                                 }

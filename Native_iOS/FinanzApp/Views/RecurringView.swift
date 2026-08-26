@@ -192,11 +192,11 @@ struct BrandToggle: View {
     var body: some View {
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 12)
-                .fill(isOn ? (vm.isDarkMode ? Color(hex: "#2FE8B0") : Color(hex: "#1FD8A4")) : Color.white.opacity(0.2))
+                .fill(isOn ? AppColors.income : AppColors.glassStrong)
                 .frame(width: 38, height: 22)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
-                        .stroke(isOn ? Color.clear : Color.white.opacity(0.3), lineWidth: 1)
+                        .stroke(isOn ? Color.clear : AppColors.glassBorderStrong, lineWidth: 1)
                 )
             Circle()
                 .fill(Color.white)

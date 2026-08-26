@@ -198,7 +198,7 @@ struct DailyBarChart: View {
             ForEach(entries, id: \.day) { entry in
                 let isSelected = selectedDay == entry.day
                 RoundedRectangle(cornerRadius: 3, style: .continuous)
-                    .fill(barFill(isSelected: isSelected))
+                    .fill(AppColors.expense.opacity(isSelected ? 1 : 0.45))
                     .frame(height: max(3, CGFloat(entry.amount / maxValue) * height))
                     .frame(maxWidth: .infinity)
                     .contentShape(Rectangle())
@@ -212,11 +212,6 @@ struct DailyBarChart: View {
         .frame(height: height, alignment: .bottom)
     }
 
-    private func barFill(isSelected: Bool) -> LinearGradient {
-        isSelected
-            ? LinearGradient(colors: [Color(hex: "#FF9B9B"), Color(hex: "#FF3B3B")], startPoint: .top, endPoint: .bottom)
-            : LinearGradient(colors: [Color(hex: "#FF9B9B").opacity(0.55), Color(hex: "#FF5C5C").opacity(0.55)], startPoint: .top, endPoint: .bottom)
-    }
 }
 
 // MARK: - Legend

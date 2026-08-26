@@ -20,7 +20,7 @@ struct HomeView: View {
         ScrollView {
             VStack(spacing: 12) {
                 header
-                BalanceCard(income: vm.monthIncome, expense: vm.monthExpense, balance: vm.monthBalance, monthName: currentMonthName())
+                BalanceCard(income: vm.monthIncome, expense: vm.monthExpense, balance: vm.monthBalance)
                     .padding(.horizontal, 18)
 
                 budgetCard
@@ -349,11 +349,6 @@ struct HomeView: View {
     private func greeting() -> String {
         let h = Calendar.current.component(.hour, from: Date())
         return L.greeting(hour: h)
-    }
-
-    private func currentMonthName() -> String {
-        let m = Calendar.current.component(.month, from: Date()) - 1
-        return IT_MONTHS_FULL[m]
     }
 }
 

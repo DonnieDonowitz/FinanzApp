@@ -1,8 +1,8 @@
 {
   "Native_iOS/FinanzApp/App/FinanzApp.swift": {
-    "mtime": 1787664881.5654607,
-    "seen": 1787744585.345006,
-    "ast_hash": "4afa4699440fdb616db6bf09256ae17b",
+    "mtime": 1787500479.4354973,
+    "seen": 1787500623.6563032,
+    "ast_hash": "43cef0695bd267d898acf5c93ea009e5",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/Contents.json": {
@@ -42,28 +42,28 @@
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Theme/Localization.swift": {
-    "mtime": 1787665185.6336622,
-    "seen": 1787744585.345091,
-    "ast_hash": "dbe79a12d03a586488684c68785da49b",
+    "mtime": 1787493923.8519158,
+    "seen": 1787497896.424851,
+    "ast_hash": "127e62b636b15c0575b12031c4f4ba02",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Theme/Theme.swift": {
-    "mtime": 1787664850.4843688,
-    "seen": 1787744585.345091,
-    "ast_hash": "70ca032ed8172b864b4fd7e5c22d00df",
-    "semantic_hash": ""
+    "mtime": 1787350889.4737592,
+    "seen": 1787493634.5137,
+    "ast_hash": "8ebfc37427cbabf71b7f73e09ce729d2",
+    "semantic_hash": "8ebfc37427cbabf71b7f73e09ce729d2"
   },
   "Native_iOS/FinanzApp/ViewModels/AppViewModel.swift": {
-    "mtime": 1787665148.205719,
-    "seen": 1787744585.345091,
-    "ast_hash": "6c1de3ad6d200d686477c663a3d8f2f2",
+    "mtime": 1787493923.8522394,
+    "seen": 1787497896.424868,
+    "ast_hash": "0241aaf26c130c19ae55e4edbeb39871",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Views/AddRecurringView.swift": {
-    "mtime": 1787665004.7362,
-    "seen": 1787744585.345092,
-    "ast_hash": "22ffceb502659f7e748d61e5b22f6e3d",
-    "semantic_hash": ""
+    "mtime": 1787350889.4741523,
+    "seen": 1787493634.5137012,
+    "ast_hash": "a29e6cbd20a2226413f11642734f4139",
+    "semantic_hash": "a29e6cbd20a2226413f11642734f4139"
   },
   "Native_iOS/FinanzApp/Views/AddTransactionView.swift": {
     "mtime": 1787350889.4742892,
@@ -78,10 +78,10 @@
     "semantic_hash": "43f901b5501d14b240b945bc01842f44"
   },
   "Native_iOS/FinanzApp/Views/Components/BalanceCard.swift": {
-    "mtime": 1787727082.2606401,
-    "seen": 1787744585.345121,
-    "ast_hash": "170b6ef190b12fdee75c77e10bf49c6d",
-    "semantic_hash": ""
+    "mtime": 1787350889.474603,
+    "seen": 1787493634.5137029,
+    "ast_hash": "2833b9cdb9c78634299981c096104eaf",
+    "semantic_hash": "2833b9cdb9c78634299981c096104eaf"
   },
   "Native_iOS/FinanzApp/Views/Components/CategoryPicker.swift": {
     "mtime": 1787350889.4746659,
@@ -90,9 +90,9 @@
     "semantic_hash": "07c5d960106d66121c01d1116a53e1ba"
   },
   "Native_iOS/FinanzApp/Views/Components/ChartView.swift": {
-    "mtime": 1787664928.334315,
-    "seen": 1787744585.345152,
-    "ast_hash": "8ce896f638727e829290632a635509b2",
+    "mtime": 1787504117.707898,
+    "seen": 1787504302.704963,
+    "ast_hash": "5dd63aacb9acaa2ec053078fa06213f7",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Views/Components/ConfirmDialog.swift": {
@@ -108,10 +108,10 @@
     "semantic_hash": "d2bf19720a9d554ebdf884c710452c85"
   },
   "Native_iOS/FinanzApp/Views/Components/GlassView.swift": {
-    "mtime": 1787664862.5105135,
-    "seen": 1787744585.345183,
-    "ast_hash": "aafd4d5ac9d1bfa22637dc7d87646670",
-    "semantic_hash": ""
+    "mtime": 1787350889.476185,
+    "seen": 1787493634.513705,
+    "ast_hash": "b24d4618639fbd1bc45ea00e52209623",
+    "semantic_hash": "b24d4618639fbd1bc45ea00e52209623"
   },
   "Native_iOS/FinanzApp/Views/Components/QuickAddBar.swift": {
     "mtime": 1787350889.4762537,
@@ -138,34 +138,34 @@
     "semantic_hash": "875f87010bce14bdf8ba1bdc37399048"
   },
   "Native_iOS/FinanzApp/Views/HomeView.swift": {
-    "mtime": 1787727108.8564477,
-    "seen": 1787744585.345258,
-    "ast_hash": "374e2e0d95b77c7af7a001e331c8a2ce",
+    "mtime": 1787493923.8531199,
+    "seen": 1787497896.4250722,
+    "ast_hash": "92378cee125c9d10b80ab976315049cd",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Views/RecurringView.swift": {
-    "mtime": 1787664975.8306699,
-    "seen": 1787744585.345258,
-    "ast_hash": "e7586ce028d349cf4758a59e3f6bdaf8",
-    "semantic_hash": ""
+    "mtime": 1787350889.4769535,
+    "seen": 1787493634.513707,
+    "ast_hash": "af9e368f68858816648f61731c7a16e4",
+    "semantic_hash": "af9e368f68858816648f61731c7a16e4"
   },
   "Native_iOS/FinanzApp/Views/SettingsView.swift": {
-    "mtime": 1787665165.1908438,
-    "seen": 1787744585.345259,
-    "ast_hash": "6ae779546a973e979d0115d0407500e6",
+    "mtime": 1787497495.8350272,
+    "seen": 1787497896.425087,
+    "ast_hash": "1b7bf64b65649fe7feac5f05c36d0d3f",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Views/StatisticsView.swift": {
-    "mtime": 1787727037.3428187,
-    "seen": 1787744585.345259,
-    "ast_hash": "b74b38e4b1317ac85824e52063205372",
+    "mtime": 1787493923.8536084,
+    "seen": 1787497896.425087,
+    "ast_hash": "18b0f090d43af0676aa1b3aeae3061a4",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Views/TransactionsView.swift": {
-    "mtime": 1787664995.82005,
-    "seen": 1787744585.3452601,
-    "ast_hash": "b8a217f095606688832d911c72d577e2",
-    "semantic_hash": ""
+    "mtime": 1787350889.4772515,
+    "seen": 1787493634.513708,
+    "ast_hash": "9d62abf4ede5fb061515aafae1ed2751",
+    "semantic_hash": "9d62abf4ede5fb061515aafae1ed2751"
   },
   "Native_iOS/FinanzAppWidget/Assets.xcassets/Contents.json": {
     "mtime": 1785173989.1579995,
@@ -204,33 +204,33 @@
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/AppIcon-Dark.png": {
-    "mtime": 1787665248.4422057,
-    "seen": 1787744585.345328,
-    "ast_hash": "a1c4d56195c23dbf1d6df0a2a8f0f92c",
-    "semantic_hash": ""
+    "mtime": 1787350889.472129,
+    "seen": 1787493634.5137122,
+    "ast_hash": "17218cf5ee010c2a5619df1bb27e580b",
+    "semantic_hash": "17218cf5ee010c2a5619df1bb27e580b"
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/AppIcon.png": {
-    "mtime": 1787665248.410654,
-    "seen": 1787744585.3453288,
-    "ast_hash": "0a91bb3d3d65c78f1ba367ec9315c324",
-    "semantic_hash": ""
+    "mtime": 1787350889.4726858,
+    "seen": 1787493634.5137122,
+    "ast_hash": "8efb3bae4b493e30a8fc5137284571f3",
+    "semantic_hash": "8efb3bae4b493e30a8fc5137284571f3"
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/icon-dark.svg": {
-    "mtime": 1787665232.3480918,
-    "seen": 1787744585.3453288,
-    "ast_hash": "1ad8411aa4634bf780cbf4afd1b9fce2",
-    "semantic_hash": ""
+    "mtime": 1787350889.4728298,
+    "seen": 1787493634.513713,
+    "ast_hash": "545a2083c19b75daeb428ebb7ee5405f",
+    "semantic_hash": "545a2083c19b75daeb428ebb7ee5405f"
   },
   "Native_iOS/FinanzApp/Assets.xcassets/AppIcon.appiconset/icon.svg": {
-    "mtime": 1787665221.6215353,
-    "seen": 1787744585.34533,
-    "ast_hash": "22f563c3d37fa32f07e8c7fa40065765",
-    "semantic_hash": ""
+    "mtime": 1787350889.4728897,
+    "seen": 1787493634.513713,
+    "ast_hash": "30a610b4ec11b07bb0ff15dd59e2cabb",
+    "semantic_hash": "30a610b4ec11b07bb0ff15dd59e2cabb"
   },
   "Native_iOS/FinanzApp/Intents/QuickAddTransactionIntent.swift": {
-    "mtime": 1787663249.7876477,
-    "seen": 1787744585.3450298,
-    "ast_hash": "052cf7104293f8db7e987ca952b5dcea",
+    "mtime": 1787494260.8944643,
+    "seen": 1787497896.4247968,
+    "ast_hash": "a7f046e00773ab0934c0a8f2a86d50e3",
     "semantic_hash": ""
   },
   "Native_iOS/FinanzApp/Models/Gamification.swift": {

@@ -77,10 +77,10 @@ struct StatisticsView: View {
             ForEach(StatsPeriod.allCases, id: \.self) { p in
                 Text(p.label)
                     .font(.system(size: 12.5, weight: .bold))
-                    .foregroundStyle(period == p ? Color(hex: "#0B1120") : AppColors.textSecondary)
+                    .foregroundStyle(period == p ? .white : AppColors.textSecondary)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 8)
-                    .background(period == p ? Color.white.opacity(0.9) : Color.clear)
+                    .background(period == p ? AppColors.primary : Color.clear)
                     .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                     .onTapGesture { withAnimation { period = p } }
             }
@@ -157,16 +157,11 @@ struct StatisticsView: View {
     private var summaryCard: some View {
         let income = vm.incomeForMonth(selectedMonth)
         let expense = vm.expenseForMonth(selectedMonth)
-        let balance = income - expense
         let xp = Gamification.monthXP(income: income, spent: expense, budget: vm.monthlyBudget)
 
         return GlassView {
             VStack(spacing: 10) {
-                HStack {
-                    statColumn(L.incomes, formatCurrency(income), AppColors.incomeLight)
-                    statColumn(L.expenses, formatCurrency(expense), AppColors.expenseLight)
-                    statColumn(L.balance, formatCurrency(balance), balance >= 0 ? AppColors.income : AppColors.expense)
-                }
+                summaryRow(income: income, expense: expense)
                 if vm.isBudgetConfigured {
                     Divider().background(AppColors.divider)
                     HStack {
@@ -178,6 +173,17 @@ struct StatisticsView: View {
                 }
             }
             .padding(18)
+        }
+    }
+
+    /// The income/expenses/balance three-column row shared by the month summary and the
+    /// semester/year period summary — same layout, just fed a different income/expense pair.
+    private func summaryRow(income: Double, expense: Double) -> some View {
+        let balance = income - expense
+        return HStack {
+            statColumn(L.incomes, formatCurrency(income), AppColors.incomeLight)
+            statColumn(L.expenses, formatCurrency(expense), AppColors.expenseLight)
+            statColumn(L.balance, formatCurrency(balance), balance >= 0 ? AppColors.income : AppColors.expense)
         }
     }
 
@@ -258,7 +264,10 @@ struct StatisticsView: View {
     }
 
     private func monthList(months: [String], stepper: (prev: () -> Void, next: () -> Void, canNext: Bool), title: String) -> some View {
-        VStack(spacing: 12) {
+        let income = months.reduce(0.0) { $0 + vm.incomeForMonth($1) }
+        let expense = months.reduce(0.0) { $0 + vm.expenseForMonth($1) }
+
+        return VStack(spacing: 12) {
             HStack(spacing: 12) {
                 Button(action: stepper.prev) {
                     Image(systemName: "chevron.left").foregroundStyle(AppColors.primary)
@@ -271,6 +280,12 @@ struct StatisticsView: View {
                         .foregroundStyle(stepper.canNext ? AppColors.primary : AppColors.textTertiary)
                 }
                 .disabled(!stepper.canNext)
+            }
+            .padding(.horizontal, 18)
+
+            GlassView {
+                summaryRow(income: income, expense: expense)
+                    .padding(18)
             }
             .padding(.horizontal, 18)
 

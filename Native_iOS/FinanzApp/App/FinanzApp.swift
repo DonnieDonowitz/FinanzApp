@@ -141,28 +141,14 @@ struct MainTabView: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 16)
         .background(
-            ZStack {
-                Rectangle().fill(.ultraThinMaterial).saturation(1.55)
-                RoundedRectangle(cornerRadius: 32, style: .continuous)
-                    .fill(AppColors.tabBar)
-                LinearGradient(
-                    stops: [.init(color: .white.opacity(vm.isDarkMode ? 0.10 : 0.55), location: 0), .init(color: .clear, location: 0.5)],
-                    startPoint: .top, endPoint: .bottom
-                )
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 32, style: .continuous))
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .fill(AppColors.tabBar)
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 32, style: .continuous)
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
                 .stroke(AppColors.tabBarBorder, lineWidth: 1)
         )
-        .shadow(color: AppColors.shadow.opacity(0.55), radius: 32, x: 0, y: 12)
-        .overlay(
-            RoundedRectangle(cornerRadius: 32, style: .continuous)
-                .stroke(Color.white.opacity(vm.isDarkMode ? 0.16 : 0.6), lineWidth: 1)
-                .padding(1),
-            alignment: .topLeading
-        )
+        .shadow(color: AppColors.shadow, radius: 14, x: 0, y: 4)
         .padding(.horizontal, 16)
         .padding(.bottom, 6)
     }

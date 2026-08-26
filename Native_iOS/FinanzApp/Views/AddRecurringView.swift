@@ -114,10 +114,10 @@ struct AddRecurringView: View {
                                     Button { frequency = f } label: {
                                         Text(frequencyLabel(f))
                                             .font(.system(size: 13, weight: .bold))
-                                            .foregroundStyle(frequency == f ? .black : AppColors.textSecondary)
+                                            .foregroundStyle(frequency == f ? .white : AppColors.textSecondary)
                                             .padding(.horizontal, 14)
                                             .padding(.vertical, 8)
-                                            .background(frequency == f ? Color.white.opacity(0.92) : AppColors.glass)
+                                            .background(frequency == f ? AppColors.primary : AppColors.glass)
                                             .clipShape(Capsule())
                                     }
                                 }

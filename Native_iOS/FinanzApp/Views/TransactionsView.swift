@@ -130,9 +130,9 @@ struct FilterChip: View {
         Button(action: action) {
             Text(label)
                 .font(.system(size: 13, weight: .bold))
-                .foregroundStyle(active ? .black : AppColors.textSecondary)
+                .foregroundStyle(active ? .white : AppColors.textSecondary)
                 .padding(.horizontal, 14).padding(.vertical, 8)
-                .background(active ? Color.white.opacity(0.92) : AppColors.glass)
+                .background(active ? AppColors.primary : AppColors.glass)
                 .clipShape(Capsule())
         }
     }
@@ -146,15 +146,9 @@ struct FAB: View {
                 .font(.system(size: 21, weight: .semibold))
                 .foregroundStyle(.white)
                 .frame(width: 56, height: 56)
-                .background(
-                    ZStack {
-                        Rectangle().fill(.ultraThinMaterial).saturation(1.6)
-                        LinearGradient(colors: [Color.white.opacity(0.55), Color.white.opacity(0.12)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    }
-                )
-                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(Color.white.opacity(0.6), lineWidth: 1))
-                .shadow(color: .black.opacity(0.3), radius: 24, x: 0, y: 10)
+                .background(AppColors.primary)
+                .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+                .shadow(color: AppColors.primary.opacity(0.35), radius: 14, x: 0, y: 6)
         }
         .padding(.trailing, 22).padding(.bottom, 98)
     }

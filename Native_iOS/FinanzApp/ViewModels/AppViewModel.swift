@@ -2,26 +2,6 @@ import Foundation
 import Combine
 import WidgetKit
 
-enum BackupFrequency: String, CaseIterable {
-    case daily, weekly, monthly
-
-    var label: String {
-        switch self {
-        case .daily: return L.daily
-        case .weekly: return L.weekly
-        case .monthly: return L.monthly
-        }
-    }
-
-    var minimumDays: Int {
-        switch self {
-        case .daily: return 1
-        case .weekly: return 7
-        case .monthly: return 30
-        }
-    }
-}
-
 final class AppViewModel: ObservableObject {
     @Published var categories: [Category] = [] { didSet { recomputeMonthlyCache() } }
     @Published var transactions: [Transaction] = [] { didSet { recomputeMonthlyCache(); recomputeGamificationCache() } }
@@ -71,54 +51,26 @@ final class AppViewModel: ObservableObject {
         UserDefaults.standard.set(enabled, forKey: "expenseAlertsEnabled")
     }
 
-    /// The thresholds offered out of the box; always present in `expenseAlertThresholds` and
-    /// never removable, though the user can still uncheck them individually.
-    static let defaultExpenseAlertThresholds = [50, 75, 90, 100]
+    /// The single percent-of-budget threshold the user enters themselves; 0 means "not set
+    /// yet" (no built-in presets — the reminder only fires once the user has typed one in).
+    @Published var expenseAlertThreshold: Int = UserDefaults.standard.integer(forKey: "expenseAlertThreshold")
 
-    @Published var expenseAlertThresholds: [Int] = (UserDefaults.standard.array(forKey: "expenseAlertThresholdsList") as? [Int] ?? AppViewModel.defaultExpenseAlertThresholds).sorted()
-
-    @Published var enabledExpenseAlertThresholds: Set<Int> = Set(
-        UserDefaults.standard.array(forKey: "enabledExpenseAlertThresholds") as? [Int] ?? AppViewModel.defaultExpenseAlertThresholds
-    )
-
-    func isThresholdEnabled(_ threshold: Int) -> Bool {
-        enabledExpenseAlertThresholds.contains(threshold)
+    func setExpenseAlertThreshold(_ threshold: Int) {
+        expenseAlertThreshold = threshold
+        UserDefaults.standard.set(threshold, forKey: "expenseAlertThreshold")
     }
 
-    func setThreshold(_ threshold: Int, enabled: Bool) {
-        if enabled { enabledExpenseAlertThresholds.insert(threshold) } else { enabledExpenseAlertThresholds.remove(threshold) }
-        UserDefaults.standard.set(Array(enabledExpenseAlertThresholds), forKey: "enabledExpenseAlertThresholds")
-    }
-
-    func addCustomThreshold(_ threshold: Int) {
-        guard threshold > 0, threshold <= 1000, !expenseAlertThresholds.contains(threshold) else { return }
-        expenseAlertThresholds.append(threshold)
-        expenseAlertThresholds.sort()
-        UserDefaults.standard.set(expenseAlertThresholds, forKey: "expenseAlertThresholdsList")
-        setThreshold(threshold, enabled: true)
-    }
-
-    func removeCustomThreshold(_ threshold: Int) {
-        guard !Self.defaultExpenseAlertThresholds.contains(threshold) else { return }
-        expenseAlertThresholds.removeAll { $0 == threshold }
-        UserDefaults.standard.set(expenseAlertThresholds, forKey: "expenseAlertThresholdsList")
-        setThreshold(threshold, enabled: false)
-    }
-
+    /// Fires once per month the first time spending crosses the user's own threshold, measured
+    /// against the monthly budget (the "percentage of completion" the alert is about) rather
+    /// than income.
     private func checkExpenseAlertThresholds() {
-        guard expenseAlertsEnabled, monthIncome > 0 else { return }
-        let percent = Int(monthExpense / monthIncome * 100)
-        let key = "notifiedThresholds_\(Date.currentMonth)"
-        var notified = Set(UserDefaults.standard.array(forKey: key) as? [Int] ?? [])
-        var didNotify = false
-        for threshold in expenseAlertThresholds where enabledExpenseAlertThresholds.contains(threshold) && percent >= threshold && !notified.contains(threshold) {
-            NotificationManager.sendExpenseAlert(percent: percent)
-            notified.insert(threshold)
-            didNotify = true
-        }
-        if didNotify {
-            UserDefaults.standard.set(Array(notified), forKey: key)
-        }
+        guard expenseAlertsEnabled, expenseAlertThreshold > 0, isBudgetConfigured else { return }
+        let percent = Int(monthExpense / monthlyBudget * 100)
+        guard percent >= expenseAlertThreshold else { return }
+        let key = "notifiedExpenseAlert_\(Date.currentMonth)"
+        guard !UserDefaults.standard.bool(forKey: key) else { return }
+        NotificationManager.sendExpenseAlert(percent: percent)
+        UserDefaults.standard.set(true, forKey: key)
     }
 
     let db = DatabaseManager.shared
@@ -401,19 +353,11 @@ final class AppViewModel: ObservableObject {
     // MARK: - Automatic backup
 
     @Published var autoBackupEnabled: Bool = UserDefaults.standard.bool(forKey: "autoBackupEnabled")
-    @Published var autoBackupFrequency: BackupFrequency = BackupFrequency(
-        rawValue: UserDefaults.standard.string(forKey: "autoBackupFrequency") ?? ""
-    ) ?? .weekly
 
     func setAutoBackupEnabled(_ enabled: Bool) {
         autoBackupEnabled = enabled
         UserDefaults.standard.set(enabled, forKey: "autoBackupEnabled")
         if enabled { performAutoBackupIfNeeded(force: true) }
-    }
-
-    func setAutoBackupFrequency(_ frequency: BackupFrequency) {
-        autoBackupFrequency = frequency
-        UserDefaults.standard.set(frequency.rawValue, forKey: "autoBackupFrequency")
     }
 
     /// Display name of the user-chosen backup folder, or `nil` when none has been picked yet
@@ -461,17 +405,15 @@ final class AppViewModel: ObservableObject {
         return dir
     }
 
-    /// Writes a new automatic backup if enough time has passed since the last one for the
-    /// chosen frequency. Called on every launch (there's no real background execution for a
-    /// simple local app like this), so a backup lands the next time the app is opened after
-    /// its interval elapses — not at an exact scheduled time.
+    /// Writes a new automatic backup once per calendar day. Called on every launch (there's no
+    /// real background execution for a simple local app like this), so a backup lands the first
+    /// time the app is opened each day — always, not gated behind a frequency setting.
     func performAutoBackupIfNeeded(force: Bool = false) {
         guard autoBackupEnabled else { return }
         let key = "lastAutoBackupDate"
         let now = Date()
-        if !force, let last = UserDefaults.standard.object(forKey: key) as? Date {
-            let days = Calendar.current.dateComponents([.day], from: last, to: now).day ?? Int.max
-            guard days >= autoBackupFrequency.minimumDays else { return }
+        if !force, let last = UserDefaults.standard.object(forKey: key) as? Date, Calendar.current.isDateInToday(last) {
+            return
         }
 
         let f = DateFormatter()
@@ -498,7 +440,9 @@ final class AppViewModel: ObservableObject {
         cleanupOldAutoBackups(in: cleanupDir)
     }
 
-    private func cleanupOldAutoBackups(in dir: URL, keep: Int = 10) {
+    /// Keeps only today's backup and yesterday's — one backup is written per calendar day, so
+    /// this is exactly "the last two days" of history, not an arbitrary file count.
+    private func cleanupOldAutoBackups(in dir: URL, keep: Int = 2) {
         guard let files = try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: [.contentModificationDateKey]) else { return }
         let sorted = files.sorted { a, b in
             let da = (try? a.resourceValues(forKeys: [.contentModificationDateKey]))?.contentModificationDate ?? .distantPast
